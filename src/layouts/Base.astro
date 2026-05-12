@@ -1,0 +1,42 @@
+---
+import '../styles/global.css'
+import type { Locale } from '../i18n/translations'
+
+interface Props {
+  title: string
+  description?: string
+  locale: Locale
+  altHref: string   // URL of this page in the other locale
+}
+
+const { title, description, locale, altHref } = Astro.props
+const canonicalBase = 'https://protopiastudio.nl'
+const canonical = canonicalBase + Astro.url.pathname
+---
+<!DOCTYPE html>
+<html lang={locale}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} | Protopia Studio</title>
+  {description && <meta name="description" content={description} />}
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang={locale === 'nl' ? 'en' : 'nl'} href={canonicalBase + altHref} />
+  <link rel="icon" type="image/png" href="/assets/logo/PS-logo-main-green-small.png" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body class="font-sans bg-white text-dark antialiased">
+  <slot />
+  <script>
+    if ((window as any).netlifyIdentity) {
+      (window as any).netlifyIdentity.on('init', (user: any) => {
+        if (!user) {
+          (window as any).netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/'
+          })
+        }
+      })
+    }
+  </script>
+</body>
+</html>
