@@ -1,0 +1,61 @@
+---
+import type { Locale } from '../i18n/translations'
+import { t } from '../i18n/translations'
+
+interface Props {
+  locale: Locale
+  altHref: string
+  activePage?: string
+}
+const { locale, altHref, activePage } = Astro.props
+const tr = t(locale)
+const base = locale === 'nl' ? '' : '/en'
+---
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 border-b border-border backdrop-blur-sm">
+  <div class="max-w-content mx-auto px-10 h-16 flex items-center justify-between">
+
+    <!-- Brand -->
+    <a href={`${base}/`} class="flex items-center gap-2.5">
+      <img src="/assets/logo/PS-logo-main-green.png" alt="Protopia Studio" class="h-10" />
+    </a>
+
+    <!-- Links -->
+    <ul class="hidden md:flex gap-7 list-none m-0 p-0">
+      {[
+        { href: `${base}/waarom`,    label: tr.nav.waarom,    key: 'waarom'    },
+        { href: `${base}/hoe`,       label: tr.nav.hoe,       key: 'hoe'       },
+        { href: `${base}/projecten`, label: tr.nav.projecten, key: 'projecten' },
+        { href: `${base}/wie`,       label: tr.nav.wie,       key: 'wie'       },
+        { href: `${base}/blog`,      label: tr.nav.blog,      key: 'blog'      },
+      ].map(link => (
+        <li>
+          <a
+            href={link.href}
+            class={`text-[13px] font-medium transition-colors duration-150 ${activePage === link.key ? 'text-green' : 'text-mid hover:text-green'}`}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Right: lang toggle + CTA -->
+    <div class="flex items-center gap-3">
+      <a
+        href={altHref}
+        class="text-[12px] font-semibold text-light hover:text-green transition-colors"
+        aria-label="Switch language"
+      >
+        {tr.lang.toggle}
+      </a>
+      <a
+        href={`${base}/contact`}
+        class="inline-flex items-center px-5 py-2 rounded-pill text-[13px] font-semibold bg-green text-white hover:bg-green-dark transition-colors"
+      >
+        {tr.nav.cta}
+      </a>
+    </div>
+  </div>
+</nav>
+<!-- Spacer for fixed nav -->
+<div class="h-16"></div>

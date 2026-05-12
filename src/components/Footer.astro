@@ -1,0 +1,56 @@
+---
+import type { Locale } from '../i18n/translations'
+import { t } from '../i18n/translations'
+
+interface Props {
+  locale: Locale
+}
+const { locale } = Astro.props
+const tr = t(locale)
+const base = locale === 'nl' ? '' : '/en'
+---
+<footer class="bg-dark pt-14 pb-8">
+  <div class="max-w-content mx-auto px-10">
+    <div class="grid grid-cols-3 gap-12 mb-12">
+
+      <!-- Brand col -->
+      <div>
+        <img src="/assets/logo/PS-logo-main-green.png" alt="Protopia Studio" class="h-6 mb-3 brightness-0 invert opacity-80" />
+        <p class="text-[13px] text-[#666] leading-relaxed max-w-[260px]">
+          {tr.footer.tagline}.<br />
+          {tr.home.heroSub}
+        </p>
+      </div>
+
+      <!-- Nav col -->
+      <div>
+        <h4 class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#555] mb-3.5">{tr.footer.colNav}</h4>
+        <ul class="flex flex-col gap-2 list-none p-0 m-0">
+          {[
+            { href: `${base}/waarom`,    label: tr.nav.waarom    },
+            { href: `${base}/hoe`,       label: tr.nav.hoe       },
+            { href: `${base}/projecten`, label: tr.nav.projecten },
+            { href: `${base}/wie`,       label: tr.nav.wie       },
+            { href: `${base}/blog`,      label: tr.nav.blog      },
+            { href: `${base}/contact`,   label: tr.nav.contact   },
+          ].map(l => (
+            <li><a href={l.href} class="text-[13px] text-[#777] hover:text-white transition-colors">{l.label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Work col -->
+      <div>
+        <h4 class="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#555] mb-3.5">{tr.footer.colWork}</h4>
+        <ul class="flex flex-col gap-2 list-none p-0 m-0">
+          <li><a href={`${base}/contact`} class="text-[13px] text-[#777] hover:text-white transition-colors">{tr.nav.contact}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-[#2a2a2a] pt-5 flex justify-between items-center">
+      <span class="text-[12px] text-[#555]">{tr.footer.copy}</span>
+      <span class="text-[12px] text-green font-semibold">{tr.footer.tagline}</span>
+    </div>
+  </div>
+</footer>
