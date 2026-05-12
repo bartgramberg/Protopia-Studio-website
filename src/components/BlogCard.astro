@@ -1,0 +1,33 @@
+---
+import type { Locale } from '../i18n/translations'
+import { t } from '../i18n/translations'
+
+interface Props {
+  title: string
+  category: string
+  author: string
+  date: Date
+  readingTime: number
+  image?: string
+  href: string
+  locale: Locale
+}
+const { title, category, author, date, readingTime, image, href, locale } = Astro.props
+const tr = t(locale)
+const dateStr = date.toLocaleDateString(locale === 'nl' ? 'nl-NL' : 'en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric'
+})
+---
+<a
+  href={href}
+  class="grid grid-cols-[160px_1fr] gap-5 items-start p-5 bg-white border border-border rounded-lg transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(72,115,91,0.10)]"
+>
+  <div class="w-full aspect-[4/3] bg-creme rounded overflow-hidden flex-shrink-0">
+    {image && <img src={image} alt={title} class="w-full h-full object-cover" />}
+  </div>
+  <div>
+    <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-magenta mb-1.5">{category}</div>
+    <div class="text-[15px] font-bold text-green leading-snug mb-2">{title}</div>
+    <div class="text-[12px] text-light">{author} · {readingTime} min</div>
+  </div>
+</a>

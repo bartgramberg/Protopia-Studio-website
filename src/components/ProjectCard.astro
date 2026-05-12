@@ -1,0 +1,37 @@
+---
+import type { Locale } from '../i18n/translations'
+import { t } from '../i18n/translations'
+
+interface Props {
+  title: string
+  description: string
+  category: 'environments' | 'businesses' | 'products'
+  image: string
+  imageAlt: string
+  href: string
+  locale: Locale
+}
+const { title, description, category, image, imageAlt, href, locale } = Astro.props
+const tr = t(locale)
+const catLabel = tr.projects.categoryLabel[category]
+---
+<a
+  href={href}
+  class="block bg-white border border-border rounded-lg overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(72,115,91,0.12)]"
+  data-cat={category}
+>
+  <div class="w-full h-60 bg-creme overflow-hidden flex items-center justify-center">
+    {image
+      ? <img src={image} alt={imageAlt} class="w-full h-full object-cover" />
+      : <span class="text-[10px] text-border uppercase tracking-[0.1em]">Afbeelding</span>
+    }
+  </div>
+  <div class="p-5">
+    <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">{catLabel}</div>
+    <div class="text-[15px] font-bold text-green leading-snug mb-2">{title}</div>
+    <div class="text-[13px] text-mid leading-relaxed line-clamp-3 mb-3">{description}</div>
+    <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">
+      {tr.projects.readMore}
+    </span>
+  </div>
+</a>
