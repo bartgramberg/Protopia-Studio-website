@@ -1,0 +1,111 @@
+---
+import Base from '../../../layouts/Base.astro'
+import Nav from '../../../components/Nav.astro'
+import Footer from '../../../components/Footer.astro'
+import { getCollection, render } from 'astro:content'
+import { t } from '../../../i18n/translations'
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects', ({ id }) => id.startsWith('en/'))
+  return projects.map(p => ({
+    params: { slug: p.id.replace('en/', '') },
+    props:  { project: p },
+  }))
+}
+
+const { project } = Astro.props
+const { Content }  = await render(project)
+const locale = 'en'
+const tr = t(locale)
+const slug = project.id.replace('en/', '')
+const catLabel = tr.projects.categoryLabel[project.data.category]
+---
+<Base title={project.data.title} description={project.data.description} locale={locale} altHref={`/projecten/${slug}`}>
+  <Nav locale={locale} altHref={`/projecten/${slug}`} activePage="projecten" />
+
+  <!-- Hero -->
+  <div class="bg-creme pt-[88px] pb-16">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">
+        {catLabel}
+      </span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">
+        {project.data.title}
+      </h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{project.data.description}</p>
+      <div class="flex gap-2 flex-wrap mt-5">
+        {project.data.services.map(s => (
+          <span class="text-[11px] font-semibold uppercase tracking-[0.12em] px-3 py-1 rounded-pill border border-green text-green">
+            {tr.projects.servicesLabel[s]}
+          </span>
+        ))}
+        <span class="text-[11px] font-semibold uppercase tracking-[0.12em] px-3 py-1 rounded-pill bg-creme text-light">
+          {project.data.year}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero image -->
+  {project.data.image && (
+    <div class="max-w-content mx-auto px-10 my-10">
+      <img
+        src={project.data.image}
+        alt={project.data.imageAlt}
+        class="w-full aspect-[16/7] object-cover rounded-lg"
+      />
+    </div>
+  )}
+
+  <!-- 3-col detail -->
+  <section class="py-16">
+    <div class="max-w-content mx-auto px-10">
+      <div class="grid grid-cols-3 gap-10">
+        <div>
+          <h3 class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-4">
+            {tr.projects.challenge}
+          </h3>
+          <p class="text-[14px] text-mid leading-[1.75]">{project.data.challenge}</p>
+        </div>
+        <div>
+          <h3 class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-4">
+            {tr.projects.role}
+          </h3>
+          <p class="text-[14px] text-mid leading-[1.75]">{project.data.role}</p>
+        </div>
+        <div>
+          <h3 class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-4">
+            {tr.projects.result}
+          </h3>
+          <p class="text-[14px] text-mid leading-[1.75]">{project.data.result}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body content -->
+  <section class="py-12 bg-creme">
+    <div class="max-w-content mx-auto px-10">
+      <div class="prose prose-lg max-w-none text-mid">
+        <Content />
+      </div>
+    </div>
+  </section>
+
+  {project.data.link && (
+    <div class="max-w-content mx-auto px-10 py-8">
+      <a href={project.data.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-blue before:content-['>'] hover:text-green transition-colors">
+        View project
+      </a>
+    </div>
+  )}
+
+  <!-- Back link -->
+  <div class="max-w-content mx-auto px-10 pb-16">
+    <a href="/en/projects" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-mid before:content-['<'] hover:text-green transition-colors">
+      All projects
+    </a>
+  </div>
+
+  <Footer locale={locale} />
+</Base>

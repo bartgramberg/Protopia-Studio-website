@@ -1,0 +1,65 @@
+---
+import Base from '../../layouts/Base.astro'
+import Nav from '../../components/Nav.astro'
+import Footer from '../../components/Footer.astro'
+import { t } from '../../i18n/translations'
+const locale = 'en'
+const tr = t(locale)
+---
+<Base title="How we work" description={tr.hoe.lead} locale={locale} altHref="/hoe">
+  <Nav locale={locale} altHref="/hoe" activePage="hoe" />
+
+  <div class="bg-creme pt-[88px] pb-16">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.hoe.eyebrow}</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">{tr.hoe.title}</h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{tr.hoe.lead}</p>
+    </div>
+  </div>
+
+  <section class="py-20">
+    <div class="max-w-content mx-auto px-10">
+      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden">
+        {[
+          {
+            num: '1',
+            title: 'Research & Strategy',
+            desc: 'Complex questions reduced to concrete strategies. We analyse context, stakeholders and systems — and translate that into a clear direction.',
+            examples: ['Best practice research', 'Stakeholder analysis', 'Strategic roadmap'],
+          },
+          {
+            num: '2',
+            title: 'Concept & Design',
+            desc: 'Innovative concepts, business models and spaces — built and tested directly. We do not design in a drawer, but in practice.',
+            examples: ['Service design', 'Spatial design', 'Business model canvas'],
+          },
+          {
+            num: '3',
+            title: 'Co-creation & Realisation',
+            desc: 'Building teams, labs and partnerships that deliver tangible results. From post-it, via pilot to product.',
+            examples: ['Design sprints', 'Pilot programmes', 'Community building'],
+          },
+        ].map(s => (
+          <div class="bg-white p-9">
+            <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">{s.num}</div>
+            <div class="text-[15px] font-bold text-green mb-2">{s.title}</div>
+            <p class="text-[13px] text-mid leading-[1.65] mb-4">{s.desc}</p>
+            <ul class="flex flex-col gap-1">
+              {s.examples.map(e => (
+                <li class="text-[12px] text-light before:content-['>'] before:mr-1.5">{e}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-content mx-auto px-10 pb-20">
+    <a href="/en/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">
+      Work together?
+    </a>
+  </div>
+
+  <Footer locale={locale} />
+</Base>

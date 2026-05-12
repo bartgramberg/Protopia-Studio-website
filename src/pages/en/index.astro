@@ -1,0 +1,165 @@
+---
+import Base from '../../layouts/Base.astro'
+import Nav from '../../components/Nav.astro'
+import Footer from '../../components/Footer.astro'
+import ProjectCard from '../../components/ProjectCard.astro'
+import BlogCard from '../../components/BlogCard.astro'
+import { getCollection } from 'astro:content'
+import { t } from '../../i18n/translations'
+
+const locale = 'en'
+const tr = t(locale)
+
+const allProjects = await getCollection('projects', ({ id }) => id.startsWith('en/'))
+const featured = allProjects
+  .filter(p => p.data.featured)
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 3)
+
+const allPosts = await getCollection('blog', ({ id }) => id.startsWith('en/'))
+const recentPosts = allPosts
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 2)
+---
+<Base title="Protopia Studio" description={tr.home.heroSub} locale={locale} altHref="/">
+  <Nav locale={locale} altHref="/" activePage="home" />
+
+  <!-- Hero -->
+  <section class="bg-creme pt-24 pb-20">
+    <div class="max-w-content mx-auto px-10">
+      <div class="grid grid-cols-2 gap-[72px] items-center">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">
+            {tr.home.heroTagline}
+          </p>
+          <h1 class="text-[clamp(40px,5vw,72px)] font-bold leading-[1.05] tracking-[-0.03em] text-green text-balance">
+            {tr.home.heroTitle} <em class="not-italic text-magenta">{tr.home.heroAccent}</em>
+          </h1>
+          <p class="mt-6 text-[17px] text-mid leading-[1.75] max-w-[540px]">{tr.home.heroSub}</p>
+          <div class="flex gap-3.5 mt-8 flex-wrap items-center">
+            <a href="/en/projects" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-green text-white hover:bg-green-dark transition-colors border border-green">
+              {tr.home.heroCta}
+            </a>
+            <a href="/en/contact" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-green border border-green hover:bg-green hover:text-white transition-colors">
+              {tr.home.heroCtaAlt}
+            </a>
+          </div>
+        </div>
+        <div class="aspect-square flex items-center justify-center">
+          <img src="/assets/logo/PS-logo-main-green.png" alt="Protopia Studio" class="w-full h-full object-contain" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services strip -->
+  <section class="py-20">
+    <div class="max-w-content mx-auto px-10">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">
+        How we work
+      </p>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mb-10">
+        {tr.home.servicesTitle}
+      </h2>
+      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden">
+        {[
+          { num: tr.home.service1Num, title: tr.home.service1Title, desc: tr.home.service1Desc },
+          { num: tr.home.service2Num, title: tr.home.service2Title, desc: tr.home.service2Desc },
+          { num: tr.home.service3Num, title: tr.home.service3Title, desc: tr.home.service3Desc },
+        ].map(s => (
+          <div class="bg-white p-9">
+            <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">{s.num}</div>
+            <div class="text-[15px] font-bold text-green mb-2">{s.title}</div>
+            <p class="text-[13px] text-mid leading-[1.65]">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured projects -->
+  <section class="py-20 bg-creme">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">
+        {tr.projects.eyebrow}
+      </span>
+      <div class="grid grid-cols-3 gap-5 mt-10">
+        {featured.map(p => (
+          <ProjectCard
+            title={p.data.title}
+            description={p.data.description}
+            category={p.data.category}
+            image={p.data.image}
+            imageAlt={p.data.imageAlt}
+            href={`/en/projects/${p.id.replace('en/', '')}`}
+            locale={locale}
+          />
+        ))}
+      </div>
+      <div class="mt-8">
+        <a href="/en/projects" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">
+          {tr.projects.viewAll}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="py-[88px] text-center">
+    <div class="max-w-content mx-auto px-10">
+      <blockquote class="text-[clamp(20px,2.5vw,28px)] italic font-light text-mid leading-[1.6] max-w-[760px] mx-auto text-balance">
+        {tr.home.quoteText}
+      </blockquote>
+      <p class="text-[13px] text-light font-medium mt-5 tracking-[0.02em]">{tr.home.quoteAttr}</p>
+    </div>
+  </section>
+
+  <!-- Blog preview -->
+  <section class="py-20 bg-creme">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">
+        {tr.blog.eyebrow}
+      </span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mt-2 mb-10">
+        {tr.blog.latestTitle}
+      </h2>
+      <div class="grid grid-cols-2 gap-6">
+        {recentPosts.map(p => (
+          <BlogCard
+            title={p.data.title}
+            category={p.data.category}
+            author={p.data.author}
+            date={p.data.date}
+            readingTime={p.data.readingTime}
+            image={p.data.image}
+            href={`/en/blog/${p.id.replace('en/', '')}`}
+            locale={locale}
+          />
+        ))}
+      </div>
+      <div class="mt-8">
+        <a href="/en/blog" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">
+          {tr.blog.viewAll}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA banner -->
+  <section class="bg-green py-[72px] text-center">
+    <div class="max-w-content mx-auto px-10">
+      <h2 class="text-[clamp(26px,3vw,38px)] font-bold text-white leading-[1.2] mb-2.5 text-balance">{tr.home.ctaTitle}</h2>
+      <p class="text-[16px] text-white/70 mb-7">{tr.home.ctaSub}</p>
+      <div class="flex gap-3.5 justify-center flex-wrap">
+        <a href="/en/contact" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-white text-green hover:bg-creme transition-colors">
+          {tr.home.ctaPrimary}
+        </a>
+        <a href="/en/blog" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">
+          {tr.home.ctaSecondary}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer locale={locale} />
+</Base>

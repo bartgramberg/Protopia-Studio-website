@@ -1,0 +1,81 @@
+---
+import Base from '../../layouts/Base.astro'
+import Nav from '../../components/Nav.astro'
+import Footer from '../../components/Footer.astro'
+import { t } from '../../i18n/translations'
+const locale = 'en'
+const tr = t(locale)
+---
+<Base title="Why regeneration" description={tr.waarom.lead} locale={locale} altHref="/waarom">
+  <Nav locale={locale} altHref="/waarom" activePage="waarom" />
+
+  <div class="bg-creme pt-[88px] pb-16">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.waarom.eyebrow}</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">{tr.waarom.title}</h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{tr.waarom.lead}</p>
+    </div>
+  </div>
+
+  <!-- Spectrum: degenerative → sustainable → regenerative -->
+  <section class="py-20">
+    <div class="max-w-content mx-auto px-10">
+      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden">
+        {[
+          {
+            step: 'Step 1',
+            title: 'Degenerative',
+            desc: 'Systems that extract more than they contribute. Depletion of resources, erosion of communities, loss of biodiversity.',
+          },
+          {
+            step: 'Step 2',
+            title: 'Sustainable',
+            desc: 'Doing less harm. Sustainability is important, but not sufficient. We cannot "sustain" our way to recovery.',
+          },
+          {
+            step: 'Step 3',
+            title: 'Regenerative',
+            desc: 'Systems that give back more than they take. Active restoration of ecological, social and economic systems.',
+            active: true,
+          },
+        ].map(s => (
+          <div class={`p-8 ${s.active ? 'bg-creme' : 'bg-white'}`}>
+            <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">{s.step}</div>
+            <div class="text-[20px] font-bold text-green mb-2.5">{s.title}</div>
+            <p class="text-[14px] text-mid leading-[1.7]">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 Principles -->
+  <section class="py-20 bg-creme">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">8 principles</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mb-10">The principles of regenerative design.</h2>
+      <div class="grid grid-cols-4 gap-4">
+        {[
+          { num: '01', title: 'Holistic thinking',       desc: 'Understanding systems as a whole, not as a sum of parts.' },
+          { num: '02', title: 'Resource cycles',          desc: 'Materials and energy remain in use — no waste, only nutrients.' },
+          { num: '03', title: 'Cyclical processes',       desc: 'Designs that renew and restore, in rhythm with nature.' },
+          { num: '04', title: 'Resilience',               desc: 'Systems that absorb setbacks and come back stronger.' },
+          { num: '05', title: 'Inclusive',                desc: 'All people and living beings count in the design.' },
+          { num: '06', title: 'Intergenerational',        desc: 'Decisions that also work for future generations.' },
+          { num: '07', title: 'Social regeneration',      desc: 'Restoring and strengthening communities and relationships.' },
+          { num: '08', title: 'Commons & cooperation',    desc: 'Managing shared resources based on trust and collaboration.' },
+        ].map(p => (
+          <div class="bg-white border border-[rgba(72,115,91,0.12)] rounded-lg overflow-hidden">
+            <div class="p-5">
+              <div class="text-[28px] font-extrabold text-magenta leading-none mb-2">{p.num}</div>
+              <div class="text-[14px] font-bold text-green mb-1.5">{p.title}</div>
+              <p class="text-[12px] text-mid leading-[1.6]">{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer locale={locale} />
+</Base>
