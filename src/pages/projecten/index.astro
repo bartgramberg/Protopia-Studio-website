@@ -1,0 +1,92 @@
+---
+import Base from '../../layouts/Base.astro'
+import Nav from '../../components/Nav.astro'
+import Footer from '../../components/Footer.astro'
+import ProjectCard from '../../components/ProjectCard.astro'
+import { getCollection } from 'astro:content'
+import { t } from '../../i18n/translations'
+
+const locale = 'nl'
+const tr = t(locale)
+
+const projects = await getCollection('projects', ({ id }) => id.startsWith('nl/'))
+projects.sort((a, b) => a.data.order - b.data.order)
+---
+<Base title="Projecten" description={tr.projects.eyebrow} locale={locale} altHref="/en/projects">
+  <Nav locale={locale} altHref="/en/projects" activePage="projecten" />
+
+  <div class="bg-creme pt-[88px] pb-16">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Wat we doen</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">
+        {tr.projects.eyebrow}
+      </h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">Ondernemers, bedrijven en overheden met een missie.</p>
+    </div>
+  </div>
+
+  <section class="py-20">
+    <div class="max-w-content mx-auto px-10">
+      <!-- Filters -->
+      <div id="filters" class="flex gap-2 flex-wrap mb-10">
+        {[
+          { key: 'all',          label: tr.projects.filterAll },
+          { key: 'environments', label: tr.projects.filterEnvironments },
+          { key: 'businesses',   label: tr.projects.filterBusinesses },
+          { key: 'products',     label: tr.projects.filterProducts },
+        ].map(f => (
+          <button
+            data-filter={f.key}
+            class="filter-btn cursor-pointer border border-border bg-white text-mid font-medium text-[13px] px-[22px] py-[9px] rounded-pill transition-all hover:bg-creme hover:text-green data-[active]:bg-green data-[active]:text-white data-[active]:border-green"
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+
+      <!-- Grid -->
+      <div id="projects-grid" class="grid grid-cols-3 gap-5">
+        {projects.map(p => (
+          <div data-cat={p.data.category} class="project-item">
+            <ProjectCard
+              title={p.data.title}
+              description={p.data.description}
+              category={p.data.category}
+              image={p.data.image}
+              imageAlt={p.data.imageAlt}
+              href={`/projecten/${p.id.replace('nl/', '')}`}
+              locale={locale}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer locale={locale} />
+</Base>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn')
+  const items   = document.querySelectorAll<HTMLElement>('.project-item')
+
+  function setFilter(filter: string) {
+    buttons.forEach(btn => {
+      if (btn.dataset.filter === filter) {
+        btn.dataset.active = 'true'
+      } else {
+        delete btn.dataset.active
+      }
+    })
+    items.forEach(item => {
+      const cat = item.dataset.cat
+      item.style.display = filter === 'all' || cat === filter ? '' : 'none'
+    })
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => setFilter(btn.dataset.filter ?? 'all'))
+  })
+
+  setFilter('all')
+</script>
