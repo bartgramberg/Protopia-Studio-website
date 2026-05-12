@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+import { t } from '../i18n/translations'
+const locale = 'nl'
+const tr = t(locale)
+---
+<Base title="Contact" description={tr.contact.lead} locale={locale} altHref="/en/contact">
+  <Nav locale={locale} altHref="/en/contact" activePage="contact" />
+
+  <div class="bg-creme pt-[88px] pb-16">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.contact.eyebrow}</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">{tr.contact.title}</h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{tr.contact.lead}</p>
+    </div>
+  </div>
+
+  <section class="py-20">
+    <div class="max-w-[600px] mx-auto px-10">
+      <p class="text-[15px] text-mid leading-[1.8] mb-6">
+        Stuur ons een e-mail op <a href="mailto:hello@protopiastudio.nl" class="text-green font-semibold hover:text-magenta transition-colors">hello@protopiastudio.nl</a> of vul het formulier in.
+      </p>
+      <form class="flex flex-col gap-4" data-netlify="true" name="contact">
+        <input type="hidden" name="form-name" value="contact" />
+        <div class="flex flex-col gap-1.5">
+          <label class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">Naam</label>
+          <input name="name" type="text" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green" />
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">E-mail</label>
+          <input name="email" type="email" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green" />
+        </div>
+        <div class="flex flex-col gap-1.5">
+          <label class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">Bericht</label>
+          <textarea name="message" rows="5" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green resize-none"></textarea>
+        </div>
+        <button type="submit" class="self-start inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-green text-white hover:bg-green-dark transition-colors">
+          Verstuur
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <Footer locale={locale} />
+</Base>

@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+import { t } from '../i18n/translations'
+const locale = 'nl'
+const tr = t(locale)
+
+const team = [
+  { name: 'Joris de Leeuw',    role: 'Regeneratieve visionair, architect, system thinker en verbinder.', quote: '"Joris is het hart van ons gedachtegoed."', img: '' },
+  { name: 'Maarten Langbroek', role: 'Ondernemer, business developer, lean startup expert en natuurfanaat.', quote: '"Niemand maakt iets sneller écht dan Maarten."', img: '' },
+  { name: 'Bart Gramberg',     role: 'Strateeg, ontwerper, ecosysteem-bouwer en AI-enthousiast.', quote: '"Bart neemt je mee — into uncharted territory."', img: '' },
+]
+const advisors = [
+  { name: 'Kim van der Leeuw', role: 'Serial impact entrepreneur, business designer, programmamanager & brok energie.', quote: '"Onze duurzaamheids-dinosaurus."', img: '' },
+  { name: 'Zoë Red',           role: 'Communicatiestrateeg, klimaat-guru, impact investor & netwerkbouwer.', quote: '"Van meta-denken tot morgen doen."', img: '' },
+]
+---
+<Base title="Wie we zijn" description="Wij zijn Protopians." locale={locale} altHref="/en/who">
+  <Nav locale={locale} altHref="/en/who" activePage="wie" />
+
+  <div class="bg-creme pt-[88px] pb-16">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.wie.eyebrow}</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">
+        Wij zijn <em class="not-italic text-magenta">Protopians</em>.
+      </h1>
+    </div>
+  </div>
+
+  <!-- Mission -->
+  <section class="py-20">
+    <div class="max-w-content mx-auto px-10">
+      <div class="grid grid-cols-[1fr_2fr] gap-16">
+        <div>
+          <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Missie</span>
+          <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">{tr.wie.missionTitle}</h2>
+        </div>
+        <div class="flex flex-col gap-4 text-[15px] text-mid leading-[1.8]">
+          <p>Wij geloven dat de grote uitdagingen van onze tijd vragen om een regeneratieve systeemverandering, met oplossingen die de kracht van het leven versterken en onze relatie tot natuur en elkaar herstellen in duurzame balans.</p>
+          <p>Wij staan voor hoopvolle verandering: geen utopie met abstracte idealen, maar concrete, haalbare stappen in de transitie naar een betere wereld.</p>
+          <p>Wij zijn Protopians.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="py-20 bg-creme">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.wie.teamEyebrow}</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mt-2 mb-10">{tr.wie.teamTitle}</h2>
+      <div class="grid grid-cols-3 gap-6">
+        {team.map(m => (
+          <div class="bg-white border border-border rounded-lg overflow-hidden">
+            <div class="w-full aspect-square bg-creme flex items-center justify-center">
+              {m.img ? <img src={m.img} alt={m.name} class="w-full h-full object-cover" /> : <span class="text-[10px] text-border uppercase tracking-[0.1em]">Foto</span>}
+            </div>
+            <div class="p-5">
+              <div class="text-[15px] font-bold text-green mb-1">{m.name}</div>
+              <div class="text-[13px] text-mid leading-[1.6] mb-3">{m.role}</div>
+              <div class="text-[12px] text-light italic">{m.quote}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Advisors -->
+  <section class="py-20">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.wie.advisorEyebrow}</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mt-2 mb-10">{tr.wie.advisorTitle}</h2>
+      <div class="grid grid-cols-2 gap-6 max-w-[740px]">
+        {advisors.map(m => (
+          <div class="bg-white border border-border rounded-lg overflow-hidden">
+            <div class="w-full aspect-square bg-creme flex items-center justify-center">
+              {m.img ? <img src={m.img} alt={m.name} class="w-full h-full object-cover" /> : <span class="text-[10px] text-border uppercase tracking-[0.1em]">Foto</span>}
+            </div>
+            <div class="p-5">
+              <div class="text-[15px] font-bold text-green mb-1">{m.name}</div>
+              <div class="text-[13px] text-mid leading-[1.6] mb-3">{m.role}</div>
+              <div class="text-[12px] text-light italic">{m.quote}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer locale={locale} />
+</Base>

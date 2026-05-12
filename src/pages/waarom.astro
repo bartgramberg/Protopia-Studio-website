@@ -1,0 +1,81 @@
+---
+import Base from '../layouts/Base.astro'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+import { t } from '../i18n/translations'
+const locale = 'nl'
+const tr = t(locale)
+---
+<Base title="Waarom regeneratie" description={tr.waarom.lead} locale={locale} altHref="/en/why">
+  <Nav locale={locale} altHref="/en/why" activePage="waarom" />
+
+  <div class="bg-creme pt-[88px] pb-16">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.waarom.eyebrow}</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">{tr.waarom.title}</h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{tr.waarom.lead}</p>
+    </div>
+  </div>
+
+  <!-- Spectrum: degeneratief → duurzaam → regeneratief -->
+  <section class="py-20">
+    <div class="max-w-content mx-auto px-10">
+      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden">
+        {[
+          {
+            step: 'Stap 1',
+            title: 'Degeneratief',
+            desc: 'Systemen die meer onttrekken dan ze bijdragen. Uitputting van grondstoffen, erosie van gemeenschappen, verlies van biodiversiteit.',
+          },
+          {
+            step: 'Stap 2',
+            title: 'Duurzaam',
+            desc: 'Minder schade doen. Duurzaamheid is belangrijk, maar niet voldoende. We kunnen niet onze weg naar herstel "sustainen".',
+          },
+          {
+            step: 'Stap 3',
+            title: 'Regeneratief',
+            desc: 'Systemen die meer teruggeven dan ze nemen. Actief herstel van ecologische, sociale en economische systemen.',
+            active: true,
+          },
+        ].map(s => (
+          <div class={`p-8 ${s.active ? 'bg-creme' : 'bg-white'}`}>
+            <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">{s.step}</div>
+            <div class="text-[20px] font-bold text-green mb-2.5">{s.title}</div>
+            <p class="text-[14px] text-mid leading-[1.7]">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 Principles -->
+  <section class="py-20 bg-creme">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">8 principes</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mb-10">De principes van regeneratief ontwerp.</h2>
+      <div class="grid grid-cols-4 gap-4">
+        {[
+          { num: '01', title: 'Holistisch denken',     desc: 'Systemen begrijpen in hun geheel, niet als optelsom van onderdelen.' },
+          { num: '02', title: 'Grondstoffenkringlopen', desc: 'Materialen en energie blijven in gebruik — geen afval, alleen voedingsstoffen.' },
+          { num: '03', title: 'Cyclische processen',    desc: 'Ontwerpen die vernieuwen en herstellen, in ritme met de natuur.' },
+          { num: '04', title: 'Veerkracht',             desc: 'Systemen die tegenslagen absorberen en sterker terugkomen.' },
+          { num: '05', title: 'Inclusief',              desc: 'Alle mensen en levende wezens tellen mee in het ontwerp.' },
+          { num: '06', title: 'Intergenerationeel',     desc: 'Beslissingen die ook voor toekomstige generaties werken.' },
+          { num: '07', title: 'Sociale regeneratie',    desc: 'Gemeenschappen en relaties herstellen en versterken.' },
+          { num: '08', title: 'Commons & coöperatie',   desc: 'Gedeelde bronnen beheren op basis van vertrouwen en samenwerking.' },
+        ].map(p => (
+          <div class="bg-white border border-[rgba(72,115,91,0.12)] rounded-lg overflow-hidden">
+            <div class="p-5">
+              <div class="text-[28px] font-extrabold text-magenta leading-none mb-2">{p.num}</div>
+              <div class="text-[14px] font-bold text-green mb-1.5">{p.title}</div>
+              <p class="text-[12px] text-mid leading-[1.6]">{p.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Footer locale={locale} />
+</Base>

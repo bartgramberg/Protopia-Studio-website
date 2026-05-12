@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+import { t } from '../i18n/translations'
+const locale = 'nl'
+const tr = t(locale)
+---
+<Base title="Hoe we werken" description={tr.hoe.lead} locale={locale} altHref="/en/how">
+  <Nav locale={locale} altHref="/en/how" activePage="hoe" />
+
+  <div class="bg-creme pt-[88px] pb-16">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.hoe.eyebrow}</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">{tr.hoe.title}</h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{tr.hoe.lead}</p>
+    </div>
+  </div>
+
+  <section class="py-20">
+    <div class="max-w-content mx-auto px-10">
+      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden">
+        {[
+          {
+            num: '1',
+            title: 'Onderzoek & Strategie',
+            desc: 'Complexe vraagstukken herleid tot concrete strategieën. We analyseren context, stakeholders en systemen — en vertalen dat naar een heldere richting.',
+            examples: ['Onderzoek naar best practices', 'Stakeholderanalyse', 'Strategische roadmap'],
+          },
+          {
+            num: '2',
+            title: 'Concept & Ontwerp',
+            desc: 'Innovatieve concepten, businessmodellen en plekken — direct gebouwd en getest. Wij ontwerpen niet in een la, maar in de praktijk.',
+            examples: ['Service design', 'Ruimtelijk ontwerp', 'Business model canvas'],
+          },
+          {
+            num: '3',
+            title: 'Co-creatie & Realisatie',
+            desc: 'Teams, labs en partnerschappen bouwen die tastbare resultaten leveren. Van post-it, via pilot naar product.',
+            examples: ['Design sprints', 'Pilot programmas', 'Community building'],
+          },
+        ].map(s => (
+          <div class="bg-white p-9">
+            <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">{s.num}</div>
+            <div class="text-[15px] font-bold text-green mb-2">{s.title}</div>
+            <p class="text-[13px] text-mid leading-[1.65] mb-4">{s.desc}</p>
+            <ul class="flex flex-col gap-1">
+              {s.examples.map(e => (
+                <li class="text-[12px] text-light before:content-['>'] before:mr-1.5">{e}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-content mx-auto px-10 pb-20">
+    <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">
+      Samenwerken?
+    </a>
+  </div>
+
+  <Footer locale={locale} />
+</Base>
