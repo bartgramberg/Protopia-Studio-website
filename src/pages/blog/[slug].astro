@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro'
+import Nav from '../../components/Nav.astro'
+import Footer from '../../components/Footer.astro'
+import { getCollection, render } from 'astro:content'
+import { t } from '../../i18n/translations'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ id }) => id.startsWith('nl/'))
+  return posts.map(p => ({
+    params: { slug: p.id.replace('nl/', '') },
+    props:  { post: p },
+  }))
+}
+
+const { post } = Astro.props
+const { Content } = await render(post)
+const locale = 'nl'
+const tr = t(locale)
+const slug = post.id.replace('nl/', '')
+const dateStr = post.data.date.toLocaleDateString('nl-NL', {
+  day: 'numeric', month: 'long', year: 'numeric'
+})
+---
+<Base title={post.data.title} description={post.data.title} locale={locale} altHref={`/en/blog/${slug}`}>
+  <Nav locale={locale} altHref={`/en/blog/${slug}`} activePage="blog" />
+
+  <div class="bg-creme pt-[88px] pb-16">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[10px] font-semibold uppercase tracking-[0.12em] text-magenta mb-4 inline-block">{post.data.category}</span>
+      <h1 class="text-[clamp(32px,4vw,52px)] font-bold leading-[1.12] tracking-[-0.025em] text-green text-balance mb-5">
+        {post.data.title}
+      </h1>
+      <p class="text-[13px] text-light">{post.data.author} · {dateStr} · {post.data.readingTime} min</p>
+    </div>
+  </div>
+
+  {post.data.image && (
+    <div class="max-w-content mx-auto px-10 my-10">
+      <img src={post.data.image} alt={post.data.title} class="w-full aspect-[16/7] object-cover rounded-lg" />
+    </div>
+  )}
+
+  <article class="py-12">
+    <div class="max-w-[720px] mx-auto px-10">
+      <div class="prose prose-lg text-mid">
+        <Content />
+      </div>
+    </div>
+  </article>
+
+  <div class="max-w-content mx-auto px-10 pb-16">
+    <a href="/blog" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-mid before:content-['<'] hover:text-green transition-colors">
+      {tr.blog.eyebrow}
+    </a>
+  </div>
+
+  <Footer locale={locale} />
+</Base>
