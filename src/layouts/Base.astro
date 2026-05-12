@@ -23,7 +23,7 @@ const canonical = canonicalBase + Astro.url.pathname
   <link rel="canonical" href={canonical} />
   <link rel="alternate" hreflang={locale === 'nl' ? 'en' : 'nl'} href={canonicalBase + altHref} />
   <link rel="icon" type="image/png" href="/assets/logo/PS-logo-main-green-small.png" />
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="font-sans bg-white text-dark antialiased">
   <slot />
