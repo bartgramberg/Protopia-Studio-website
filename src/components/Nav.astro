@@ -10,6 +10,21 @@ interface Props {
 const { locale, altHref, activePage } = Astro.props
 const tr = t(locale)
 const base = locale === 'nl' ? '' : '/en'
+const links = locale === 'nl'
+  ? [
+      { href: '/waarom',    label: tr.nav.waarom,    key: 'waarom'    },
+      { href: '/hoe',       label: tr.nav.hoe,       key: 'hoe'       },
+      { href: '/projecten', label: tr.nav.projecten, key: 'projecten' },
+      { href: '/wie',       label: tr.nav.wie,       key: 'wie'       },
+      { href: '/blog',      label: tr.nav.blog,      key: 'blog'      },
+    ]
+  : [
+      { href: '/en/why',      label: tr.nav.waarom,    key: 'waarom'    },
+      { href: '/en/how',      label: tr.nav.hoe,       key: 'hoe'       },
+      { href: '/en/projects', label: tr.nav.projecten, key: 'projecten' },
+      { href: '/en/who',      label: tr.nav.wie,       key: 'wie'       },
+      { href: '/en/blog',     label: tr.nav.blog,      key: 'blog'      },
+    ]
 ---
 <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 border-b border-border backdrop-blur-sm">
   <div class="max-w-content mx-auto px-10 h-16 flex items-center justify-between">
@@ -21,13 +36,7 @@ const base = locale === 'nl' ? '' : '/en'
 
     <!-- Links -->
     <ul class="hidden md:flex gap-7 list-none m-0 p-0">
-      {[
-        { href: `${base}/waarom`,    label: tr.nav.waarom,    key: 'waarom'    },
-        { href: `${base}/hoe`,       label: tr.nav.hoe,       key: 'hoe'       },
-        { href: `${base}/projecten`, label: tr.nav.projecten, key: 'projecten' },
-        { href: `${base}/wie`,       label: tr.nav.wie,       key: 'wie'       },
-        { href: `${base}/blog`,      label: tr.nav.blog,      key: 'blog'      },
-      ].map(link => (
+      {links.map(link => (
         <li>
           <a
             href={link.href}
