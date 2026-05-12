@@ -25,16 +25,16 @@ const tr = t(locale)
       <form class="flex flex-col gap-4" data-netlify="true" name="contact">
         <input type="hidden" name="form-name" value="contact" />
         <div class="flex flex-col gap-1.5">
-          <label class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">Naam</label>
-          <input name="name" type="text" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green" />
+          <label for="name" class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">Naam</label>
+          <input id="name" name="name" type="text" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green" />
         </div>
         <div class="flex flex-col gap-1.5">
-          <label class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">E-mail</label>
-          <input name="email" type="email" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green" />
+          <label for="email" class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">E-mail</label>
+          <input id="email" name="email" type="email" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green" />
         </div>
         <div class="flex flex-col gap-1.5">
-          <label class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">Bericht</label>
-          <textarea name="message" rows="5" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green resize-none"></textarea>
+          <label for="message" class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">Bericht</label>
+          <textarea id="message" name="message" rows="5" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green resize-none"></textarea>
         </div>
         <button type="submit" class="self-start inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-green text-white hover:bg-green-dark transition-colors">
           Verstuur
