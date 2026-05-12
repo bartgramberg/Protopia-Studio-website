@@ -1,0 +1,67 @@
+backend:
+  name: github
+  repo: bartgramberg/Protopia-Studio-website
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+i18n:
+  structure: multiple_folders
+  locales: [nl, en]
+  default_locale: nl
+
+collections:
+  - name: projects
+    label: Projects
+    folder: src/content/projects
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - { label: Title,                   name: title,       widget: string,   i18n: true }
+      - { label: Description,             name: description, widget: text,     i18n: true }
+      - { label: Challenge,               name: challenge,   widget: text,     i18n: true }
+      - { label: Our role,                name: role,        widget: text,     i18n: true }
+      - { label: Result,                  name: result,      widget: markdown, i18n: true }
+      - { label: "Body (full detail page)", name: body,      widget: markdown, i18n: true }
+      - { label: Image alt text,          name: imageAlt,    widget: string,   i18n: true }
+      - { label: Project type,            name: typeProject, widget: string,   i18n: true }
+      - label: Category
+        name: category
+        widget: select
+        i18n: true
+        options:
+          - { label: "Regenerative environments", value: "environments" }
+          - { label: "Regenerative businesses",   value: "businesses" }
+          - { label: "Regenerative products",     value: "products" }
+      - label: Services
+        name: services
+        widget: list
+        i18n: true
+        field:
+          widget: select
+          options:
+            - { label: "Research & Strategy",       value: "research" }
+            - { label: "Concept & Design",          value: "design" }
+            - { label: "Co-creation & Realisation", value: "realisation" }
+      - { label: Year,                    name: year,        widget: string,  i18n: duplicate }
+      - { label: Image,                   name: image,       widget: image,   i18n: duplicate }
+      - { label: "Featured on homepage",  name: featured,    widget: boolean, i18n: duplicate, default: false }
+      - { label: "Display order",         name: order,       widget: number,  i18n: duplicate }
+      - { label: "External link",         name: link,        widget: string,  i18n: duplicate, required: false }
+
+  - name: blog
+    label: Blog
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - { label: Title,              name: title,       widget: string,   i18n: true }
+      - { label: Category,           name: category,    widget: string,   i18n: true }
+      - { label: Body,               name: body,        widget: markdown, i18n: true }
+      - { label: Author,             name: author,      widget: string,   i18n: duplicate }
+      - { label: Date,               name: date,        widget: datetime, i18n: duplicate }
+      - { label: Image,              name: image,       widget: image,    i18n: duplicate, required: false }
+      - { label: "Reading time (min)", name: readingTime, widget: number, i18n: duplicate }
