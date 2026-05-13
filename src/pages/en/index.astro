@@ -20,70 +20,163 @@ const allPosts = await getCollection('blog', ({ id }) => id.startsWith('en/'))
 const recentPosts = allPosts
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 2)
+
+const logos = [
+  { src: '/assets/logos/rabobank.webp',          alt: 'Rabobank' },
+  { src: '/assets/logos/abn-amro.png',           alt: 'ABN AMRO' },
+  { src: '/assets/logos/amsterdam.png',           alt: 'City of Amsterdam' },
+  { src: '/assets/logos/eu-commissie.png',        alt: 'European Commission' },
+  { src: '/assets/logos/fmo.png',                alt: 'FMO' },
+  { src: '/assets/logos/hva.png',                alt: 'Amsterdam University of Applied Sciences' },
+  { src: '/assets/logos/klasmann.png',           alt: 'Klasmann-Deilmann' },
+  { src: '/assets/logos/pro-climate.png',        alt: 'Pro-Climate' },
+  { src: '/assets/logos/flevoland.png',          alt: 'Province of Flevoland' },
+  { src: '/assets/logos/van-lanschot-kempen.png', alt: 'Van Lanschot Kempen' },
+  { src: '/assets/logos/wakawaka.png',           alt: 'WakaWaka' },
+  { src: '/assets/logos/amec.png',               alt: 'Amec' },
+]
 ---
-<Base title="Protopia Studio" description={tr.home.heroSub} locale={locale} altHref="/">
+<Base title="Protopia Studio" description="We design and develop cities, projects and products for a resilient world." locale={locale} altHref="/">
   <Nav locale={locale} altHref="/" activePage="home" />
 
   <!-- Hero -->
-  <section class="bg-creme pt-24 pb-20">
+  <div class="bg-creme pt-24 pb-20">
     <div class="max-w-content mx-auto px-10">
       <div class="grid grid-cols-2 gap-[72px] items-center">
         <div>
-          <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">
-            {tr.home.heroTagline}
-          </p>
-          <h1 class="text-[clamp(40px,5vw,72px)] font-bold leading-[1.05] tracking-[-0.03em] text-green text-balance">
-            {tr.home.heroTitle} <em class="not-italic text-magenta">{tr.home.heroAccent}</em>
+          <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Regenerative Design Studio</span>
+          <h1 class="text-[clamp(40px,5vw,68px)] font-bold leading-[1.08] tracking-[-0.025em] text-green text-balance">
+            Protopia is a <em class="not-italic text-magenta">regenerative studio</em>.
           </h1>
-          <p class="mt-6 text-[17px] text-mid leading-[1.75] max-w-[540px]">{tr.home.heroSub}</p>
+          <p class="text-[22px] font-medium leading-[1.45] text-mid text-balance mt-6 max-w-[540px]">We design and develop cities, projects and products for a resilient world.</p>
+          <p class="text-[14px] font-semibold text-green mt-4 tracking-[0.01em]">Social, ecological and economic in balance.</p>
           <div class="flex gap-3.5 mt-8 flex-wrap items-center">
-            <a href="/en/projects" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-green text-white hover:bg-green-dark transition-colors border border-green">
-              {tr.home.heroCta}
+            <a href="/en/why" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-green text-white hover:bg-green-dark transition-colors border border-green">
+              Regeneration, what is that?
             </a>
             <a href="/en/contact" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-green border border-green hover:bg-green hover:text-white transition-colors">
-              {tr.home.heroCtaAlt}
+              Schedule a conversation
             </a>
           </div>
         </div>
         <div class="aspect-square flex items-center justify-center">
-          <img src="/assets/logo/PS-logo-main-green.png" alt="Protopia Studio" class="w-full h-full object-contain" />
+          <img src="/assets/hero-collage.png" alt="Regenerative city — collage of nature and city in balance" class="w-full h-full object-contain" />
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Services strip -->
-  <section class="py-20">
+  <!-- Protopia delivers -->
+  <div class="bg-creme py-20">
     <div class="max-w-content mx-auto px-10">
-      <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">
-        How we work
-      </p>
-      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mb-10">
-        {tr.home.servicesTitle}
-      </h2>
-      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden">
-        {[
-          { num: tr.home.service1Num, title: tr.home.service1Title, desc: tr.home.service1Desc },
-          { num: tr.home.service2Num, title: tr.home.service2Title, desc: tr.home.service2Desc },
-          { num: tr.home.service3Num, title: tr.home.service3Title, desc: tr.home.service3Desc },
-        ].map(s => (
-          <div class="bg-white p-9">
-            <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">{s.num}</div>
-            <div class="text-[15px] font-bold text-green mb-2">{s.title}</div>
-            <p class="text-[13px] text-mid leading-[1.65]">{s.desc}</p>
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Protopia delivers.</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Three ways in which we contribute.</h2>
+      <p class="text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4 mb-12">From carbon credit models to regenerative cities — we design and build.</p>
+      <div class="grid grid-cols-3 gap-6">
+        <a href="/en/projects" class="block bg-white border border-border rounded-lg overflow-hidden hover:shadow-[0_6px_24px_rgba(72,115,91,0.13)] transition-shadow">
+          <div class="h-[180px] bg-creme overflow-hidden">
+            <img src="/assets/levert-steden.png" alt="Regenerative map of Amsterdam on iPad" class="w-full h-full object-cover" />
           </div>
-        ))}
+          <div class="p-[22px]">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Products</div>
+            <div class="text-[15px] font-bold text-green mb-2">Regenerative products</div>
+            <p class="text-[13px] text-mid leading-[1.6] mb-3">Protopia designs and builds products and services, specialising in creating new, unique value propositions that deliver economic and regenerative impact.</p>
+            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">View regenerative products</span>
+          </div>
+        </a>
+        <a href="/en/projects" class="block bg-white border border-border rounded-lg overflow-hidden hover:shadow-[0_6px_24px_rgba(72,115,91,0.13)] transition-shadow">
+          <div class="h-[180px] bg-creme overflow-hidden">
+            <img src="/assets/levert-business.jpg" alt="Team working on business model canvas" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-[22px]">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Businesses</div>
+            <div class="text-[15px] font-bold text-green mb-2">Regenerative businesses</div>
+            <p class="text-[13px] text-mid leading-[1.6] mb-3">From carbon credit models to impact ecosystems or regenerative forestry. We develop new business models and build teams, partnerships and ventures with a regenerative mindset.</p>
+            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">View regenerative businesses</span>
+          </div>
+        </a>
+        <a href="/en/projects" class="block bg-white border border-border rounded-lg overflow-hidden hover:shadow-[0_6px_24px_rgba(72,115,91,0.13)] transition-shadow">
+          <div class="h-[180px] bg-creme overflow-hidden">
+            <img src="/assets/levert-omgevingen.jpeg" alt="Sketches of regenerative urban environments" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-[22px]">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Environments</div>
+            <div class="text-[15px] font-bold text-green mb-2">Regenerative environments</div>
+            <p class="text-[13px] text-mid leading-[1.6] mb-3">The city as a source for renewing and improving the ecosystem? It's possible. Protopia redesigns urban spaces and supports local and national initiatives for a positive living environment.</p>
+            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">View regenerative environments</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Client logos marquee -->
+      <div class="mt-12">
+        <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-light pb-2 border-b-2 border-border inline-block mb-6">We work for entrepreneurs, businesses and governments with a mission</p>
+        <div
+          class="relative overflow-hidden py-8"
+          style="mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);"
+          aria-label="Our clients"
+        >
+          <div class="clients-track flex items-center gap-20 w-max">
+            {logos.map(l => (
+              <img src={l.src} alt={l.alt} class="h-14 w-auto max-w-[180px] object-contain grayscale opacity-[0.72] hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0" />
+            ))}
+            {logos.map(l => (
+              <img src={l.src} alt="" aria-hidden="true" class="h-14 w-auto max-w-[180px] object-contain grayscale opacity-[0.72] flex-shrink-0" />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Protopia regenerates -->
+  <div class="py-20">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Protopia regenerates.</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Our strength lies in combining research, design and entrepreneurship.</h2>
+      <p class="text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4">From post-it, via pilot to product. From report to result. From idea to impact.</p>
+      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden mt-12">
+        <div class="bg-white p-9">
+          <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">#1</div>
+          <div class="text-[15px] font-bold text-green mb-2">Research & Strategy</div>
+          <p class="text-[13px] text-mid leading-[1.65] mb-4">Complex questions brought to their core and translated into ideas & concrete strategies.</p>
+          <a href="/en/how" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">What does that mean?</a>
+        </div>
+        <div class="bg-white p-9">
+          <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">#2</div>
+          <div class="text-[15px] font-bold text-green mb-2">Concept & Design</div>
+          <p class="text-[13px] text-mid leading-[1.65] mb-4">Innovative concepts, business models and places. Built and tested immediately.</p>
+          <a href="/en/how" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">What do I get?</a>
+        </div>
+        <div class="bg-white p-9">
+          <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">#3</div>
+          <div class="text-[15px] font-bold text-green mb-2">Co-creation & Realisation</div>
+          <p class="text-[13px] text-mid leading-[1.65] mb-4">We build teams, labs and partnerships that deliver tangible results together.</p>
+          <a href="/en/how" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">What do you do then?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quote -->
+  <div class="bg-creme py-[72px]">
+    <div class="max-w-content mx-auto px-10 text-center">
+      <blockquote class="text-[clamp(20px,2.5vw,28px)] italic font-light text-mid leading-[1.6] max-w-[760px] mx-auto text-balance">
+        "Protopia is a state of becoming, rather than a destination. It is a process. In the protopian mode, things are better today than they were yesterday, although only a little better."
+      </blockquote>
+      <p class="text-[13px] text-light font-medium mt-5 tracking-[0.02em]">— Kevin Kelly, futurist and founder of Wired magazine</p>
+      <div class="mt-6">
+        <a href="/en/who" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green justify-center before:content-['>'] hover:text-magenta transition-colors">We believe in this. Read our mission</a>
+      </div>
+    </div>
+  </div>
 
   <!-- Featured projects -->
-  <section class="py-20 bg-creme">
+  <div class="py-20">
     <div class="max-w-content mx-auto px-10">
-      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">
-        {tr.projects.eyebrow}
-      </span>
-      <div class="grid grid-cols-3 gap-5 mt-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-2">Projects we are proud of.</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mt-2 mb-10">Work that matters.</h2>
+      <div class="grid grid-cols-3 gap-5">
         {featured.map(p => (
           <ProjectCard
             title={p.data.title}
@@ -97,32 +190,16 @@ const recentPosts = allPosts
         ))}
       </div>
       <div class="mt-8">
-        <a href="/en/projects" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">
-          {tr.projects.viewAll}
-        </a>
+        <a href="/en/projects" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">View all projects</a>
       </div>
     </div>
-  </section>
-
-  <!-- Quote -->
-  <section class="py-[88px] text-center">
-    <div class="max-w-content mx-auto px-10">
-      <blockquote class="text-[clamp(20px,2.5vw,28px)] italic font-light text-mid leading-[1.6] max-w-[760px] mx-auto text-balance">
-        {tr.home.quoteText}
-      </blockquote>
-      <p class="text-[13px] text-light font-medium mt-5 tracking-[0.02em]">{tr.home.quoteAttr}</p>
-    </div>
-  </section>
+  </div>
 
   <!-- Blog preview -->
-  <section class="py-20 bg-creme">
+  <div class="bg-creme py-20">
     <div class="max-w-content mx-auto px-10">
-      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">
-        {tr.blog.eyebrow}
-      </span>
-      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mt-2 mb-10">
-        {tr.blog.latestTitle}
-      </h2>
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-2">This inspires us.</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mt-2 mb-10">Latest posts.</h2>
       <div class="grid grid-cols-2 gap-6">
         {recentPosts.map(p => (
           <BlogCard
@@ -138,28 +215,42 @@ const recentPosts = allPosts
         ))}
       </div>
       <div class="mt-8">
-        <a href="/en/blog" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">
-          {tr.blog.viewAll}
-        </a>
+        <a href="/en/blog" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">View all posts</a>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- CTA banner -->
-  <section class="bg-green py-[72px] text-center">
+  <div class="bg-green py-[72px] text-center">
     <div class="max-w-content mx-auto px-10">
-      <h2 class="text-[clamp(26px,3vw,38px)] font-bold text-white leading-[1.2] mb-2.5 text-balance">{tr.home.ctaTitle}</h2>
-      <p class="text-[16px] text-white/70 mb-7">{tr.home.ctaSub}</p>
+      <h2 class="text-[clamp(26px,3vw,38px)] font-bold text-white leading-[1.2] mb-2.5 text-balance">Follow us for the latest news,<br />projects and blogs.</h2>
+      <p class="text-[16px] text-white/70 mb-7">Building a regenerative world together.</p>
       <div class="flex gap-3.5 justify-center flex-wrap">
-        <a href="/en/contact" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-white text-green hover:bg-creme transition-colors">
-          {tr.home.ctaPrimary}
+        <a href="/en/contact" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">
+          Get in touch
         </a>
-        <a href="/en/blog" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">
-          {tr.home.ctaSecondary}
+        <a href="/en/blog" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white" style="background:rgba(255,255,255,0.12)">
+          View the journal
         </a>
       </div>
     </div>
-  </section>
+  </div>
 
   <Footer locale={locale} />
 </Base>
+
+<style>
+@keyframes clients-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.clients-track {
+  animation: clients-marquee 60s linear infinite;
+}
+.clients-track:hover {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .clients-track { animation: none; }
+}
+</style>

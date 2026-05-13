@@ -10,9 +10,9 @@ category: "environments"
 services:
   - research
 year: "2025"
-image: "/uploads/Thumbnail_AmsRegen.png"
+image: "/assets/werk/werk-amsregen.png"
 featured: true
-order: 1
+order: 2
 ---
 
 Onderzoek en visieontwikkeling voor de gemeente Amsterdam naar de stad als regeneratief ecosysteem. Het project resulteerde in ontwerpprincipes, modellen en beleidsvoorstellen die de stad helpen om te transfomeren naar een regeneratieve samenleving.

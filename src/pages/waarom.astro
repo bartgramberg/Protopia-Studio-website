@@ -6,76 +6,256 @@ import { t } from '../i18n/translations'
 const locale = 'nl'
 const tr = t(locale)
 ---
-<Base title="Waarom regeneratie" description={tr.waarom.lead} locale={locale} altHref="/en/why">
+<Base title="Waarom Regeneratie" description="De grote uitdagingen van onze tijd vragen om meer dan het beperken van schade. Ze vragen om actief herstel." locale={locale} altHref="/en/why">
   <Nav locale={locale} altHref="/en/why" activePage="waarom" />
 
+  <!-- Hero -->
   <div class="bg-creme pt-[88px] pb-16">
     <div class="max-w-content mx-auto px-10">
-      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.waarom.eyebrow}</span>
-      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">{tr.waarom.title}</h1>
-      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{tr.waarom.lead}</p>
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Waarom Regeneratie</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">Waarom regeneratie?</h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">De grote uitdagingen van onze tijd vragen om meer dan het beperken van schade. Ze vragen om actief herstel — van ecosystemen, van gemeenschappen, van de balans tussen mens en natuur. Niet wachten op de perfecte oplossing, maar nu de beste stap zetten die mogelijk is. Dat is regeneratie.</p>
     </div>
   </div>
 
-  <!-- Spectrum: degeneratief → duurzaam → regeneratief -->
+  <!-- Spectrum -->
   <section class="py-20">
     <div class="max-w-content mx-auto px-10">
-      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden">
-        {[
-          {
-            step: 'Stap 1',
-            title: 'Degeneratief',
-            desc: 'Systemen die meer onttrekken dan ze bijdragen. Uitputting van grondstoffen, erosie van gemeenschappen, verlies van biodiversiteit.',
-          },
-          {
-            step: 'Stap 2',
-            title: 'Duurzaam',
-            desc: 'Minder schade doen. Duurzaamheid is belangrijk, maar niet voldoende. We kunnen niet onze weg naar herstel "sustainen".',
-          },
-          {
-            step: 'Stap 3',
-            title: 'Regeneratief',
-            desc: 'Systemen die meer teruggeven dan ze nemen. Actief herstel van ecologische, sociale en economische systemen.',
-            active: true,
-          },
-        ].map(s => (
-          <div class={`p-8 ${s.active ? 'bg-creme' : 'bg-white'}`}>
-            <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">{s.step}</div>
-            <div class="text-[20px] font-bold text-green mb-2.5">{s.title}</div>
-            <p class="text-[14px] text-mid leading-[1.7]">{s.desc}</p>
-          </div>
-        ))}
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Het spectrum</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Degeneratief. Duurzaam. Regeneratief.</h2>
+      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden mt-10">
+        <div class="bg-white p-8">
+          <img src="/assets/spectrum/degeneratief.png" alt="Degeneratief—vervuilde stad illustratie" class="w-full aspect-[5/4] object-contain mb-4" />
+          <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">Stap 1</div>
+          <div class="text-[20px] font-bold text-green mb-2.5">Degeneratief</div>
+          <p class="text-[14px] text-mid leading-[1.7]">Onze huidige manier van leven heeft een onomkeerbare impact op de wereld. Dit degeneratieve systeem — extractief, lineair, gebaseerd op schaarste en uitputten van natuurlijke bronnen — is niet houdbaar.</p>
+        </div>
+        <div class="bg-white p-8">
+          <img src="/assets/spectrum/sustainable.png" alt="Duurzaam—stad in balans illustratie" class="w-full aspect-[5/4] object-contain mb-4" />
+          <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">Stap 2</div>
+          <div class="text-[20px] font-bold text-green mb-2.5">Duurzaam</div>
+          <p class="text-[14px] text-mid leading-[1.7]">Gelukkig zijn we ons hier collectief steeds meer van bewust, en heeft duurzaamheidsdenken een vlucht genomen. Duurzaamheid is een noodzakelijke, maar uiteindelijk onvolmaakte positie. Schade beperken is niet genoeg.</p>
+        </div>
+        <div class="bg-creme p-8">
+          <img src="/assets/spectrum/regeneratief.png" alt="Regeneratief—groene stad illustratie" class="w-full aspect-[5/4] object-contain mb-4" />
+          <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">Stap 3 — de richting</div>
+          <div class="text-[20px] font-bold text-magenta mb-2.5">Regeneratief</div>
+          <p class="text-[14px] text-mid leading-[1.7]">De volgende stap is regeneratie: het actief herstellen van natuurlijke en sociale ecosystemen. Een systemische kijk op de wereld die uitgaat van overvloed, wederkerigheid en veerkracht.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 8 Principles -->
+  <!-- Vier toepassingsgebieden -->
   <section class="py-20 bg-creme">
     <div class="max-w-content mx-auto px-10">
-      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">8 principes</span>
-      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mb-10">De principes van regeneratief ontwerp.</h2>
-      <div class="grid grid-cols-4 gap-4">
-        {[
-          { num: '01', title: 'Holistisch denken',     desc: 'Systemen begrijpen in hun geheel, niet als optelsom van onderdelen.' },
-          { num: '02', title: 'Grondstoffenkringlopen', desc: 'Materialen en energie blijven in gebruik — geen afval, alleen voedingsstoffen.' },
-          { num: '03', title: 'Cyclische processen',    desc: 'Ontwerpen die vernieuwen en herstellen, in ritme met de natuur.' },
-          { num: '04', title: 'Veerkracht',             desc: 'Systemen die tegenslagen absorberen en sterker terugkomen.' },
-          { num: '05', title: 'Inclusief',              desc: 'Alle mensen en levende wezens tellen mee in het ontwerp.' },
-          { num: '06', title: 'Intergenerationeel',     desc: 'Beslissingen die ook voor toekomstige generaties werken.' },
-          { num: '07', title: 'Sociale regeneratie',    desc: 'Gemeenschappen en relaties herstellen en versterken.' },
-          { num: '08', title: 'Commons & coöperatie',   desc: 'Gedeelde bronnen beheren op basis van vertrouwen en samenwerking.' },
-        ].map(p => (
-          <div class="bg-white border border-[rgba(72,115,91,0.12)] rounded-lg overflow-hidden">
-            <div class="p-5">
-              <div class="text-[28px] font-extrabold text-magenta leading-none mb-2">{p.num}</div>
-              <div class="text-[14px] font-bold text-green mb-1.5">{p.title}</div>
-              <p class="text-[12px] text-mid leading-[1.6]">{p.desc}</p>
-            </div>
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Vier toepassingsgebieden</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Geen utopie, maar concrete stappen.</h2>
+      <div class="grid grid-cols-[1.1fr_1fr] gap-14 items-start mt-10">
+        <div class="flex flex-col gap-3.5">
+          <p class="text-[16px] text-mid leading-[1.7]">Regeneratie is geen abstracte belofte. Het is de richting die je kiest met elk project, elke ingreep, elke beslissing — of het nu gaat om een stad, een bedrijf of een product.</p>
+          <p class="text-[16px] text-mid leading-[1.7]">Protopia werkt in het spanningsveld tussen regeneratieve visie en economische realiteit, en maakt dat spanningsveld productief. Niet door te adviseren vanaf de zijlijn, maar door te ontwerpen, te bouwen en te realiseren.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-white border border-[rgba(72,115,91,0.18)] rounded-lg p-5 flex flex-col justify-center min-h-[110px]">
+            <div class="text-[14px] font-bold text-green mb-1">Omgevingen</div>
+            <div class="text-[12.5px] text-mid leading-[1.55]">Levende socio-ecologische systemen die meer teruggeven dan ze nemen.</div>
           </div>
-        ))}
+          <div class="bg-white border border-[rgba(72,115,91,0.18)] rounded-lg p-5 flex flex-col justify-center min-h-[110px]">
+            <div class="text-[14px] font-bold text-green mb-1">Bedrijven</div>
+            <div class="text-[12.5px] text-mid leading-[1.55]">Businessmodellen die ecologische en sociale waarde creëren naast financiële.</div>
+          </div>
+          <div class="bg-white border border-[rgba(72,115,91,0.18)] rounded-lg p-5 flex flex-col justify-center min-h-[110px]">
+            <div class="text-[14px] font-bold text-green mb-1">Producten</div>
+            <div class="text-[12.5px] text-mid leading-[1.55]">Ontwerpen die de levende systemen versterken waarvan ze afhankelijk zijn.</div>
+          </div>
+          <div class="bg-green rounded-lg p-5 flex flex-col justify-center min-h-[110px]">
+            <div class="text-[9.5px] font-semibold uppercase tracking-[0.14em] text-white/70 mb-1.5">Onze rol</div>
+            <div class="text-[15px] font-bold text-white mb-1.5">Van visie naar realisatie.</div>
+            <div class="text-[12.5px] text-white/90 leading-[1.6]">Wij ontwerpen, prototypen en bouwen — in alle drie de domeinen.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- 8 Principes -->
+  <section class="py-20">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">8 regeneratieve principes als kompas</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Acht principes als ontwerphouding en toetsinstrument.</h2>
+      <p class="text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4">Protopia Studio heeft acht regeneratieve ontwerpprincipes ontwikkeld. Ze beschrijven geen eindtoestand, maar een richting — van meer leven, meer overvloed, en meer vermogen van systemen om zichzelf te vernieuwen.</p>
+
+      <!-- Domain tabs -->
+      <div class="mt-8">
+        <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-light mb-2.5">Stap 1 — Kies een domein om te zien hoe een principe werkt</div>
+        <div class="flex gap-2 flex-wrap" id="domain-tabs">
+          <button class="px-domain-tab active" data-domain="cities">Omgevingen</button>
+          <button class="px-domain-tab" data-domain="business">Bedrijven</button>
+          <button class="px-domain-tab" data-domain="products">Producten</button>
+        </div>
+
+        <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-light mt-6 mb-4">Stap 2 — Klik op een principe</div>
+        <div class="grid grid-cols-4 gap-4" id="principles-grid">
+          {[
+            { num: '01', p: 1, title: 'Eén levend systeem',           desc: 'Ontwerp vanuit één geïntegreerd socio-ecologisch geheel.',   img: '/assets/principes/01-holistic.png' },
+            { num: '02', p: 2, title: 'Regeneratief bronnenbeheer',   desc: 'Geef per saldo meer terug dan je neemt.',                    img: '/assets/principes/02-resources.png' },
+            { num: '03', p: 3, title: 'Natuurlijke patronen en ritmes', desc: 'Beweeg mee met cycli, seizoenen en timing.',               img: '/assets/principes/03-cycli.png' },
+            { num: '04', p: 4, title: 'Zelforganisatie en veerkracht', desc: 'Creëer condities — geef ruimte, geen sturing.',             img: '/assets/principes/04-resilience.png' },
+            { num: '05', p: 5, title: 'Inclusief voor al het leven',  desc: 'Heb gelijkwaardig aandacht voor mens én niet-menselijk leven.', img: '/assets/principes/05-inclusief.png' },
+            { num: '06', p: 6, title: 'Intergenerationeel perspectief', desc: 'Ontwerp voor toekomstige generaties.',                    img: '/assets/principes/06-intergenerationeel.png' },
+            { num: '07', p: 7, title: 'Culturele regeneratie',        desc: 'Versterk de cultuur die regeneratie draagt.',                img: '/assets/principes/07-social.png' },
+            { num: '08', p: 8, title: 'Commons & coöperatief beheer', desc: 'Bouw aan gedeeld bezit en gezamenlijk rentmeesterschap.',    img: '/assets/principes/08-commons.png' },
+          ].map(item => (
+            <button
+              class="px-pcard text-left border border-[rgba(72,115,91,0.12)] bg-creme rounded-lg overflow-hidden transition-all duration-200 hover:border-green hover:shadow-[0_6px_20px_rgba(72,115,91,0.12)] hover:-translate-y-0.5"
+              data-p={item.p}
+            >
+              <img src={item.img} alt={item.title} class="w-full aspect-[4/3] object-contain bg-creme" />
+              <div class="p-[18px] pb-5">
+                <div class="text-[28px] font-extrabold text-magenta leading-none mb-2">{item.num}</div>
+                <div class="text-[14px] font-bold text-green mb-1.5">{item.title}</div>
+                <p class="text-[12px] text-mid leading-[1.6]">{item.desc}</p>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        <!-- Detail panel -->
+        <div id="px-detail" class="mt-8 bg-creme rounded-xl overflow-hidden opacity-0 translate-y-2 transition-all duration-300">
+          <div id="px-detail-strip" class="h-[5px] bg-green"></div>
+          <div class="p-8 relative">
+            <div id="px-detail-num" class="absolute top-[18px] right-7 text-[64px] font-light italic text-green/20 leading-none tracking-[-2px]">01</div>
+            <span id="px-detail-pill" class="inline-block text-[9px] font-semibold uppercase tracking-[0.16em] px-3 py-1 rounded-pill text-white bg-green mb-3">Omgevingen</span>
+            <h3 id="px-detail-title" class="text-[22px] font-bold text-green mb-1.5 leading-snug max-w-[78%]">Eén levend systeem</h3>
+            <p id="px-detail-activating" class="text-[13px] italic text-magenta mb-3.5"></p>
+            <div id="px-detail-short" class="text-[13px] text-mid leading-[1.7] p-4 bg-white rounded-lg mb-4"></div>
+            <div id="px-detail-body" class="text-[13.5px] text-[#333] leading-[1.8]"></div>
+            <div class="flex justify-between items-center mt-5 pt-4 border-t border-[rgba(72,115,91,0.12)]">
+              <button id="px-nav-prev" class="px-nav-btn" onclick="pxNavigate(-1)">← Vorige</button>
+              <span id="px-nav-progress" class="text-[11px] text-light tracking-[0.1em]">1 / 8</span>
+              <button id="px-nav-next" class="px-nav-btn" onclick="pxNavigate(1)">Volgende →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA banner -->
+  <div class="bg-green py-[72px] text-center">
+    <div class="max-w-content mx-auto px-10">
+      <h2 class="text-[clamp(26px,3vw,38px)] font-bold text-white leading-[1.2] mb-2.5 text-balance">Regeneratieve kennis in de praktijk.</h2>
+      <p class="text-[16px] text-white/70 mb-7">Zie ook ons verkennend onderzoek Amsterdam Regeneratieve Stad.</p>
+      <div class="flex gap-3.5 justify-center flex-wrap">
+        <a href="/projecten" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">Bekijk projecten</a>
+        <a href="/contact" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">Neem contact op</a>
+      </div>
+    </div>
+  </div>
 
   <Footer locale={locale} />
 </Base>
+
+<style>
+.px-domain-tab {
+  cursor: pointer;
+  border: 1px solid var(--color-border, #DEDAD4);
+  background: white;
+  color: #4A4A4A;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 22px;
+  border-radius: 999px;
+  transition: all 0.15s;
+}
+.px-domain-tab:hover { background: #F2EFE9; color: #48735B; }
+.px-domain-tab.active { background: #48735B; color: white; border-color: #48735B; }
+.px-pcard.active { border-color: #D90D7D !important; box-shadow: 0 6px 20px rgba(217,13,125,0.18) !important; }
+.px-pcard.active .principle-title { color: #D90D7D; }
+#px-detail.visible { opacity: 1 !important; transform: translateY(0) !important; }
+#px-detail-strip.business { background: #347EBF; }
+#px-detail-strip.products { background: #D90D7D; }
+#px-detail-pill.business { background: #347EBF; }
+#px-detail-pill.products { background: #D90D7D; }
+.px-nav-btn {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #48735B;
+  background: white;
+  border: 1px solid #DEDAD4;
+  padding: 7px 16px;
+  border-radius: 999px;
+  transition: all 0.15s;
+}
+.px-nav-btn:hover { background: #48735B; color: white; border-color: #48735B; }
+.px-nav-btn:disabled { opacity: 0.4; cursor: default; background: white; color: #7A7A7A; }
+</style>
+
+<script>
+const PX_NAMES = ['Eén levend systeem','Regeneratief bronnenbeheer','Natuurlijke patronen en ritmes','Zelforganisatie en veerkracht','Inclusief voor al het leven','Intergenerationeel perspectief','Culturele regeneratie','Commons & coöperatief beheer'];
+const PX_DOMAINS = {cities:'Omgevingen',business:'Bedrijven',products:'Producten'};
+const PX_DATA = {
+  1:{cities:{activating:'Ontwerp vanuit één levend socio-ecologisch systeem',short:'De stad is één geïntegreerd, continu veranderend socio-ecologisch systeem, ingebed in een grotere bioregionale samenhang.',full:'<p>Ecologie, sociale en culturele structuren, en economie versterken of ondermijnen elkaar voortdurend. Regeneratief ontwerpen begint met het erkennen van die wederkerigheid en met het ontwerpen van oplossingen die meerdere functies tegelijk vervullen.</p><p>De wijk is onderdeel van de stad, de stad van de regio. Een ingreep werkt door op alle schaalniveaus. Dit actief verbinden van schalen is een kernopgave.</p>'},business:{activating:'Handel vanuit één levend socio-ecologisch systeem',short:'De organisatie is één geïntegreerd systeem, ingebed in waardeketens, gemeenschappen en bioregio\'s.',full:'<p>Een organisatie is nooit een gesloten systeem. Het team is onderdeel van de organisatie, de organisatie van de waardeketen, de keten van de bioregio.</p><p>Bedrijfsbeslissingen worden niet beoordeeld op financieel rendement alleen, maar op hun bijdrage aan het levende geheel.</p>'},products:{activating:'Ontwerp vanuit één levend systeem — van materiaal tot einde levensduur',short:'Een product bestaat binnen één geïntegreerd systeem, van materiaaloorsprong via gebruik tot einde levensduur.',full:'<p>Een product is geen geïsoleerd object. Een materiaalkeuze werkt door naar het producerende ecosysteem, het gedrag van de gebruiker en het einde-levensduurlandschap.</p><p>Producten worden niet beoordeeld op functie of prijs alleen, maar op hun bijdrage aan het levende geheel.</p>'}},
+  2:{cities:{activating:'Geef meer terug dan je neemt',short:'Ontwerp op basis van circulaire, lokale en hernieuwbare bronnen. Per saldo levert een interventie meer op dan het kost.',full:'<p>Het doel is een systeem dat per saldo meer toevoegt dan het verbruikt: bodemvruchtbaarheid opbouwt, biodiversiteit vergroot, sociale en economische waarde accumuleert.</p><p>De stad voedt de regio, en de regio voedt de stad. Voedsel, water, materialen, ecologische diensten — ze stromen in beide richtingen.</p>'},business:{activating:'Geef meer terug dan je neemt',short:'Opereer op basis van regeneratieve stromen van natuurlijk, menselijk, sociaal en financieel kapitaal.',full:'<p>Een regeneratief bedrijf streeft ernaar zijn context meer terug te geven dan het neemt over alle kapitaalvormen heen.</p><p>De relatie is wederkerig: de organisatie voedt de gemeenschappen waarin ze opereert, en die gemeenschappen voeden de organisatie.</p>'},products:{activating:'Geef meer terug dan je neemt',short:'Per levenscyclus draagt een product meer bij aan levende systemen dan het onttrekt.',full:'<p>Elk materiaal behoort tot een biologische cyclus (veilige terugkeer naar bodem) of technische cyclus (continu hergebruik zonder kwaliteitsverlies).</p><p>Het product moet waarde teruggeven — in voedingsstoffen die de bodem opbouwen, materialen die in productief gebruik blijven.</p>'}},
+  3:{cities:{activating:'Beweeg mee met natuurlijke en sociaal-culturele ritmes',short:'Ontwerp in afstemming met cycli en timing. Continue verandering is uitgangspunt, geen probleem.',full:'<p>Dag en nacht, seizoenen, groeifasen, herstelperioden. Respecteer natuurlijke tijdschalen. De kunst is het onderscheid maken tussen sturen en beheersen.</p><p>Ingrepen worden afgestemd op natuurlijke processen: timing van aanleg, plantenselectie volgens successie, de trage opbouw van bodem en gemeenschap.</p>'},business:{activating:'Beweeg mee met natuurlijke en organisatorische ritmes',short:'Opereer in afstemming met groei- en herstelperioden, marktcycli en innovatieritmes.',full:'<p>Continue verandering is geen probleem om te beheersen, maar uitgangspunt voor strategie. Vertrouw dat organisaties en markten hun eigen balans vinden.</p><p>Bedrijfsbeslissingen worden afgestemd op natuurlijke processen: het ritme van werving, de seizoenen van fondsenwerving en oogst, de trage opbouw van vertrouwen.</p>'},products:{activating:'Ontwerp met natuurlijke materiaalcycli en gebruiksritmes',short:'Bouw voor veroudering, reparatie en aanpassing — niet voor geplande veroudering.',full:'<p>Het verouderen van hout en leer, de seizoensgebondenheid van objecten, de onderhouds- en reparatiecycli van goed gemaakte dingen.</p><p>Materialen worden aangeschaft op hun ecologische hoogtepunt; ontwerp voor opeenvolgende upgrades in plaats van volledige vervanging.</p>'}},
+  4:{cities:{activating:'Ontwerp voor natuurlijke zelforganisatie',short:'Ontwerp plekken waar systemen zichzelf kunnen organiseren, aanpassen en herstellen.',full:'<p>Stimuleer diversiteit, functionele redundantie en decentrale netwerken zodat systemen schokken kunnen absorberen en zich kunnen aanpassen zonder centrale sturing.</p><p>Niet de stad als machine die beheerst wordt, maar als tuin die begeleid wordt. Schep condities, verwijder blokkades — en geef ruimte.</p>'},business:{activating:'Bouw voor natuurlijke zelforganisatie',short:'Bouw organisaties waar teams en ecosystemen zichzelf kunnen organiseren, aanpassen en herstellen.',full:'<p>Stimuleer diversiteit, functionele redundantie en decentrale verbonden netwerken. Vertrouw op het zelfregulerende vermogen van de organisatie.</p><p>Niet de organisatie als machine die wordt beheerst, maar als tuin die wordt verzorgd.</p>'},products:{activating:'Ontwerp voor zelforganisatie van gebruikers en ecosystemen',short:'Modulair, repareerbaar, open — zodat producten kunnen evolueren in plaats van weggegooid worden.',full:'<p>Vertrouw op het aanpassingsvermogen van gebruikers en materialen. Ontwerp voor reparatie, modificatie en onverwacht gebruik.</p><p>Niet het product als machine die gebruikersgedrag fixeert, maar als instrument dat het empowert.</p>'}},
+  5:{cities:{activating:'Heb aandacht voor al het leven',short:'Ontwerp met expliciete aandacht voor het samenleven van alle levensvormen — mens, plant, dier, microbioom.',full:'<p>De ecologische dimensie behandelt natuur als medeontwerper: habitats geïntegreerd, corridors verbonden, niet-menselijke soorten krijgen ruimte.</p><p>De sociale dimensie betrekt alle menselijke groepen actief, inclusief kwetsbare doelgroepen. Beide dimensies zijn even wezenlijk.</p>'},business:{activating:'Creëer waarde voor al het leven',short:'Natuur als mede-begunstigde, niet als resource. Alle stakeholders — medewerkers, gemeenschappen, ecosystemen — meegewogen.',full:'<p>Ecosystemen worden ondersteund, biodiversiteit in de keten opgebouwd, niet-menselijke soorten krijgen aandacht in beslissingen.</p><p>Een bedrijf dat de natuur erkent maar zijn werknemers uitbuit, is niet regeneratief — en omgekeerd.</p>'},products:{activating:'Ontwerp voor al het leven over de volledige levenscyclus',short:'Aandacht voor gebruikers, makers, gemeenschappen rond productielocaties, en niet-menselijk leven.',full:'<p>Materialen worden gehaald uit levende systemen die worden ondersteund. Productieprocessen zijn onschadelijk voor omringende ecosystemen.</p><p>Een product met ecologische zorg maar uitbuitende arbeid is niet regeneratief — en omgekeerd.</p>'}},
+  6:{cities:{activating:'Ontwerp voor toekomstige generaties',short:'Korte-termijnwinst mag de lange-termijn levensvatbaarheid niet ondermijnen. Ontwerp voor aanpasbaarheid, niet alleen duurzaamheid.',full:'<p>Door te ontwerpen met een tijdshorizon van decennia tot eeuwen, blijven bodem, biodiversiteit en sociale structuren veerkrachtig over generaties.</p><p>Een tijdelijk gebouw dat plaats maakt voor iets beters kan een even sterke uitdrukking van intergenerationeel denken zijn als een eeuwenoude structuur.</p>'},business:{activating:'Bouw voor toekomstige generaties',short:'Korte-termijnwinst mag de lange-termijn levensvatbaarheid niet ondermijnen. Eigendomsstructuren én aanpassingsvermogen.',full:'<p>Bouw met een tijdshorizon van decennia tot generaties. Organisatorische, ecologische en sociale structuren moeten veerkrachtig blijven.</p><p>Dit verankert een rentmeesterschapsethiek in beslissingen — wat zullen toekomstige generaties nodig hebben?</p>'},products:{activating:'Ontwerp voor toekomstige generaties',short:'Producten die voorbij hun eigen levensduur waarde toevoegen — door materialen, kennis, en relaties die ze nalaten.',full:'<p>Wat blijft er over als het product weg is? Welke materialen, vaardigheden, gemeenschappen, ecosystemen heeft het versterkt of verzwakt?</p><p>Ontwerp voor langdurige bruikbaarheid én voor het zachte einde — een product dat de wereld iets nalaat.</p>'}},
+  7:{cities:{activating:'Versterk de cultuur die regeneratie draagt',short:'Ontwerp niet alleen voor functie, maar voor de cultuur, verhalen en betekenissen die regeneratie levend houden.',full:'<p>Regeneratie vraagt om een culturele basis: gedeelde verhalen, rituelen, taal en identiteit die mensen verbinden aan de plek en aan elkaar.</p><p>Plekken worden ontworpen als culturele dragers — niet als generieke achtergrond, maar als specifieke uitdrukking van wat hier waardevol is.</p>'},business:{activating:'Versterk de cultuur die regeneratie draagt',short:'Bouw een organisatiecultuur — én bredere culturele relaties — die regeneratie als vanzelfsprekend dragen.',full:'<p>Cultuur is wat blijft als de strategie verandert. Regeneratieve organisaties investeren in de verhalen, rituelen en gewoonten die wederkerigheid normaliseren.</p><p>Dit gaat verder dan interne cultuur: ook de bredere maatschappelijke en bioregionale cultuur wordt meegevoed.</p>'},products:{activating:'Versterk de cultuur die regeneratie draagt',short:'Producten zijn culturele objecten — ze dragen waarden, verhalen en praktijken in zich.',full:'<p>Wat leert dit product de gebruiker? Welke gewoonten roept het op? Welk verhaal vertelt het over onze relatie tot materialen, makers en de aarde?</p><p>Regeneratieve producten dragen actief bij aan een cultuur van zorg, vakmanschap en wederkerigheid.</p>'}},
+  8:{cities:{activating:'Bouw aan gedeeld bezit en gezamenlijk rentmeesterschap',short:'Niet alles hoeft privé of overheid te zijn. Commons — gedeelde hulpbronnen onder collectief beheer — zijn essentieel voor regeneratie.',full:'<p>Lucht, water, bodem, kennis, openbare ruimte: dit zijn commons. Ze gedijen onder coöperatief beheer met duidelijke afspraken en verantwoordelijkheden.</p><p>Ontwerp plekken die collectief beheerd kunnen worden — buurttuinen, energiecoöperaties, gedeelde infrastructuur.</p>'},business:{activating:'Bouw aan gedeeld bezit en gezamenlijk rentmeesterschap',short:'Coöperatieve eigendomsstructuren, open kennis en gedeelde infrastructuur als bouwstenen van regeneratief ondernemen.',full:'<p>Wie is eigenaar bepaalt waar de waarde naartoe vloeit. Coöperaties, stewardship-eigendom en commons-georiënteerde structuren verankeren regeneratieve waarden.</p><p>Open kennis en gedeelde infrastructuur versterken het bredere ecosysteem in plaats van waarde te onttrekken.</p>'},products:{activating:'Bouw aan gedeeld bezit en gezamenlijk rentmeesterschap',short:'Producten als commons — gedeeld, gerepareerd, doorgegeven. Open documentatie en collectief eigendom.',full:'<p>Niet elk product hoeft individueel bezit te zijn. Deelplatforms, bibliotheken, coöperatieve modellen — gedeelde toegang is vaak regeneratiever dan privébezit.</p><p>Open ontwerpen, gedeelde reparatiekennis en collectieve eigendomsstructuren maken producten tot commons.</p>'}}
+};
+
+type PxDomainKey = 'cities' | 'business' | 'products';
+type PxPrincipleKey = 1|2|3|4|5|6|7|8;
+interface PxEntry { activating: string; short: string; full: string; }
+
+let pxState: {domain: PxDomainKey; principle: PxPrincipleKey} = {domain:'cities',principle:1};
+
+function pxSelectDomain(d: string) {
+  pxState.domain = d as PxDomainKey;
+  document.querySelectorAll('.px-domain-tab').forEach(t => (t as HTMLElement).classList.toggle('active', (t as HTMLElement).dataset.domain === d));
+  pxRender();
+}
+function pxSelectPrinciple(p: number) {
+  pxState.principle = p as PxPrincipleKey;
+  document.querySelectorAll('.px-pcard').forEach(c => (c as HTMLElement).classList.toggle('active', +(c as HTMLElement).dataset.p! === p));
+  pxRender();
+  document.getElementById('px-detail')!.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function pxNavigate(delta: number) {
+  const next = pxState.principle + delta;
+  if (next < 1 || next > 8) return;
+  pxSelectPrinciple(next);
+}
+function pxRender() {
+  const {domain, principle} = pxState;
+  const data = (PX_DATA as Record<number, Record<string, PxEntry>>)[principle][domain];
+  const num = String(principle).padStart(2,'0');
+  const strip = document.getElementById('px-detail-strip')!;
+  const pill  = document.getElementById('px-detail-pill')!;
+  strip.className = 'h-[5px] bg-green ' + (domain === 'cities' ? '' : domain);
+  pill.className  = 'inline-block text-[9px] font-semibold uppercase tracking-[0.16em] px-3 py-1 rounded-pill text-white bg-green mb-3 ' + (domain === 'cities' ? '' : domain);
+  pill.textContent = (PX_DOMAINS as Record<string, string>)[domain];
+  document.getElementById('px-detail-num')!.textContent = num;
+  document.getElementById('px-detail-title')!.textContent = PX_NAMES[principle-1];
+  document.getElementById('px-detail-activating')!.textContent = data.activating;
+  document.getElementById('px-detail-short')!.textContent = data.short;
+  document.getElementById('px-detail-body')!.innerHTML = data.full;
+  document.getElementById('px-nav-progress')!.textContent = principle + ' / 8';
+  (document.getElementById('px-nav-prev') as HTMLButtonElement).disabled = principle === 1;
+  (document.getElementById('px-nav-next') as HTMLButtonElement).disabled = principle === 8;
+  document.getElementById('px-detail')!.classList.add('visible');
+}
+
+document.querySelectorAll('.px-domain-tab').forEach(btn => {
+  btn.addEventListener('click', () => pxSelectDomain((btn as HTMLElement).dataset.domain!));
+});
+document.querySelectorAll('.px-pcard').forEach(btn => {
+  btn.addEventListener('click', () => pxSelectPrinciple(+(btn as HTMLElement).dataset.p!));
+});
+pxRender();
+</script>

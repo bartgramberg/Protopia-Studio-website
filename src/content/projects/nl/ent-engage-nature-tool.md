@@ -10,9 +10,9 @@ category: "products"
 services:
   - design
 year: "2026"
-image: "/uploads/Macbook - Ent - small.jpg"
+image: "/assets/werk/werk-ent.jpg"
 featured: true
-order: 2
+order: 1
 ---
 
 ENT geeft de natuur een stem aan de ontwerptafel bij gebiedsontwikkeling. Als AI-ondersteunde gesprekspartner brengt ENT ecologische perspectieven in op de momenten dat ontwerpkeuzes worden gemaakt — vroeg, concreet en plek-specifiek.

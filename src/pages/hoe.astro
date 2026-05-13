@@ -6,60 +6,122 @@ import { t } from '../i18n/translations'
 const locale = 'nl'
 const tr = t(locale)
 ---
-<Base title="Hoe we werken" description={tr.hoe.lead} locale={locale} altHref="/en/how">
+<Base title="Hoe we werken" description="Onze kracht ligt in het combineren van onderzoek, ontwerp en realisatie." locale={locale} altHref="/en/how">
   <Nav locale={locale} altHref="/en/how" activePage="hoe" />
 
+  <!-- Hero -->
   <div class="bg-creme pt-[88px] pb-16">
     <div class="max-w-content mx-auto px-10">
-      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.hoe.eyebrow}</span>
-      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">{tr.hoe.title}</h1>
-      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{tr.hoe.lead}</p>
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Hoe we werken</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">Hoe we werken</h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">Onze kracht ligt in het combineren van onderzoek, ontwerp en realisatie. We zijn onderzoeker, ontwerper, facilitator en projectmanager in één. Bij ons krijg je niet alleen een scherpe visie maar ook de concrete vertaling én de praktische uitvoering.</p>
     </div>
   </div>
 
   <section class="py-20">
     <div class="max-w-content mx-auto px-10">
-      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden">
-        {[
-          {
-            num: '1',
-            title: 'Onderzoek & Strategie',
-            desc: 'Complexe vraagstukken herleid tot concrete strategieën. We analyseren context, stakeholders en systemen — en vertalen dat naar een heldere richting.',
-            examples: ['Onderzoek naar best practices', 'Stakeholderanalyse', 'Strategische roadmap'],
-          },
-          {
-            num: '2',
-            title: 'Concept & Ontwerp',
-            desc: 'Innovatieve concepten, businessmodellen en plekken — direct gebouwd en getest. Wij ontwerpen niet in een la, maar in de praktijk.',
-            examples: ['Service design', 'Ruimtelijk ontwerp', 'Business model canvas'],
-          },
-          {
-            num: '3',
-            title: 'Co-creatie & Realisatie',
-            desc: 'Teams, labs en partnerschappen bouwen die tastbare resultaten leveren. Van post-it, via pilot naar product.',
-            examples: ['Design sprints', 'Pilot programmas', 'Community building'],
-          },
-        ].map(s => (
-          <div class="bg-white p-9">
-            <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">{s.num}</div>
-            <div class="text-[15px] font-bold text-green mb-2">{s.title}</div>
-            <p class="text-[13px] text-mid leading-[1.65] mb-4">{s.desc}</p>
-            <ul class="flex flex-col gap-1">
-              {s.examples.map(e => (
-                <li class="text-[12px] text-light before:content-['>'] before:mr-1.5">{e}</li>
-              ))}
-            </ul>
+
+      <!-- Phase 1 -->
+      <div class="grid grid-cols-[96px_1fr_1fr] gap-10 py-14 border-b border-border items-start">
+        <div class="text-[72px] font-extrabold text-magenta leading-none">#1</div>
+        <div>
+          <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-3">Fase één</span>
+          <h3 class="text-[28px] font-bold text-green leading-snug mb-2.5">Onderzoek & Strategie</h3>
+          <p class="text-[15px] text-mid leading-[1.75] mb-4">Complexe vraagstukken tot de kern gebracht en vertaald naar ideeën & concrete strategieën.</p>
+          <p class="text-[15px] text-mid leading-[1.75] mb-4">Elke transitie begint met een nieuw narratief: een toekomstbeeld dat stevig in het heden is verankerd. Samen met partners onderzoeken we complexe vraagstukken en brengen ze terug tot de kern. Daarbij kijken we altijd naar systemen in hun geheel en vanuit alle perspectieven: van mens én natuur.</p>
+          <p class="text-[15px] text-mid leading-[1.75] mb-4">We analyseren trends en signaleren kansen voor innovatie. We reiken strategieën aan waarmee nieuwe ideeën uitmonden in concreet resultaat.</p>
+          <div class="flex flex-wrap gap-2 mt-3.5">
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Systeemanalyse</span>
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Trendonderzoek</span>
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Stakeholderonderzoek</span>
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Strategievorming</span>
           </div>
-        ))}
+          <div class="mt-6">
+            <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Samen onderzoek doen?</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="bg-creme rounded-lg p-5">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
+            <div class="text-[14px] font-bold text-green mb-1.5">Amsterdam Regeneratieve Stad</div>
+            <p class="text-[12px] text-mid leading-[1.55]">Onderzoek en visieontwikkeling voor de gemeente Amsterdam naar de stad als regeneratief ecosysteem. Resulteerde in ontwerpprincipes, modellen en beleidsvoorstellen.</p>
+          </div>
+          <div class="bg-creme rounded-lg p-5">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
+            <div class="text-[14px] font-bold text-green mb-1.5">Amsterdam Smart City</div>
+            <p class="text-[12px] text-mid leading-[1.55]">Gebruikersonderzoek, data-analyse en een nieuwe propositie en platformconcept voor een vernieuwd platform van Amsterdam Smart City.</p>
+          </div>
+        </div>
       </div>
+
+      <!-- Phase 2 -->
+      <div class="grid grid-cols-[96px_1fr_1fr] gap-10 py-14 border-b border-border items-start">
+        <div class="text-[72px] font-extrabold text-magenta leading-none">#2</div>
+        <div>
+          <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-3">Fase twee</span>
+          <h3 class="text-[28px] font-bold text-green leading-snug mb-2.5">Concept & Ontwerp</h3>
+          <p class="text-[15px] text-mid leading-[1.75] mb-4">Vernieuwende concepten, systemen en plekken die de regeneratieve samenleving vormgeven.</p>
+          <p class="text-[15px] text-mid leading-[1.75] mb-4">Als creatieve studio ontwerpen we regeneratieve concepten: van digitale diensten tot ruimtelijke ingrepen. Voor ons is er geen scheiding tussen het fysieke en digitale domein — beide zijn nodig in de transitie naar een nieuw narratief. Technologie is nooit een doel op zich, maar een middel.</p>
+          <p class="text-[15px] text-mid leading-[1.75] mb-4">In onze toolkit combineren we regeneratieve methodes zoals permacultuur, systeemdenken en biobased ontwerp met innovatietechnieken als design thinking en lean startup.</p>
+          <div class="flex flex-wrap gap-2 mt-3.5">
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Design thinking</span>
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Ruimtelijk ontwerp</span>
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Businessmodellen</span>
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Digitale diensten</span>
+          </div>
+          <div class="mt-6">
+            <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Samenwerken?</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="bg-creme rounded-lg p-5">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
+            <div class="text-[14px] font-bold text-green mb-1.5">Taralena Retreat Center</div>
+            <p class="text-[12px] text-mid leading-[1.55]">Een eerste ontwerpvisie voor een holistisch centrum gewijd aan heling, educatie en gemeenschapsvorming. Integral Theory en regeneratieve principes vertaald naar architectonisch ontwerp.</p>
+          </div>
+          <div class="bg-creme rounded-lg p-5">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
+            <div class="text-[14px] font-bold text-green mb-1.5">Brede Welvaart Meter</div>
+            <p class="text-[12px] text-mid leading-[1.55]">In een design sprint een prototype-app ontwikkeld samen met de gemeente Amsterdam. De app laat ambtenaren via stellingen reflecteren op hun werk in relatie tot brede welvaart.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="grid grid-cols-[96px_1fr_1fr] gap-10 py-14 items-start">
+        <div class="text-[72px] font-extrabold text-magenta leading-none">#3</div>
+        <div>
+          <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-3">Fase drie</span>
+          <h3 class="text-[28px] font-bold text-green leading-snug mb-2.5">Co-creatie & Realisatie</h3>
+          <p class="text-[15px] text-mid leading-[1.75] mb-4">Begeleiding van groepen en organisaties in co-creatie, zowel bij visie en concept als bij de uitvoering.</p>
+          <p class="text-[15px] text-mid leading-[1.75] mb-4">In een versnipperde en complexe wereld richten wij de aandacht op wat er echt toe doet. We begeleiden groepen en organisaties in co-creatie, met interactieve en ervaringsgerichte werkvormen die de collectieve creatiekracht activeren.</p>
+          <p class="text-[15px] text-mid leading-[1.75] mb-4">Visie en concept vertalen we naar concrete programma's en projecten. We vormen coalities en werken samen met een breed netwerk van partners.</p>
+          <div class="flex flex-wrap gap-2 mt-3.5">
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Co-creatie</span>
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Labs & Pilots</span>
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Partnerships</span>
+            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Teambuilding</span>
+          </div>
+          <div class="mt-6">
+            <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Co-creëren?</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="bg-creme rounded-lg p-5">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
+            <div class="text-[14px] font-bold text-green mb-1.5">Oosterwold in Overvloed</div>
+            <p class="text-[12px] text-mid leading-[1.55]">Een gebiedswerkplaats in Almere Oosterwold waarin bewoners, boeren, ambtenaren en ontwikkelaars samenkwamen om nieuwe vormen van samenwerking te verkennen.</p>
+          </div>
+          <div class="bg-creme rounded-lg p-5">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
+            <div class="text-[14px] font-bold text-green mb-1.5">Brede Welvaart Scan</div>
+            <p class="text-[12px] text-mid leading-[1.55]">Een instrument om de effecten van beleidsvoorstellen integraal te beoordelen op tien thema's van brede welvaart, in het hier en nu én in de toekomst.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
-
-  <div class="max-w-content mx-auto px-10 pb-20">
-    <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">
-      Samenwerken?
-    </a>
-  </div>
 
   <Footer locale={locale} />
 </Base>

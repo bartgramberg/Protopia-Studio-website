@@ -10,9 +10,9 @@ category: "products"
 services:
   - design
 year: "2026"
-image: "/uploads/Macbook - Ent - small.jpg"
+image: "/assets/werk/werk-ent.jpg"
 featured: true
-order: 2
+order: 1
 ---
 
 ENT gives nature a voice at the design table in area development. As an AI-supported conversation partner, ENT brings ecological perspectives into the moments when design choices are made: early, concretely and specific to place.

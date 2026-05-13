@@ -12,7 +12,7 @@ services:
   - design
   - realisation
 year: "2020-2026"
-image: "/uploads/Rabo carbon bank.jpg"
+image: "/assets/werk/werk-rabo.jpg"
 featured: true
 order: 3
 ---

@@ -10,9 +10,9 @@ category: "environments"
 services:
   - research
 year: "2025"
-image: "/uploads/Thumbnail_AmsRegen.png"
+image: "/assets/werk/werk-amsregen.png"
 featured: true
-order: 1
+order: 2
 ---
 
 Research and vision development for the City of Amsterdam, exploring the city as a regenerative ecosystem. The project resulted in design principles, models and policy proposals that help the city transform towards a regenerative society.

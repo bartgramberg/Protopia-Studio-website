@@ -2,9 +2,9 @@ export type Locale = 'nl' | 'en'
 
 const nl = {
   nav: {
-    waarom:    'Waarom',
+    waarom:    'Waarom Regeneratie',
     hoe:       'Hoe we werken',
-    projecten: 'Projecten',
+    projecten: 'Wat we doen',
     wie:       'Wie we zijn',
     blog:      'Blog',
     contact:   'Contact',
@@ -93,8 +93,8 @@ const nl = {
   footer: {
     tagline: 'Regenerative Design Studio',
     colNav:  'Navigatie',
-    colWork: 'Werken bij',
-    copy:    '© 2026 Protopia Studio',
+    colContact: 'Contact',
+    copy:    '© 2025 by Attention by Design',
   },
   lang: {
     toggle:  'EN',
@@ -104,9 +104,9 @@ const nl = {
 
 const en: typeof nl = {
   nav: {
-    waarom:    'Why',
+    waarom:    'Why Regeneration',
     hoe:       'How we work',
-    projecten: 'Projects',
+    projecten: 'What we do',
     wie:       'Who we are',
     blog:      'Blog',
     contact:   'Contact',
@@ -195,8 +195,8 @@ const en: typeof nl = {
   footer: {
     tagline: 'Regenerative Design Studio',
     colNav:  'Navigation',
-    colWork: 'Work with us',
-    copy:    '© 2026 Protopia Studio',
+    colContact: 'Contact',
+    copy:    '© 2025 by Attention by Design',
   },
   lang: {
     toggle:  'NL',

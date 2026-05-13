@@ -6,67 +6,99 @@ import { t } from '../../i18n/translations'
 const locale = 'en'
 const tr = t(locale)
 ---
-<Base title="Why regeneration" description={tr.waarom.lead} locale={locale} altHref="/waarom">
+<Base title="Why Regeneration" description="The great challenges of our time require more than limiting damage. They require active restoration." locale={locale} altHref="/waarom">
   <Nav locale={locale} altHref="/waarom" activePage="waarom" />
 
+  <!-- Hero -->
   <div class="bg-creme pt-[88px] pb-16">
     <div class="max-w-content mx-auto px-10">
-      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.waarom.eyebrow}</span>
-      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">{tr.waarom.title}</h1>
-      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{tr.waarom.lead}</p>
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Why Regeneration</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">Why regeneration?</h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">The great challenges of our time require more than limiting damage. They require active restoration — of ecosystems, of communities, of the balance between people and nature. Not waiting for the perfect solution, but taking the best step possible now. That is regeneration.</p>
     </div>
   </div>
 
-  <!-- Spectrum: degenerative → sustainable → regenerative -->
+  <!-- Spectrum -->
   <section class="py-20">
     <div class="max-w-content mx-auto px-10">
-      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden">
-        {[
-          {
-            step: 'Step 1',
-            title: 'Degenerative',
-            desc: 'Systems that extract more than they contribute. Depletion of resources, erosion of communities, loss of biodiversity.',
-          },
-          {
-            step: 'Step 2',
-            title: 'Sustainable',
-            desc: 'Doing less harm. Sustainability is important, but not sufficient. We cannot "sustain" our way to recovery.',
-          },
-          {
-            step: 'Step 3',
-            title: 'Regenerative',
-            desc: 'Systems that give back more than they take. Active restoration of ecological, social and economic systems.',
-            active: true,
-          },
-        ].map(s => (
-          <div class={`p-8 ${s.active ? 'bg-creme' : 'bg-white'}`}>
-            <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">{s.step}</div>
-            <div class="text-[20px] font-bold text-green mb-2.5">{s.title}</div>
-            <p class="text-[14px] text-mid leading-[1.7]">{s.desc}</p>
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">The spectrum</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Degenerative. Sustainable. Regenerative.</h2>
+      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden mt-10">
+        <div class="bg-white p-8">
+          <img src="/assets/spectrum/degeneratief.png" alt="Degenerative — polluted city illustration" class="w-full aspect-[5/4] object-contain mb-4" />
+          <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">Step 1</div>
+          <div class="text-[20px] font-bold text-green mb-2.5">Degenerative</div>
+          <p class="text-[14px] text-mid leading-[1.7]">Our current way of life has an irreversible impact on the world. This degenerative system — extractive, linear, based on scarcity and depletion of natural resources — is unsustainable.</p>
+        </div>
+        <div class="bg-white p-8">
+          <img src="/assets/spectrum/sustainable.png" alt="Sustainable — city in balance illustration" class="w-full aspect-[5/4] object-contain mb-4" />
+          <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">Step 2</div>
+          <div class="text-[20px] font-bold text-green mb-2.5">Sustainable</div>
+          <p class="text-[14px] text-mid leading-[1.7]">Fortunately, we are collectively becoming more aware of this, and sustainability thinking has taken off. Sustainability is a necessary, but ultimately imperfect position. Limiting damage is not enough.</p>
+        </div>
+        <div class="bg-creme p-8">
+          <img src="/assets/spectrum/regeneratief.png" alt="Regenerative — green city illustration" class="w-full aspect-[5/4] object-contain mb-4" />
+          <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">Step 3 — the direction</div>
+          <div class="text-[20px] font-bold text-magenta mb-2.5">Regenerative</div>
+          <p class="text-[14px] text-mid leading-[1.7]">The next step is regeneration: actively restoring natural and social ecosystems. A systemic view of the world based on abundance, reciprocity and resilience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Four application areas -->
+  <section class="py-20 bg-creme">
+    <div class="max-w-content mx-auto px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Four application areas</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Not utopia, but concrete steps.</h2>
+      <div class="grid grid-cols-[1.1fr_1fr] gap-14 items-start mt-10">
+        <div class="flex flex-col gap-3.5">
+          <p class="text-[16px] text-mid leading-[1.7]">Regeneration is not an abstract promise. It is the direction you choose with every project, every intervention, every decision — whether it concerns a city, a business or a product.</p>
+          <p class="text-[16px] text-mid leading-[1.7]">Protopia works in the tension between regenerative vision and economic reality, and makes that tension productive. Not by advising from the sidelines, but by designing, building and realising.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-white border border-[rgba(72,115,91,0.18)] rounded-lg p-5 flex flex-col justify-center min-h-[110px]">
+            <div class="text-[14px] font-bold text-green mb-1">Environments</div>
+            <div class="text-[12.5px] text-mid leading-[1.55]">Living socio-ecological systems that give back more than they take.</div>
           </div>
-        ))}
+          <div class="bg-white border border-[rgba(72,115,91,0.18)] rounded-lg p-5 flex flex-col justify-center min-h-[110px]">
+            <div class="text-[14px] font-bold text-green mb-1">Businesses</div>
+            <div class="text-[12.5px] text-mid leading-[1.55]">Business models that create ecological and social value alongside financial.</div>
+          </div>
+          <div class="bg-white border border-[rgba(72,115,91,0.18)] rounded-lg p-5 flex flex-col justify-center min-h-[110px]">
+            <div class="text-[14px] font-bold text-green mb-1">Products</div>
+            <div class="text-[12.5px] text-mid leading-[1.55]">Designs that strengthen the living systems on which they depend.</div>
+          </div>
+          <div class="bg-green rounded-lg p-5 flex flex-col justify-center min-h-[110px]">
+            <div class="text-[9.5px] font-semibold uppercase tracking-[0.14em] text-white/70 mb-1.5">Our role</div>
+            <div class="text-[15px] font-bold text-white mb-1.5">From vision to realisation.</div>
+            <div class="text-[12.5px] text-white/90 leading-[1.6]">We design, prototype and build — across all three domains.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 8 Principles -->
-  <section class="py-20 bg-creme">
+  <section class="py-20">
     <div class="max-w-content mx-auto px-10">
-      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">8 principles</span>
-      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mb-10">The principles of regenerative design.</h2>
-      <div class="grid grid-cols-4 gap-4">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">8 regenerative principles as compass</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Eight principles as design attitude and assessment tool.</h2>
+      <p class="text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4">Protopia Studio has developed eight regenerative design principles. They describe not an end state, but a direction — of more life, more abundance, and more capacity for systems to renew themselves.</p>
+      <div class="grid grid-cols-4 gap-4 mt-10">
         {[
-          { num: '01', title: 'Holistic thinking',       desc: 'Understanding systems as a whole, not as a sum of parts.' },
-          { num: '02', title: 'Resource cycles',          desc: 'Materials and energy remain in use — no waste, only nutrients.' },
-          { num: '03', title: 'Cyclical processes',       desc: 'Designs that renew and restore, in rhythm with nature.' },
-          { num: '04', title: 'Resilience',               desc: 'Systems that absorb setbacks and come back stronger.' },
-          { num: '05', title: 'Inclusive',                desc: 'All people and living beings count in the design.' },
-          { num: '06', title: 'Intergenerational',        desc: 'Decisions that also work for future generations.' },
-          { num: '07', title: 'Social regeneration',      desc: 'Restoring and strengthening communities and relationships.' },
-          { num: '08', title: 'Commons & cooperation',    desc: 'Managing shared resources based on trust and collaboration.' },
+          { num: '01', title: 'One living system',              desc: 'Design from one integrated socio-ecological whole.',              img: '/assets/principes/01-holistic.png' },
+          { num: '02', title: 'Regenerative resource management', desc: 'Give back more than you take on balance.',                    img: '/assets/principes/02-resources.png' },
+          { num: '03', title: 'Natural patterns and rhythms',   desc: 'Move with cycles, seasons and timing.',                          img: '/assets/principes/03-cycli.png' },
+          { num: '04', title: 'Self-organisation and resilience', desc: 'Create conditions — give space, not control.',                  img: '/assets/principes/04-resilience.png' },
+          { num: '05', title: 'Inclusive for all life',         desc: 'Give equal attention to human and non-human life.',               img: '/assets/principes/05-inclusief.png' },
+          { num: '06', title: 'Intergenerational perspective',  desc: 'Design for future generations.',                                  img: '/assets/principes/06-intergenerationeel.png' },
+          { num: '07', title: 'Cultural regeneration',          desc: 'Strengthen the culture that carries regeneration.',               img: '/assets/principes/07-social.png' },
+          { num: '08', title: 'Commons & cooperative stewardship', desc: 'Build shared ownership and collective stewardship.',           img: '/assets/principes/08-commons.png' },
         ].map(p => (
-          <div class="bg-white border border-[rgba(72,115,91,0.12)] rounded-lg overflow-hidden">
-            <div class="p-5">
+          <div class="border border-[rgba(72,115,91,0.12)] bg-creme rounded-lg overflow-hidden">
+            <img src={p.img} alt={p.title} class="w-full aspect-[4/3] object-contain bg-creme" />
+            <div class="p-[18px] pb-5">
               <div class="text-[28px] font-extrabold text-magenta leading-none mb-2">{p.num}</div>
               <div class="text-[14px] font-bold text-green mb-1.5">{p.title}</div>
               <p class="text-[12px] text-mid leading-[1.6]">{p.desc}</p>
@@ -76,6 +108,18 @@ const tr = t(locale)
       </div>
     </div>
   </section>
+
+  <!-- CTA banner -->
+  <div class="bg-green py-[72px] text-center">
+    <div class="max-w-content mx-auto px-10">
+      <h2 class="text-[clamp(26px,3vw,38px)] font-bold text-white leading-[1.2] mb-2.5 text-balance">Regenerative knowledge in practice.</h2>
+      <p class="text-[16px] text-white/70 mb-7">See also our exploratory research Amsterdam Regenerative City.</p>
+      <div class="flex gap-3.5 justify-center flex-wrap">
+        <a href="/en/projects" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">View projects</a>
+        <a href="/en/contact" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">Get in touch</a>
+      </div>
+    </div>
+  </div>
 
   <Footer locale={locale} />
 </Base>

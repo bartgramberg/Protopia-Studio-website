@@ -6,40 +6,59 @@ import { t } from '../i18n/translations'
 const locale = 'nl'
 const tr = t(locale)
 ---
-<Base title="Contact" description={tr.contact.lead} locale={locale} altHref="/en/contact">
+<Base title="Contact" description="Wij werken samen met corporates, overheden, NGO's en impact investors." locale={locale} altHref="/en/contact">
   <Nav locale={locale} altHref="/en/contact" activePage="contact" />
 
   <div class="bg-creme pt-[88px] pb-16">
     <div class="max-w-content mx-auto px-10">
-      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">{tr.contact.eyebrow}</span>
-      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">{tr.contact.title}</h1>
-      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{tr.contact.lead}</p>
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Contact</span>
+      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">Laten we kennismaken.</h1>
+      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">Wij werken samen met corporates, overheden, NGO's en impact investors. Vertel ons over je vraagstuk.</p>
     </div>
   </div>
 
   <section class="py-20">
-    <div class="max-w-[600px] mx-auto px-10">
-      <p class="text-[15px] text-mid leading-[1.8] mb-6">
-        Stuur ons een e-mail op <a href="mailto:hello@protopiastudio.nl" class="text-green font-semibold hover:text-magenta transition-colors">hello@protopiastudio.nl</a> of vul het formulier in.
-      </p>
-      <form class="flex flex-col gap-4" data-netlify="true" name="contact">
-        <input type="hidden" name="form-name" value="contact" />
-        <div class="flex flex-col gap-1.5">
-          <label for="name" class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">Naam</label>
-          <input id="name" name="name" type="text" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green" />
+    <div class="max-w-content mx-auto px-10">
+      <div class="grid grid-cols-2 gap-[72px] items-start">
+
+        <!-- Left: info -->
+        <div>
+          <h3 class="text-[22px] font-bold text-green mb-3">Plan een gesprek</h3>
+          <p class="text-[15px] text-mid leading-[1.75] mb-5">Geen utopie, maar concrete stappen in de transitie naar een betere wereld. Neem contact op en vertel ons wat je bezig houdt.</p>
+          <div class="flex flex-col gap-2.5 mb-7">
+            <div class="text-[14px] text-mid"><strong class="text-green mr-1.5">E-mail</strong>info@protopiastudio.nl</div>
+            <div class="text-[14px] text-mid"><strong class="text-green mr-1.5">Web</strong>protopiastudio.nl</div>
+          </div>
+          <blockquote class="text-[17px] italic font-light text-mid leading-[1.6]">"Van post-it, via pilot naar product. Van rapport naar resultaat."</blockquote>
+          <p class="text-[13px] text-light font-medium mt-2.5">— Protopia Studio</p>
         </div>
-        <div class="flex flex-col gap-1.5">
-          <label for="email" class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">E-mail</label>
-          <input id="email" name="email" type="email" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green" />
-        </div>
-        <div class="flex flex-col gap-1.5">
-          <label for="message" class="text-[12px] font-semibold uppercase tracking-[0.1em] text-light">Bericht</label>
-          <textarea id="message" name="message" rows="5" required class="border border-border rounded-lg px-4 py-3 text-[14px] text-dark focus:outline-none focus:border-green resize-none"></textarea>
-        </div>
-        <button type="submit" class="self-start inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-green text-white hover:bg-green-dark transition-colors">
-          Verstuur
-        </button>
-      </form>
+
+        <!-- Right: form -->
+        <form class="flex flex-col gap-4" data-netlify="true" name="contact">
+          <input type="hidden" name="form-name" value="contact" />
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label for="name" class="text-[11px] font-semibold uppercase tracking-[0.1em] text-green">Naam</label>
+              <input id="name" name="name" type="text" placeholder="Jouw naam" required class="border-[1.5px] border-border rounded-lg px-4 py-[11px] text-[14px] text-dark focus:outline-none focus:border-green transition-colors" />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="email" class="text-[11px] font-semibold uppercase tracking-[0.1em] text-green">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="jouw@email.nl" required class="border-[1.5px] border-border rounded-lg px-4 py-[11px] text-[14px] text-dark focus:outline-none focus:border-green transition-colors" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label for="organisatie" class="text-[11px] font-semibold uppercase tracking-[0.1em] text-green">Organisatie</label>
+            <input id="organisatie" name="organisatie" type="text" placeholder="Jouw organisatie" class="border-[1.5px] border-border rounded-lg px-4 py-[11px] text-[14px] text-dark focus:outline-none focus:border-green transition-colors" />
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label for="message" class="text-[11px] font-semibold uppercase tracking-[0.1em] text-green">Vraagstuk</label>
+            <textarea id="message" name="message" rows="5" placeholder="Vertel ons over je vraagstuk of project…" required class="border-[1.5px] border-border rounded-lg px-4 py-[11px] text-[14px] text-dark focus:outline-none focus:border-green transition-colors resize-none min-h-[110px]"></textarea>
+          </div>
+          <button type="submit" class="w-full inline-flex items-center justify-center px-[26px] py-[13px] rounded-pill text-[15px] font-semibold bg-green text-white hover:bg-green-dark transition-colors">
+            Verstuur bericht
+          </button>
+        </form>
+      </div>
     </div>
   </section>
 
