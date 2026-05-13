@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: bartgramberg/Protopia-Studio-website
-  branch: dev
+  branch: main
 
 media_folder: public/uploads
 public_folder: /uploads
