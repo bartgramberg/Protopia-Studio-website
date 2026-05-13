@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: bartgramberg/Protopia-Studio-website
-  branch: main
+  branch: dev
 
 media_folder: public/uploads
 public_folder: /uploads
@@ -41,6 +41,7 @@ collections:
         i18n: true
         field:
           label: Service
+          name: service
           widget: select
           options:
             - { label: "Research & Strategy",       value: "research" }
