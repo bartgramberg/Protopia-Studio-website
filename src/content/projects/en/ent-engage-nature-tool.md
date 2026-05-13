@@ -1,11 +1,11 @@
 ---
 title: "ENT - Engage Nature Tool"
-description: "ENT geeft de natuur een stem aan de ontwerptafel bij gebiedsontwikkeling. Als AI-ondersteunde gesprekspartner brengt ENT ecologische perspectieven in op de momenten dat ontwerpkeuzes worden gemaakt — vroeg, concreet en plek-specifiek."
-challenge: "Natuur wordt in gebiedsontwikkeling vaak gezien als moetje, risico of kostenpost. Natuurinclusiviteit is gelukkig in opkomst, maar men denkt vaak nog vanuit business cases en in ontwerp en ontwikkeling moet de natuur dan 'ook nog even meegenomen worden'."
-role: "Protopia is de bedenker en ontwikkelaar van ENT (Engage Nature Tool). Belangrijke stappen in het ontwikkelproces: Validatie van het idee bij relevante stakeholders, ontwikkeling van werkende prototypen, positionering in de markt en business model onderzoek."
-result: "Eerste workshops en demos tonen aan dat de ENT in staat is om een nieuw perspectief te geven aan oa projectontwikkelaars, architecten en ecologen. Protopia Studio heeft besloten de algemene ENT tool gratis aan te bieden en financieren als een Stichting. Gemeente Amsterdam is aangehaakt partner."
-imageAlt: "Laptop met Engage Nature Tool. Gebruiker is in conversatie met \"de Egel\""
-typeProject: "Regeneratief product"
+description: "ENT gives nature a voice at the design table in area development. As an AI-supported conversation partner, ENT brings ecological perspectives into the moments when design choices are made: early, concretely and specific to place."
+challenge: "In area development, nature is often treated as an obligation, a risk or a cost. Nature-inclusive development is fortunately gaining ground, but thinking still often starts from business cases, with nature added later as something that also needs to be considered."
+role: "Protopia is the creator and developer of ENT (Engage Nature Tool). Key steps in the development process included validating the idea with relevant stakeholders, developing working prototypes, market positioning and business model research."
+result: "Initial workshops and demos show that ENT can offer a new perspective to project developers, architects and ecologists, among others. Protopia Studio has decided to offer the general ENT tool for free and finance it through a foundation. The City of Amsterdam has joined as a partner."
+imageAlt: "Laptop with the Engage Nature Tool. The user is in conversation with \"the Hedgehog\"."
+typeProject: "regenerative product"
 category: "products"
 services:
   - design
@@ -15,6 +15,4 @@ featured: true
 order: 2
 ---
 
-<!-- TODO: translate from NL -->
-
-ENT geeft de natuur een stem aan de ontwerptafel bij gebiedsontwikkeling. Als AI-ondersteunde gesprekspartner brengt ENT ecologische perspectieven in op de momenten dat ontwerpkeuzes worden gemaakt — vroeg, concreet en plek-specifiek.
+ENT gives nature a voice at the design table in area development. As an AI-supported conversation partner, ENT brings ecological perspectives into the moments when design choices are made: early, concretely and specific to place.

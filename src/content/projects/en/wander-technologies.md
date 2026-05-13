@@ -1,10 +1,10 @@
 ---
 title: "Wander Technologies"
-description: "Travel startup en app die toeristen naar minder bezochte plekken leidt, lokale ondernemers ondersteunt en de stad leefbaarder maakt. Protopia Studio was venture cofounder en verantwoordelijk voor strategie, design en productontwikkeling."
-challenge: "Amsterdam kreeg steeds meer toeristen geconcentreerd in de binnenstad, waardoor sociale structuren onder druk kwamen en lokale ondernemers werden uitgesloten van economische voordelen."
-role: "Protopia Studio ontwikkelde de app, back-end, businessmodel en het gamification-concept. Verantwoordelijk voor strategie, design, product ownership, partnerschappen en funding. Samen met gemeente en lokale partners getest en doorontwikkeld in Startup in Residence."
-result: "De Wander app werd gelanceerd in 2017 en stimuleerde spreiding van bezoekers, versterkte sociale cohesie en verhoogde de economische kansen voor kleine ondernemers. De app leverde inzichten op voor stadsbeheer en toerismeplanning."
-imageAlt: "Design Wander app"
+description: "A travel startup and app that guides tourists to less-visited places, supports local entrepreneurs and makes the city more liveable. Protopia Studio was venture co-founder and responsible for strategy, design and product development."
+challenge: "Amsterdam saw increasing numbers of tourists concentrated in the city centre, putting social structures under pressure and excluding local entrepreneurs from economic benefits."
+role: "Protopia Studio developed the app, back end, business model and gamification concept. We were responsible for strategy, design, product ownership, partnerships and funding. Together with the municipality and local partners, the app was tested and further developed through Startup in Residence."
+result: "The Wander app launched in 2017 and encouraged visitors to spread across the city, strengthened social cohesion and increased economic opportunities for small entrepreneurs. The app also generated insights for urban management and tourism planning."
+imageAlt: "Wander app design"
 typeProject: "venture / app"
 category: "businesses"
 services:
@@ -17,6 +17,4 @@ featured: false
 order: 8
 ---
 
-<!-- TODO: translate from NL -->
-
-Travel startup en app die toeristen naar minder bezochte plekken leidt, lokale ondernemers ondersteunt en de stad leefbaarder maakt. Protopia Studio was venture cofounder en verantwoordelijk voor strategie, design en productontwikkeling.
+A travel startup and app that guides tourists to less-visited places, supports local entrepreneurs and makes the city more liveable. Protopia Studio was venture co-founder and responsible for strategy, design and product development.

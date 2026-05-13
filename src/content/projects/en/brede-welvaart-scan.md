@@ -1,11 +1,11 @@
 ---
-title: "Brede Welvaart Scan"
-description: "In een design sprint ontwikkelde Protopia Studio samen met de gemeente Amsterdam de Brede Welvaart Scan: een instrument om de effecten van beleidsvoorstellen integraal te beoordelen op tien thema’s van brede welvaart, in het hier en nu én in de toekomst."
-challenge: "Amsterdam wil dat in alle besluitvorming structureel rekening wordt gehouden met brede welvaart: welzijn, gezondheid, sociale cohesie, ecologie en economie. De uitdaging: hoe ontwikkel je een praktisch instrument dat dit denken toegankelijk en bruikbaar maakt voor beleidsmakers?"
-role: "Protopia Studio faciliteerde een design sprint met ambtenaren en beleidsmakers. In korte tijd werd gewerkt aan een prototype van de Brede Welvaart Scan, waarin de effecten van beleidsvoorstellen inzichtelijk worden gemaakt over tien dimensies."
-result: "De Brede Welvaart Scan is nu een instrument waarmee college en raad integrale afwegingen kunnen maken. Het ondersteunt breder denken bij beleidsontwikkeling en toont mogelijkheden om beleid meer bij te laten dragen aan welzijn van alle Amsterdammers."
-imageAlt: "Brede Welvaart Scan"
-typeProject: "prototype / beleidsinstrument"
+title: "Broad Prosperity Scan"
+description: "In a design sprint with the City of Amsterdam, Protopia Studio developed the Broad Prosperity Scan: a tool for assessing the effects of policy proposals across ten themes of broad prosperity, both in the here and now and in the future."
+challenge: "Amsterdam wants broad prosperity to be structurally considered in all decision-making: wellbeing, health, social cohesion, ecology and the economy. The challenge: how do you develop a practical instrument that makes this way of thinking accessible and useful for policymakers?"
+role: "Protopia Studio facilitated a design sprint with civil servants and policymakers. In a short period of time, we worked on a prototype of the Broad Prosperity Scan, making the effects of policy proposals visible across ten dimensions."
+result: "The Broad Prosperity Scan is now a tool that helps the municipal executive and council make more integrated decisions. It supports broader thinking in policy development and reveals ways for policy to contribute more strongly to the wellbeing of all Amsterdammers."
+imageAlt: "Broad Prosperity Scan"
+typeProject: "prototype / policy instrument"
 category: "products"
 services:
   - design
@@ -16,6 +16,4 @@ featured: false
 order: 11
 ---
 
-<!-- TODO: translate from NL -->
-
-In een design sprint ontwikkelde Protopia Studio samen met de gemeente Amsterdam de Brede Welvaart Scan: een instrument om de effecten van beleidsvoorstellen integraal te beoordelen op tien thema’s van brede welvaart, in het hier en nu én in de toekomst.
+In a design sprint with the City of Amsterdam, Protopia Studio developed the Broad Prosperity Scan: a tool for assessing the effects of policy proposals across ten themes of broad prosperity, both in the here and now and in the future.

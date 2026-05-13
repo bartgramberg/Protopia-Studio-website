@@ -1,11 +1,11 @@
 ---
 title: "Carbon Bank - Rabobank"
-description: "Regeneratieve landbouw werkt als de businesscase klopt. Wij hebben mede de Rabobank Carbon Bank opgezet om werkende verdienmodellen rond regeneratieve land- en bosbouw te onderzoeken en uit te bouwen. Met concreet resultaat —  bossen geplant, koolstof vastgelegd, boeren die verdienen aan natuurherstel."
-challenge: "Rabobank wil zijn boeren klanten helpen verduurzamen EN toegang bieden tot koolstofmarkten (carbon credits) voor CO2 opslag. Regeneratieve landbouw en herbebossing zijn alleen interessant voor landeigenaren als er een goede business case achter zit. Daarnaast is nieuwe expertise vereist, en moet er vertrouwen zijn in de partners voor implementatie."
-role: "Kim en Maarten hebben een leidende rol gespeeld in de opzet van de Rabo Carbon Bank. Kim als strategisch lead, waaronder zowel interne als externe positionering en als manager van regeneratieve landbouw projecten in de VS, Brazilië en Nieuw-Zeeland. Maarten heeft een herbebossing project voor boeren in Brazilië opgericht, pilot gestart, certificering opgezet en succesvol de transitie naar een derde partij buiten de bank gefaciliteerd."
-result: "10.000 Ha aan regeneratieve landbouw geïnitieerd, 100 Ha aan biodiverse bossen geplant en 1000Ha aan bestaand bos beschermd. Dit is een showcase voor andere boeren in de regio. Binnen de Rabobank staan dergelijke projecten nu op de kaart voor investeringen en als inspiratie voor andere afdelingen."
-imageAlt: "Carbon Bank - Rabobank. image toon de grens tussen natuur en agricultuur in een braziliaans regenwoud. Initiatieven van de carbon bank hebben in dit gebeid geleid tot reforestatie, betaald vanuit carbon credit market. Deze nieuwe business voor boeren is zowel goed voor de natuur als economisch voordelig."
-typeProject: "Regeneratieve business"
+description: "Regenerative agriculture works when the business case works. We helped establish the Rabobank Carbon Bank to explore and scale viable revenue models around regenerative agriculture and forestry. With tangible results: forests planted, carbon stored, and farmers earning from nature restoration."
+challenge: "Rabobank wanted to help its farmer clients become more sustainable and gain access to carbon markets for CO2 storage. Regenerative agriculture and reforestation are only attractive to landowners when there is a strong business case behind them. New expertise is also required, and implementation partners need to be trusted."
+role: "Kim and Maarten played leading roles in setting up the Rabo Carbon Bank. Kim served as strategic lead, covering internal and external positioning and managing regenerative agriculture projects in the US, Brazil and New Zealand. Maarten founded a reforestation project for farmers in Brazil, launched the pilot, set up certification and successfully facilitated the transition to a third party outside the bank."
+result: "10,000 hectares of regenerative agriculture were initiated, 100 hectares of biodiverse forest were planted and 1,000 hectares of existing forest were protected. The work became a showcase for other farmers in the region. Within Rabobank, projects like these are now recognised as investment opportunities and as inspiration for other departments."
+imageAlt: "Carbon Bank - Rabobank. The image shows the boundary between nature and agriculture in a Brazilian rainforest. Carbon Bank initiatives in this area have led to reforestation funded through the carbon credit market. This new business opportunity for farmers is both good for nature and economically beneficial."
+typeProject: "regenerative business"
 category: "businesses"
 services:
   - research
@@ -17,6 +17,4 @@ featured: true
 order: 3
 ---
 
-<!-- TODO: translate from NL -->
-
-Regeneratieve landbouw werkt als de businesscase klopt. Wij hebben mede de Rabobank Carbon Bank opgezet om werkende verdienmodellen rond regeneratieve land- en bosbouw te onderzoeken en uit te bouwen. Met concreet resultaat —  bossen geplant, koolstof vastgelegd, boeren die verdienen aan natuurherstel.
+Regenerative agriculture works when the business case works. We helped establish the Rabobank Carbon Bank to explore and scale viable revenue models around regenerative agriculture and forestry. With tangible results: forests planted, carbon stored, and farmers earning from nature restoration.

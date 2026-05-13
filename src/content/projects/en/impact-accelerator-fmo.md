@@ -1,11 +1,11 @@
 ---
 title: "Impact Accelerator – FMO"
-description: "FMO, de Nederlandse ontwikkelingsbank, had geen goede manier om klantvragen te vertalen naar nieuwe producten. Samen met innovatiestudio Aim for the Moon werd een innovatieprogramma opgezet dat uitmondde in een eigen accelerator — waarmee FMO-klanten nieuwe digitale diensten ontwikkelden die aansloten op echte behoeften uit de markt."
-challenge: "FMO, de ondernemende Nederlandse ontwikkelingsbank, bedient klanten over de hele wereld in een snel veranderende omgeving. Om relevant te blijven moest FMO haar dienstverlening vernieuwen — maar een gestructureerd innovatieproces ontbrak. Hoe ontsluit je de werkelijke uitdagingen van klanten en vertaal je die naar concrete nieuwe producten en diensten?"
-role: "Samen met innovatiestudio Aim for the Moon een impact-gedreven innovatieprogramma ontworpen voor FMO. Het proces omvatte het in kaart brengen van de kernuitdagingen van klanten, het ontwerpen van product- en service-innovaties als oplossing, en de ontwikkeling van een eerste MVP."
-result: "Het programma resulteerde in de lancering van een gespecialiseerde accelerator voor FMO-klanten. Deelnemers doorliepen hun eigen innovatiereis, gericht op de ontwikkeling van nieuwe digitale diensten en producten — direct aansluitend op de behoeften uit de markt."
+description: "FMO, the Dutch entrepreneurial development bank, did not have a good way to translate customer needs into new products. Together with innovation studio Aim for the Moon, an innovation programme was created that led to a dedicated accelerator, enabling FMO customers to develop new digital services aligned with real market needs."
+challenge: "FMO serves customers around the world in a rapidly changing environment. To stay relevant, FMO needed to renew its services, but a structured innovation process was missing. How do you uncover customers' real challenges and translate them into concrete new products and services?"
+role: "Together with innovation studio Aim for the Moon, we designed an impact-driven innovation programme for FMO. The process included mapping customers' core challenges, designing product and service innovations as solutions, and developing a first MVP."
+result: "The programme resulted in the launch of a specialised accelerator for FMO customers. Participants went through their own innovation journey, focused on developing new digital services and products that directly addressed market needs."
 imageAlt: "FMO sustainable tech accelerator"
-typeProject: "Impact Accelerator"
+typeProject: "impact accelerator"
 category: "businesses"
 services:
   - research
@@ -16,6 +16,4 @@ featured: false
 order: 5
 ---
 
-<!-- TODO: translate from NL -->
-
-FMO, de Nederlandse ontwikkelingsbank, had geen goede manier om klantvragen te vertalen naar nieuwe producten. Samen met innovatiestudio Aim for the Moon werd een innovatieprogramma opgezet dat uitmondde in een eigen accelerator — waarmee FMO-klanten nieuwe digitale diensten ontwikkelden die aansloten op echte behoeften uit de markt.
+FMO, the Dutch entrepreneurial development bank, did not have a good way to translate customer needs into new products. Together with innovation studio Aim for the Moon, an innovation programme was created that led to a dedicated accelerator, enabling FMO customers to develop new digital services aligned with real market needs.

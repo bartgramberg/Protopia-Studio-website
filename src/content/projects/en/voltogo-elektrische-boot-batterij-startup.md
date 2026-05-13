@@ -1,11 +1,11 @@
 ---
-title: "Voltogo elektrische boot-batterij - Startup"
-description: "Vele sloepjes in Amsterdam hebben geen vaste plek met lader, dus kunnen moeilijk overschakelen op elektrisch varen. De draagbare Voltogo batterij is thuis op te laden of bij waterkantcafés in Amsterdam. Het netwerk van snelladers vergroot het vaargebied, trekt nieuwe klanten naar cafés en bespaart de gemeente een forse investering in publieke oplaadpunten."
-challenge: "Vele sloepjes in Amsterdam hebben geen vaste plek met lader, dus kunnen moeilijk overschakelen op elektrisch varen. In 2018 was de gemeente Amsterdam van plan om dit in 2023 te verplichten. Booteigenaren moeten dan met een accu naar hun bootje, vaak op de fiets. Bestaande accu packs zijn te zwaar of leveren te weinig bereik voor een dagje varen."
-role: "Als Co-Founder gewerkt aan productontwerp en ontwikkeling voor productie. Door middel van Lean Startup methode het business model verder uitgewerkt en uitgebreid gebruiksonderzoek gedaan voor zowel ontwerp als positionering. Aantrekken van startup funding en support."
-result: "Geselecteerd voor het Climate KIC duurzame startup accelerator, maar de business case bleek uiteindelijk niet rond te krijgen: de techniek was (nog) te duur voor de doelgroep. Wel hebben we werkende prototypes ontwikkeld en getest, een snellader in gebruik gehad bij café Hannekes Boom en waren er genoeg deelnemende cafés om heel Amsterdam te dekken qua bereik van de batterij."
-imageAlt: "founding team met eerste productieklare Voltogo batterij"
-typeProject: "Regeneratief product"
+title: "Voltogo Electric Boat Battery - Startup"
+description: "Many small boats in Amsterdam do not have a fixed berth with a charger, making it difficult to switch to electric boating. The portable Voltogo battery can be charged at home or at waterfront cafes in Amsterdam. The fast-charging network expands boating range, brings new customers to cafes and saves the municipality a major investment in public charging points."
+challenge: "Many small boats in Amsterdam do not have a fixed berth with a charger, making it difficult to switch to electric boating. In 2018, the City of Amsterdam planned to make this mandatory in 2023. Boat owners would then need to carry a battery to their boat, often by bicycle. Existing battery packs were too heavy or did not provide enough range for a day on the water."
+role: "As co-founder, Maarten worked on product design and development for production. Using the Lean Startup method, the business model was developed further and extensive user research was conducted for both design and positioning. The work also included attracting startup funding and support."
+result: "Voltogo was selected for the Climate KIC sustainable startup accelerator, but the business case ultimately did not work: the technology was still too expensive for the target group. Even so, we developed and tested working prototypes, operated a fast charger at cafe Hannekes Boom and had enough participating cafes to cover all of Amsterdam in terms of battery range."
+imageAlt: "Founding team with the first production-ready Voltogo battery"
+typeProject: "regenerative product"
 category: "products"
 services:
   - research
@@ -16,6 +16,4 @@ featured: false
 order: 13
 ---
 
-<!-- TODO: translate from NL -->
-
-Vele sloepjes in Amsterdam hebben geen vaste plek met lader, dus kunnen moeilijk overschakelen op elektrisch varen. De draagbare Voltogo batterij is thuis op te laden of bij waterkantcafés in Amsterdam. Het netwerk van snelladers vergroot het vaargebied, trekt nieuwe klanten naar cafés en bespaart de gemeente een forse investering in publieke oplaadpunten.
+Many small boats in Amsterdam do not have a fixed berth with a charger, making it difficult to switch to electric boating. The portable Voltogo battery can be charged at home or at waterfront cafes in Amsterdam. The fast-charging network expands boating range, brings new customers to cafes and saves the municipality a major investment in public charging points.

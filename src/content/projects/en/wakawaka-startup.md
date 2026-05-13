@@ -1,11 +1,11 @@
 ---
-title: "WakaWaka - startup"
-description: "De missie: licht brengen in de levens van iedereen die nog in het donker leeft. Een product en business model rond een lamp op zonne-energie maakte dit mogelijk. honderdduizenden mensen zonder toegang tot elektriciteit ontvingen een gratis zonnelamp, betaald door verkoop in het globale westen."
-challenge: "Meer dan 20% van de wereldbevolking heeft geen toegang tot elektriciteit. Na zonsondergang blijft het donker — verlicht door kaarsen en kerosinelampen. Dit leidt tot ernstige gezondheidsschade, hoge CO2-uitstoot en slechte leerprestaties bij kinderen. Een probleem met enorme schaal en urgentie."
-role: "Kim (protopia adviseur) was mede-oprichter van Off-Grid Solutions BV, het bedrijf achter WakaWaka. Vanuit die rol bijgedragen aan business modeling, strategisch advies en management, met als missie: licht brengen in de levens van iedereen die nog in het donker leeft."
-result: "WakaWaka groeide uit tot ’s werelds meest efficiënte lijn van solar LED-producten. Bij Kim’s vertrek hadden meer dan 400.000 mensen dankzij de producten toegang tot licht — waardoor kinderen konden studeren en vluchtelingen hun leven konden opbouwen."
+title: "WakaWaka - Startup"
+description: "The mission: bring light to the lives of everyone still living in the dark. A product and business model around a solar-powered lamp made this possible. Hundreds of thousands of people without access to electricity received a free solar lamp, funded by sales in the global West."
+challenge: "More than 20% of the world's population has no access to electricity. After sunset, darkness remains, lit only by candles and kerosene lamps. This causes serious health damage, high CO2 emissions and poor learning outcomes for children. It is a problem of enormous scale and urgency."
+role: "Kim, a Protopia advisor, was co-founder of Off-Grid Solutions BV, the company behind WakaWaka. In that role, she contributed to business modelling, strategic advice and management, with the mission of bringing light to the lives of everyone still living in the dark."
+result: "WakaWaka grew into the world's most efficient line of solar LED products. By the time Kim left, more than 400,000 people had access to light thanks to the products, enabling children to study and refugees to rebuild their lives."
 imageAlt: "WakaWaka light"
-typeProject: "Impact venture"
+typeProject: "impact venture"
 category: "products"
 services:
   - research
@@ -17,6 +17,4 @@ featured: false
 order: 10
 ---
 
-<!-- TODO: translate from NL -->
-
-De missie: licht brengen in de levens van iedereen die nog in het donker leeft. Een product en business model rond een lamp op zonne-energie maakte dit mogelijk. honderdduizenden mensen zonder toegang tot elektriciteit ontvingen een gratis zonnelamp, betaald door verkoop in het globale westen.
+The mission: bring light to the lives of everyone still living in the dark. A product and business model around a solar-powered lamp made this possible. Hundreds of thousands of people without access to electricity received a free solar lamp, funded by sales in the global West.

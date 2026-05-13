@@ -1,11 +1,11 @@
 ---
-title: "Financieel Vooruitzicht - ABN AMRO"
-description: "Waar lig jij 's nachts wakker van? 70% van de Nederlanders noemt op die vraag lange-termijn financiële zorgen. Bij ABN AMRO ontwikkelden we een intuïtieve applicatie die het complexe, arbedsintensieve en kostbare proces van financiele planning voor iedereen toegankelijk maakt. Resultaat: Gelukkige klanten en een positieve business case."
-challenge: "Zeven op de tien Nederlanders noemt een financiële zorg op de lange termijn als zijn grootste probleem. Toch blijft professionele financiële planning voor de meeste mensen onbereikbaar: het proces is duur, tijdrovend en vereist specialistische begeleiding. ABN AMRO wilde dit doorbreken. De ambitie: financiële planning democratiseren en voor iedere klant beschikbaar maken. Onze rol Bart nam de lead in productstrategie, applicatieontwerp en service design. We vertaalden een complex, handmatig adviesproces naar een intuïtieve digitale applicatie die klanten in één gesprek een helder beeld geeft van hun financiële toekomst. Daarbij werkten we nauw samen met het interne team aan business development, werkinstructies en de opzet en begeleiding van de pilotfase — inclusief training van medewerkers en evaluatie van klantgesprekken."
-role: "Bart nam de lead in productstrategie, applicatieontwerp en service design. We vertaalden een complex, handmatig adviesproces naar een intuïtieve digitale applicatie die klanten in één gesprek een helder beeld geeft van hun financiële toekomst. Daarbij werkten we nauw samen met het interne team aan business development, werkinstructies en de opzet en begeleiding van de pilotfase — inclusief training van medewerkers en evaluatie van klantgesprekken."
-result: "De eerste versie van Financieel Vooruitzicht is live en wordt actief gebruikt door klanten van ABN AMRO. De reacties zijn ronduit positief: klanten geven aan dat het gesprek hen rust geeft en dat ze voor het eerst een concreet beeld hebben van wat er mogelijk is. Wat het verschil maakt: mensen gaan daadwerkelijk financiële keuzes voor de toekomst maken na gebruik. Van eerder stoppen met werken tot bewuster sparen — Financieel Vooruitzicht zet onzekerheid om in actie. dit levert meer vertrouwen bij gebruikers, en door het actievere financiële gedrag ook een positieve business case voor ABN AMRO"
-imageAlt: "klant en adviseur in gesprek over de financiele toekomst"
-typeProject: "regeneratief product"
+title: "Financial Outlook - ABN AMRO"
+description: "What keeps you awake at night? Seventy percent of Dutch people answer that question with long-term financial worries. At ABN AMRO, we developed an intuitive application that makes the complex, labour-intensive and expensive process of financial planning accessible to everyone. The result: happier customers and a positive business case."
+challenge: "Seven out of ten Dutch people name a long-term financial concern as their biggest problem. Yet professional financial planning remains out of reach for most people: the process is expensive, time-consuming and requires specialist guidance. ABN AMRO wanted to change this. The ambition was to democratise financial planning and make it available to every customer."
+role: "Bart led product strategy, application design and service design. We translated a complex, manual advisory process into an intuitive digital application that gives customers a clear picture of their financial future in a single conversation. We worked closely with the internal team on business development, work instructions and the setup and guidance of the pilot phase, including employee training and evaluation of customer conversations."
+result: "The first version of Financial Outlook is live and actively used by ABN AMRO customers. Responses have been very positive: customers say the conversation gives them peace of mind and, for the first time, a concrete picture of what is possible. The difference is that people actually start making financial choices for the future after using it, from retiring earlier to saving more consciously. Financial Outlook turns uncertainty into action. This creates more confidence for users and, through more active financial behaviour, a positive business case for ABN AMRO."
+imageAlt: "Customer and advisor discussing the financial future"
+typeProject: "regenerative product"
 category: "products"
 services:
   - research
@@ -17,6 +17,4 @@ featured: false
 order: 16
 ---
 
-<!-- TODO: translate from NL -->
-
-Waar lig jij 's nachts wakker van? 70% van de Nederlanders noemt op die vraag lange-termijn financiële zorgen. Bij ABN AMRO ontwikkelden we een intuïtieve applicatie die het complexe, arbedsintensieve en kostbare proces van financiele planning voor iedereen toegankelijk maakt. Resultaat: Gelukkige klanten en een positieve business case.
+What keeps you awake at night? Seventy percent of Dutch people answer that question with long-term financial worries. At ABN AMRO, we developed an intuitive application that makes the complex, labour-intensive and expensive process of financial planning accessible to everyone. The result: happier customers and a positive business case.

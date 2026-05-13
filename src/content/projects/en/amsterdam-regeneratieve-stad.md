@@ -1,11 +1,11 @@
 ---
-title: "Amsterdam Regeneratieve Stad"
-description: "Onderzoek en visieontwikkeling voor de gemeente Amsterdam naar de stad als regeneratief ecosysteem. Het project resulteerde in ontwerpprincipes, modellen en beleidsvoorstellen die de stad helpen om te transfomeren naar een regeneratieve samenleving."
-challenge: "De gemeente Amsterdam zoekt naar manieren om stedelijke ontwikkeling te verduurzamen en te regenereren. De uitdaging: hoe kan de stad niet alleen minder schade toebrengen, maar daadwerkelijk bijdragen aan herstel van ecologische en sociale systemen?"
-role: "Protopia Studio voerde onderzoek uit naar internationale best practices en analyseerde bestaand beleid en initiatieven in de stad. Daaruit ontwikkelden we een raamwerk van 8 ontwerpprincipes, een gelaagd stedenbouwkundig model en een database van voorbeelden."
-result: "Het project leverde een inspirerende visie en concrete handvatten voor beleid, ontwerp en praktijk. De kern: een regeneratieve stad geeft meer terug dan zij neemt. Ze herstelt en versterkt de ecologische én sociale systemen waarvan zij deel uitmaakt. Het hielp de gemeente Amsterdam om regeneratieve principes te vertalen naar haar eigen stedelijke context en om richting te geven aan toekomstig beleid en initiatieven. Er zijn nieuwe concepten voor Amsterdam voorgesteld, van bodemverbetering en coöperatieve voedselsystemen tot regeneratief inkoopbeleid en educatieve programma’s."
-imageAlt: "Gelaagd model voor de regeneratieve stad"
-typeProject: "onderzoek & visie"
+title: "Amsterdam Regenerative City"
+description: "Research and vision development for the City of Amsterdam, exploring the city as a regenerative ecosystem. The project resulted in design principles, models and policy proposals that help the city transform towards a regenerative society."
+challenge: "The City of Amsterdam is looking for ways to make urban development more sustainable and regenerative. The challenge: how can the city not only cause less harm, but actively contribute to the restoration of ecological and social systems?"
+role: "Protopia Studio researched international best practices and analysed existing policy and initiatives across the city. From this, we developed a framework of eight design principles, a layered urban model and a database of examples."
+result: "The project delivered an inspiring vision and concrete tools for policy, design and practice. The central idea: a regenerative city gives back more than it takes. It restores and strengthens the ecological and social systems it is part of. The work helped the City of Amsterdam translate regenerative principles into its own urban context and shape future policy and initiatives. New concepts were proposed for Amsterdam, from soil improvement and cooperative food systems to regenerative procurement and educational programmes."
+imageAlt: "Layered model for the regenerative city"
+typeProject: "research & vision"
 category: "environments"
 services:
   - research
@@ -15,6 +15,4 @@ featured: true
 order: 1
 ---
 
-<!-- TODO: translate from NL -->
-
-Onderzoek en visieontwikkeling voor de gemeente Amsterdam naar de stad als regeneratief ecosysteem. Het project resulteerde in ontwerpprincipes, modellen en beleidsvoorstellen die de stad helpen om te transfomeren naar een regeneratieve samenleving.
+Research and vision development for the City of Amsterdam, exploring the city as a regenerative ecosystem. The project resulted in design principles, models and policy proposals that help the city transform towards a regenerative society.

@@ -1,9 +1,9 @@
 ---
 title: "Innovatiepartners"
-description: "In opdracht van Gemeente Amsterdam  bedacht, ontwierp en realiseerde Protopia Studio Innovatiepartners.nl: hét platform voor innovatieve ondernemers die willen samenwerken met publieke organisaties."
-challenge: "Publieke organisaties hebben innovatieve oplossingen nodig voor maatschappelijke transities, maar kleinere ondernemers vinden vaak geen weg door complexe aanbestedings- en subsidietrajecten."
-role: "Protopia Studio ontwikkelde het concept, begeleidde de realisatie, en fungeerde als product owner voor o.a. strategie, design, platformarchitectuur, stakeholdermanagement en marketing."
-result: "Innovatiepartners.nl  maakte het eenvoudiger voor ondernemers om mee te doen aan aanbestedingen en subsidies. Het platform groeide uit tot hét punt waar overheid en ondernemers elkaar vinden, en stimuleerde samenwerking bij maatschappelijke innovatie."
+description: "Commissioned by the City of Amsterdam, Protopia Studio conceived, designed and delivered Innovatiepartners.nl: the platform for innovative entrepreneurs who want to collaborate with public organisations."
+challenge: "Public organisations need innovative solutions for societal transitions, but smaller entrepreneurs often struggle to find their way through complex procurement and subsidy processes."
+role: "Protopia Studio developed the concept, guided implementation and acted as product owner for strategy, design, platform architecture, stakeholder management and marketing."
+result: "Innovatiepartners.nl made it easier for entrepreneurs to take part in tenders and subsidy programmes. The platform grew into the place where government and entrepreneurs find each other, stimulating collaboration around societal innovation."
 imageAlt: "Innovatiepartners platform"
 typeProject: "venture / platform"
 category: "businesses"
@@ -17,6 +17,4 @@ featured: false
 order: 14
 ---
 
-<!-- TODO: translate from NL -->
-
-In opdracht van Gemeente Amsterdam  bedacht, ontwierp en realiseerde Protopia Studio Innovatiepartners.nl: hét platform voor innovatieve ondernemers die willen samenwerken met publieke organisaties.
+Commissioned by the City of Amsterdam, Protopia Studio conceived, designed and delivered Innovatiepartners.nl: the platform for innovative entrepreneurs who want to collaborate with public organisations.

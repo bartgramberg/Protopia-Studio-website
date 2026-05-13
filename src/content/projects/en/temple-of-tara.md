@@ -1,11 +1,11 @@
 ---
 title: "Temple of Tārā"
-description: "Een visie- en conceptstudie voor een nieuw retreatcenter in Sri Lanka, op een voormalige theeplantage. De Temple of Tārā is een heiligdom voor vrouwelijke empowerment, regeneratief leven en interculturele verbinding."
-challenge: "De initiatiefnemer wilde een veilig en transformerend centrum oprichten waar lokale en internationale vrouwen samenkomen voor tantra, yoga en educatie. De context is complex: een postkoloniale samenleving met ongelijkheden, gecombineerd met de snelle groei van toerisme. Het centrum moest een antwoord bieden op sociale ongelijkheid én ecologische regeneratie."
-role: "Protopia Studio ontwierp de eerste conceptschetsen in nauwe co-creatie met de initiatiefnemer. Het concept omvat een tempelruimte voor 50 personen, negen cabins, een openluchtrestaurant en ondersteunende faciliteiten. Het concept combineert sacred geometry en Vastu Shastra met eco-bouw en permacultuur. Ook hebben we geadviseerd over de aanpak en aanschaf van het land."
-result: "De visie maakt concreet hoe regeneratieve architectuur en sociaal programma elkaar kunnen versterken. De Temple of Tārā laat zien hoe een retreat center kan fungeren als brug tussen lokaal en mondiaal, door zowel gemeenschappen te versterken als internationale bezoekers een diepere verbinding met land en cultuur te bieden. Het project verbindt spirituele ontwikkeling, vrouwenemancipatie en regeneratieve principes in een holistische leef- en leeromgeving, en vormt zo een concreet voorbeeld van hoe architectuur en programma’s samen kunnen bijdragen aan sociale én ecologische transformatie."
-imageAlt: "Ontwerpstudie retreat center"
-typeProject: "ontwerpstudie"
+description: "A vision and concept study for a new retreat centre in Sri Lanka, on a former tea plantation. The Temple of Tārā is a sanctuary for female empowerment, regenerative living and intercultural connection."
+challenge: "The initiator wanted to create a safe and transformative centre where local and international women could come together for tantra, yoga and education. The context is complex: a postcolonial society with inequalities, combined with the rapid growth of tourism. The centre needed to respond to both social inequality and ecological regeneration."
+role: "Protopia Studio designed the first concept sketches in close co-creation with the initiator. The concept includes a temple space for 50 people, nine cabins, an open-air restaurant and supporting facilities. It combines sacred geometry and Vastu Shastra with eco-building and permaculture. We also advised on the approach and acquisition of the land."
+result: "The vision makes concrete how regenerative architecture and social programming can strengthen each other. The Temple of Tārā shows how a retreat centre can act as a bridge between local and global contexts, strengthening communities while offering international visitors a deeper connection to land and culture. The project connects spiritual development, women's empowerment and regenerative principles in a holistic living and learning environment."
+imageAlt: "Retreat center design study"
+typeProject: "design study"
 category: "environments"
 services:
   - design
@@ -15,6 +15,4 @@ featured: false
 order: 17
 ---
 
-<!-- TODO: translate from NL -->
-
-Een visie- en conceptstudie voor een nieuw retreatcenter in Sri Lanka, op een voormalige theeplantage. De Temple of Tārā is een heiligdom voor vrouwelijke empowerment, regeneratief leven en interculturele verbinding.
+A vision and concept study for a new retreat centre in Sri Lanka, on a former tea plantation. The Temple of Tārā is a sanctuary for female empowerment, regenerative living and intercultural connection.

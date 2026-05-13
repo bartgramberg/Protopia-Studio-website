@@ -1,11 +1,11 @@
 ---
-title: "Oosterwold in Overvloed"
-description: "Een werkplaats in Almere Oosterwold waarin bewoners, boeren, ambtenaren en ontwikkelaars samenkwamen om nieuwe vormen van samenwerking te verkennen. Protopia Studio begeleidde het proces en bracht overheid en ontwikkelaars in gesprek met bewonersinitiatieven."
-challenge: "Oosterwold is een experimenteel stadsdeel waar 18.000 woningen in een landbouwlandschap worden gebouwd. De uitdaging: hoe zorgen we dat bewonersinitiatieven, overheid, boeren en ontwikkelaars samenwerken om de grote transities in wonen, landbouw en klimaat te versnellen?"
-role: "Protopia Studio begeleidde het proces richting professionele stakeholders, haalde uitdagingen op, vertaalde dit naar een inhoudelijk programma en organiseerde partnerschappen en funding. Samen met lokale initiatiefnemers en kunstenaars creëerden we een dag vol kunst, dialoog en systeemdenken."
-result: "Het evenement bracht circa 40 sleutelfiguren samen en resulteerde in concrete voorstellen zoals een gebiedscoöperatie, waterateliers en inspiratie-tours. De provincie Flevoland sprak de ambitie uit om dit vervolg te geven met meer bijeenkomsten en interventies. Oosterwold werd zo neergezet als proeftuin voor brede welvaart en vitale samenleving. Lees hier ook een kort verslag van het evenement: Wat gebeurt er als boeren, ambtenaren, bewoners en projectontwikkelaars elkaar ontmoeten op een boerderij in Oosterwold?"
-imageAlt: "Evenement Oosterwold in Overvloed"
-typeProject: "evenement"
+title: "Oosterwold in Abundance"
+description: "A workshop in Almere Oosterwold where residents, farmers, civil servants and developers came together to explore new forms of collaboration. Protopia Studio guided the process and brought government and developers into dialogue with resident initiatives."
+challenge: "Oosterwold is an experimental urban district where 18,000 homes are being built in an agricultural landscape. The challenge: how can resident initiatives, government, farmers and developers work together to accelerate major transitions in housing, agriculture and climate?"
+role: "Protopia Studio guided the process with professional stakeholders, gathered challenges, translated them into a substantive programme and organised partnerships and funding. Together with local initiators and artists, we created a day full of art, dialogue and systems thinking."
+result: "The event brought together around 40 key figures and resulted in concrete proposals such as an area cooperative, water ateliers and inspiration tours. The Province of Flevoland expressed the ambition to continue this work with more gatherings and interventions. Oosterwold was positioned as a testing ground for broad prosperity and a vital society."
+imageAlt: "Oosterwold in Abundance event"
+typeProject: "event"
 category: "environments"
 services:
   - research
@@ -16,6 +16,4 @@ featured: false
 order: 9
 ---
 
-<!-- TODO: translate from NL -->
-
-Een werkplaats in Almere Oosterwold waarin bewoners, boeren, ambtenaren en ontwikkelaars samenkwamen om nieuwe vormen van samenwerking te verkennen. Protopia Studio begeleidde het proces en bracht overheid en ontwikkelaars in gesprek met bewonersinitiatieven.
+A workshop in Almere Oosterwold where residents, farmers, civil servants and developers came together to explore new forms of collaboration. Protopia Studio guided the process and brought government and developers into dialogue with resident initiatives.

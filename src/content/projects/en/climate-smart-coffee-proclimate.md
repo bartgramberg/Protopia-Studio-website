@@ -1,11 +1,11 @@
 ---
 title: "Climate Smart Coffee – ProClimate"
-description: "In de koffiestreek rond Mount Elgon in Oeganda beïnvloeden ontbossing, bodemerosie en afhankelijkheid van brandhout al jaren aan de levensstandaard van lokale boeren. Dit project voor Fair trade coöperatie Coffee-A-Cup pakte dit aan met 13.000 verbeterde kooktoestellen en 5 miljoen geplante bomen — goed voor meer dan 200.000 ton CO2-reductie en betere inkomens voor de regio."
-challenge: "De regio Mount Elgon in Oeganda is bekend om zijn Arabica-koffie, wat ook de belangrijkste inkomstenbron is voor lokale huishoudens. Tegelijkertijd is 90% van de bevolking afhankelijk van brandhout voor koken. Dit legt een enorme druk op de omliggende bossen, met bodemerosie, grondverschuivingen en dalende koffieopbrengsten tot gevolg. Een vicieuze cirkel die de levensstandaard van koffieboeren verder ondermijnt."
-role: "Technische assistentie en carbon finance voor opdrachtgever ProClimate, ter ondersteuning van de lokale fair trade coöperatie Coffee-A-Cup. Business modeling en het aantrekken van impact financing voor de distributie van 13.000 verbeterde kooktoestellen en de aanplant van 5 miljoen inheemse bomen."
-result: "Het project bereikte de laatste planningsfase en financial close. De verwachte opbrengst: meer dan 200.000 ton CO2-reductie, en aanzienlijke gezondheids- en productiviteitswinst voor de koffieboeren in de regio."
+description: "In the coffee region around Mount Elgon in Uganda, deforestation, soil erosion and dependence on firewood have affected local farmers' living standards for years. This project for fair trade cooperative Coffee-A-Cup addressed the issue with 13,000 improved cookstoves and 5 million planted trees, resulting in more than 200,000 tonnes of CO2 reduction and better incomes for the region."
+challenge: "The Mount Elgon region in Uganda is known for its Arabica coffee, which is also the main source of income for local households. At the same time, 90% of the population depends on firewood for cooking. This places enormous pressure on surrounding forests, causing soil erosion, landslides and declining coffee yields. It is a vicious cycle that further undermines the living standards of coffee farmers."
+role: "Technical assistance and carbon finance for client ProClimate, supporting the local fair trade cooperative Coffee-A-Cup. Business modelling and attracting impact finance for the distribution of 13,000 improved cookstoves and the planting of 5 million native trees."
+result: "The project reached the final planning phase and financial close. The expected outcome: more than 200,000 tonnes of CO2 reduction, along with significant health and productivity gains for coffee farmers in the region."
 imageAlt: "Climate Smart Coffee"
-typeProject: "Regeneratieve business"
+typeProject: "regenerative business"
 category: "businesses"
 services: []
 year: "2014-2016"
@@ -14,6 +14,4 @@ featured: false
 order: 7
 ---
 
-<!-- TODO: translate from NL -->
-
-In de koffiestreek rond Mount Elgon in Oeganda beïnvloeden ontbossing, bodemerosie en afhankelijkheid van brandhout al jaren aan de levensstandaard van lokale boeren. Dit project voor Fair trade coöperatie Coffee-A-Cup pakte dit aan met 13.000 verbeterde kooktoestellen en 5 miljoen geplante bomen — goed voor meer dan 200.000 ton CO2-reductie en betere inkomens voor de regio.
+In the coffee region around Mount Elgon in Uganda, deforestation, soil erosion and dependence on firewood have affected local farmers' living standards for years. This project for fair trade cooperative Coffee-A-Cup addressed the issue with 13,000 improved cookstoves and 5 million planted trees, resulting in more than 200,000 tonnes of CO2 reduction and better incomes for the region.

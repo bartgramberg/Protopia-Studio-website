@@ -1,11 +1,11 @@
 ---
 title: "Taralena Center"
-description: "Een eerste ontwerpvisie voor een holistisch centrum gewijd aan heling, educatie en gemeenschapsvorming. Het Taralena Center verkent hoe Integral Theory en regeneratieve principes kunnen worden vertaald naar een architectonisch en landschappelijk ontwerp."
-challenge: "Hoe kan een plek ontstaan die zowel bewustzijnsgroei als natuurherstel faciliteert, en waar mensen samenleven in harmonie met hun omgeving? Vanuit die vraag ontwikkelden we een visionair concept voor een holistisch educatief centrum in Nederland. We wilden een plek verbeelden die meer is dan een retreatcenter: een plek waar persoonlijke transformatie, natuurverbondenheid en collectieve heling samenkomen"
-role: "Protopia Studio ontwierp het Taralena Center als een integrale leer- en leefomgeving, met bewustzijnsontwikkeling als antwoord op ecologische en maatschappelijke uitdagingen. Het is geïnspireerd door de Integral Theory van filosoof Ken Wilber en met toepassing van Sacred Geometry."
-result: "Het Taralena Center laat zien hoe een toekomstbestendig, regeneratief centrum eruit kan zien dat educatie, natuurherstel en gemeenschapsleven verbindt. Het centrum is ontworpen rond drie pijlers:  Educatie – een omgeving die spirituele ontwaking en persoonlijke ontwikkeling faciliteert.  Natuurherstel – regeneratieve principes zoals herbebossing, circulair bouwen en rewilding van voormalige landbouwgrond.  Community – een gemeenschap die samen leert, leeft en zorgt, met een voedselbos, ecologische bouw en een inclusieve sociale structuur. Hoewel het project niet gericht is op directe realisatie, biedt het een krachtig toekomstbeeld en inspiratiebron voor initiatieven die zoeken naar een nieuwe balans tussen mens en natuur. Het ontwerp illustreert hoe systemisch denken, regeneratieve architectuur en holistische programma’s samen een nieuwe maatschappelijke infrastructuur kunnen vormen. Download hier het Vision Deck voor het Taralena Center:"
-imageAlt: "Plattegrond regeneratief retreat center"
-typeProject: "ontwerpstudie"
+description: "An initial design vision for a holistic centre dedicated to healing, education and community building. The Taralena Center explores how Integral Theory and regenerative principles can be translated into architectural and landscape design."
+challenge: "How can a place emerge that facilitates both consciousness development and nature restoration, where people live together in harmony with their environment? From that question, we developed a visionary concept for a holistic educational centre in the Netherlands. We wanted to imagine a place that is more than a retreat centre: a place where personal transformation, connection to nature and collective healing come together."
+role: "Protopia Studio designed the Taralena Center as an integral learning and living environment, with consciousness development as a response to ecological and societal challenges. It is inspired by the Integral Theory of philosopher Ken Wilber and applies Sacred Geometry."
+result: "The Taralena Center shows what a future-proof regenerative centre could look like, connecting education, nature restoration and community life. The centre is designed around three pillars: education, an environment that facilitates spiritual awakening and personal development; nature restoration, through regenerative principles such as reforestation, circular construction and rewilding former agricultural land; and community, a group that learns, lives and cares together, with a food forest, ecological building and an inclusive social structure. Although the project is not aimed at immediate realisation, it offers a powerful future image and source of inspiration for initiatives seeking a new balance between people and nature."
+imageAlt: "Plan of a regenerative retreat center"
+typeProject: "design study"
 category: "environments"
 services:
   - research
@@ -16,6 +16,4 @@ featured: false
 order: 6
 ---
 
-<!-- TODO: translate from NL -->
-
-Een eerste ontwerpvisie voor een holistisch centrum gewijd aan heling, educatie en gemeenschapsvorming. Het Taralena Center verkent hoe Integral Theory en regeneratieve principes kunnen worden vertaald naar een architectonisch en landschappelijk ontwerp.
+An initial design vision for a holistic centre dedicated to healing, education and community building. The Taralena Center explores how Integral Theory and regenerative principles can be translated into architectural and landscape design.

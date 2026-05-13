@@ -1,11 +1,11 @@
 ---
 title: "Log&Solve - Klasmann-Deilmann"
-description: "Een dashboard dat plantenkwekers helpt niet meer te sturen op gevoel en ervaring, maar op data van hun teelten. Dit bespaart energie, meststoffen, bestrijdingsmiddelen en water. En dus ook kosten voor de kweker."
-challenge: "Klasmann-Deilmann is leverancier van a-klasse potgrond en vertrouwd adviseur van kwekers in Europa. KD wil hun eigen portfolio uitbreiden met (digitale) diensten, en hun klanten portfolio maakt nog vaak kweek-beslissingen op basis van ervaring en gevoel."
-role: "De gebruiksgroep is over het algemeen conservatief, dus voor impact moest het gebruik moest zo laagdrempelig mogelijk worden. Door handmatig eerste pilots op te zetten konden we achterhalen welke data de meeste waarde gaf en in welke vorm, en samen met de kwekers en KD experts doorontwikkelen tot een database met meerdere dashboards. Daarnaast adviseerden wij KD over de implementatie en het business model voor Log&Solve en werkten met de Sales afdeling aan het opschalen."
-result: "Ook bij vooruitstrevende kwekers met geautomatiseerde systemen bleek er nog veel te behalen door structureel kweek data op te halen van water, pH, EC, nutriënten en fotos van veld, plant en wortels. Door inzicht uit data kan hier op worden bespaard. Daarnaast stimuleert het een gedragsverandering van overvloedigheid naar precisie landbouw; van 'beter teveel dan te weinig mest' naar 'hoeveel biedt een optimaal resultaat'."
-imageAlt: "Aan sensoren gekoppelde app toont groeidata"
-typeProject: "Regeneratief product"
+description: "A dashboard that helps growers make decisions based on cultivation data instead of intuition and experience alone. This saves energy, fertilisers, pesticides and water, and therefore costs for the grower."
+challenge: "Klasmann-Deilmann is a supplier of premium potting soil and a trusted advisor to growers across Europe. KD wanted to expand its own portfolio with digital services, while its customers still often made cultivation decisions based on experience and instinct."
+role: "The user group is generally conservative, so impact required the product to be as accessible as possible. By manually setting up the first pilots, we identified which data created the most value and in what form. Together with growers and KD experts, we developed this into a database with multiple dashboards. We also advised KD on implementation and the business model for Log&Solve, and worked with the sales department on scaling."
+result: "Even among progressive growers with automated systems, there was still a lot to gain from systematically collecting cultivation data on water, pH, EC, nutrients and photos of fields, plants and roots. Data-driven insight can reduce inputs. It also stimulates a behavioural shift from abundance to precision agriculture: from 'better too much fertiliser than too little' to 'what amount produces the optimal result?'"
+imageAlt: "Sensor-connected app showing growth data"
+typeProject: "regenerative product"
 category: "products"
 services:
   - research
@@ -17,6 +17,4 @@ featured: false
 order: 4
 ---
 
-<!-- TODO: translate from NL -->
-
-Een dashboard dat plantenkwekers helpt niet meer te sturen op gevoel en ervaring, maar op data van hun teelten. Dit bespaart energie, meststoffen, bestrijdingsmiddelen en water. En dus ook kosten voor de kweker.
+A dashboard that helps growers make decisions based on cultivation data instead of intuition and experience alone. This saves energy, fertilisers, pesticides and water, and therefore costs for the grower.

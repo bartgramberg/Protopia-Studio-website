@@ -1,11 +1,11 @@
 ---
-title: "Voedselcoöp Marineterrein"
-description: "Protopia Studio ontwierp een schets voor een voedselcoöperatief, gebaseerd op permacultuurprincipes. Het plan omvat een market garden, voedselbos, educatie-hub en coöperatieve markt. Zo ontstaat een blauwdruk voor lokale gebiedscoöperaties die ecologische, sociale en educatieve synergieën creëren."
-challenge: "De nieuwe woonwijk op het Marineterrein vroeg om innovatieve ideeën voor duurzame, inclusieve en regeneratieve wijkvoorzieningen. Hoe kan voedselproductie worden geïntegreerd in de stad, en tegelijk bijdragen aan biodiversiteit, sociale cohesie en circulaire kringlopen?"
-role: "Protopia Studio ontwikkelde een schetsontwerp voor een coöperatief voedselsysteem in de wijk. Het plan combineert permacultuurprincipes, collectief beheer en educatieve functies. We tekenden een paviljoen als centrale ontmoetingsplek, gekoppeld aan een market garden, voedselbos, lokale compostverzameling en waterretentie."
-result: "Het ontwerp laat zien hoe lokale gebiedscoöperaties kunnen functioneren als nieuwe commons: bewoners beheren samen regeneratieve voorzieningen en profiteren van lokaal voedsel, educatie en een sterke sociale structuur. De aanpak versterkt biodiversiteit, herstelt de bodem, vergroot klimaatbestendigheid en bevordert eigenaarschap en verbondenheid in de wijk. Het model is schaalbaar en kan in meerdere stadsdelen worden toegepast."
-imageAlt: "Ontwerpstudie gebiedscooperatie"
-typeProject: "ontwerpstudie"
+title: "Food Cooperative Marineterrein"
+description: "Protopia Studio designed a sketch for a food cooperative based on permaculture principles. The plan includes a market garden, food forest, education hub and cooperative market. It creates a blueprint for local area cooperatives that generate ecological, social and educational synergies."
+challenge: "The new residential district at the Marineterrein called for innovative ideas for sustainable, inclusive and regenerative neighbourhood facilities. How can food production be integrated into the city while contributing to biodiversity, social cohesion and circular flows?"
+role: "Protopia Studio developed a sketch design for a cooperative food system in the neighbourhood. The plan combines permaculture principles, collective management and educational functions. We designed a pavilion as a central meeting place, connected to a market garden, food forest, local compost collection and water retention."
+result: "The design shows how local area cooperatives can function as new commons: residents collectively manage regenerative facilities and benefit from local food, education and a strong social structure. The approach strengthens biodiversity, restores soil, increases climate resilience and fosters ownership and connection in the neighbourhood. The model is scalable and can be applied in multiple urban districts."
+imageAlt: "Area cooperative design study"
+typeProject: "design study"
 category: "environments"
 services:
   - design
@@ -15,6 +15,4 @@ featured: false
 order: 12
 ---
 
-<!-- TODO: translate from NL -->
-
-Protopia Studio ontwierp een schets voor een voedselcoöperatief, gebaseerd op permacultuurprincipes. Het plan omvat een market garden, voedselbos, educatie-hub en coöperatieve markt. Zo ontstaat een blauwdruk voor lokale gebiedscoöperaties die ecologische, sociale en educatieve synergieën creëren.
+Protopia Studio designed a sketch for a food cooperative based on permaculture principles. The plan includes a market garden, food forest, education hub and cooperative market. It creates a blueprint for local area cooperatives that generate ecological, social and educational synergies.

@@ -1,11 +1,11 @@
 ---
 title: "Amsterdam Smart City"
-description: "Onderzoek en ontwerp voor een vernieuwd platform van Amsterdam Smart City. Protopia Studio deed gebruikersonderzoek, data-analyse en ontwikkelde een nieuwe propositie en platformconcept."
-challenge: "Het bestaande Amstrerdam Smart City (ASC) platform bood onvoldoende waarde voor doelgroepen en gebruikte verouderde technologie. De vraag: hoe kan ASC changemakers verbinden en innovatie versnellen in de regio?"
-role: "Protopia Studio voerde gebruikersonderzoek en data-analyse uit, ontwikkelde een nieuwe propositie en UX/UI-concept via design thinking sprints, en deed een haalbaarheidsanalyse voor integratie en realisatie van het platform."
-result: "Het vernieuwde platform biedt overzicht van transities, kennisdeling, projectinformatie en netwerkfuncties. Het platform versterkt changemakers, maakt samenwerking zichtbaar en geeft handelingsperspectief. Het haalbaarheidsonderzoek bood heldere keuzes voor verdere ontwikkeling."
-imageAlt: "Design Sprint"
-typeProject: "propositie / platformconcept"
+description: "Research and design for a renewed Amsterdam Smart City platform. Protopia Studio conducted user research and data analysis, and developed a new proposition and platform concept."
+challenge: "The existing Amsterdam Smart City (ASC) platform did not provide enough value for its target audiences and relied on outdated technology. The question: how can ASC connect changemakers and accelerate innovation in the region?"
+role: "Protopia Studio conducted user research and data analysis, developed a new proposition and UX/UI concept through design thinking sprints, and carried out a feasibility analysis for platform integration and delivery."
+result: "The renewed platform provides an overview of transitions, knowledge sharing, project information and networking functionality. It strengthens changemakers, makes collaboration visible and offers clear ways to act. The feasibility study created clear choices for further development."
+imageAlt: "Design sprint"
+typeProject: "proposition / platform concept"
 category: "products"
 services:
   - design
@@ -16,6 +16,4 @@ featured: false
 order: 18
 ---
 
-<!-- TODO: translate from NL -->
-
-Onderzoek en ontwerp voor een vernieuwd platform van Amsterdam Smart City. Protopia Studio deed gebruikersonderzoek, data-analyse en ontwikkelde een nieuwe propositie en platformconcept.
+Research and design for a renewed Amsterdam Smart City platform. Protopia Studio conducted user research and data analysis, and developed a new proposition and platform concept.
