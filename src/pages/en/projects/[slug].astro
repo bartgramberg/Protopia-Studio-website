@@ -27,7 +27,7 @@ const tr = t(locale)
 const slug = project.id.replace('en/', '')
 const catLabel = tr.projects.categoryLabel[project.data.category]
 const media = defaultProject?.data ?? project.data
-const sliderImages = media.images.length > 0 ? media.images : [media.image]
+const sliderImages = media.images.length > 0 ? media.images : media.image ? [media.image] : []
 ---
 <Base title={project.data.title} description={project.data.description} locale={locale} altHref={`/projecten/${slug}`}>
   <Nav locale={locale} altHref={`/projecten/${slug}`} activePage="projecten" />

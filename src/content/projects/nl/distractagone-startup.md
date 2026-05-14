@@ -31,7 +31,7 @@ services:
 year: 2015-2020
 image: /assets/projects/DistractaGone/images.jpeg
 thumbnail: /assets/projects/DistractaGone/images.jpeg
-howWeWorkSection: research
+howWeWorkSection: null
 images:
   - /assets/projects/DistractaGone/CgCvMK5.jpg
   - /assets/projects/DistractaGone/DG met Ingmar.jpeg

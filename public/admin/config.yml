@@ -3,6 +3,8 @@ backend:
   repo: bartgramberg/Protopia-Studio-website
   branch: main
 
+local_backend: true
+
 media_folder: public/uploads
 public_folder: /uploads
 

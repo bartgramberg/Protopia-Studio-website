@@ -33,10 +33,27 @@ All commands are run from the root of the project, from a terminal:
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run cms:local`       | Starts the local Decap CMS proxy server          |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## Local CMS testing
+
+You can test Decap CMS without pushing to GitHub or triggering a Netlify deploy.
+
+Run these in two terminals:
+
+```sh
+npm run cms:local
+```
+
+```sh
+npm run dev
+```
+
+Then open `http://localhost:4321/admin`. CMS edits will write directly to local files in this repo. Review changes with `git diff`, run `npm run build`, and only push when the change is ready.
 
 ## 👀 Want to learn more?
 

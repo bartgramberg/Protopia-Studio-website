@@ -1,6 +1,28 @@
 import { describe, it, expect } from 'vitest'
 import { z } from 'zod'
 
+const optionalString = z.preprocess(
+  value => typeof value === 'string' && value.trim() === '' || value === null ? undefined : value,
+  z.string().optional(),
+)
+
+const optionalStringFromCms = z.preprocess(
+  value => {
+    if (typeof value === 'string') return value.trim() === '' ? undefined : value
+    if (value && typeof value === 'object' && 'url' in value) {
+      const url = value.url
+      return typeof url === 'string' && url.trim() !== '' ? url : undefined
+    }
+    return undefined
+  },
+  z.string().optional(),
+)
+
+const imageList = z.preprocess(
+  value => Array.isArray(value) ? value.filter(item => typeof item === 'string' && item.trim() !== '') : [],
+  z.array(z.string()).default([]),
+)
+
 describe('project schema', () => {
   it('accepts a valid project entry', () => {
     const schema = z.object({
@@ -14,26 +36,16 @@ describe('project schema', () => {
       category:    z.enum(['environments', 'businesses', 'products']),
       services:    z.array(z.enum(['research', 'design', 'realisation'])),
       year:        z.string(),
-      image:       z.string(),
-      thumbnail:   z.string().optional(),
-      images:      z.array(z.string()).default([]),
+      image:       optionalString,
+      thumbnail:   optionalString,
+      images:      imageList,
       featured:    z.boolean().default(false),
       howWeWorkSection: z.preprocess(
-        value => value === '' ? undefined : value,
+        value => value === '' || value === null ? undefined : value,
         z.enum(['research', 'design', 'realisation']).optional(),
       ),
       order:       z.number(),
-      link:        z.preprocess(
-        value => {
-          if (typeof value === 'string') return value.trim() === '' ? undefined : value
-          if (value && typeof value === 'object' && 'url' in value) {
-            const url = value.url
-            return typeof url === 'string' && url.trim() !== '' ? url : undefined
-          }
-          return undefined
-        },
-        z.string().optional(),
-      ),
+      link:        optionalStringFromCms,
     })
     const result = schema.safeParse({
       title: 'Test',
@@ -64,21 +76,39 @@ describe('project schema', () => {
     expect(result.success).toBe(false)
   })
 
+  it('normalizes empty CMS how page section values', () => {
+    const schema = z.object({
+      howWeWorkSection: z.preprocess(
+        value => value === '' || value === null ? undefined : value,
+        z.enum(['research', 'design', 'realisation']).optional(),
+      ),
+    })
+    expect(schema.parse({ howWeWorkSection: null }).howWeWorkSection).toBeUndefined()
+    expect(schema.parse({ howWeWorkSection: '' }).howWeWorkSection).toBeUndefined()
+  })
+
   it('normalizes CMS link objects', () => {
     const schema = z.object({
-      link: z.preprocess(
-        value => {
-          if (typeof value === 'string') return value.trim() === '' ? undefined : value
-          if (value && typeof value === 'object' && 'url' in value) {
-            const url = value.url
-            return typeof url === 'string' && url.trim() !== '' ? url : undefined
-          }
-          return undefined
-        },
-        z.string().optional(),
-      ),
+      link: optionalStringFromCms,
     })
     expect(schema.parse({ link: { url: 'https://example.com' } }).link).toBe('https://example.com')
     expect(schema.parse({ link: {} }).link).toBeUndefined()
+    expect(schema.parse({ link: null }).link).toBeUndefined()
+  })
+
+  it('normalizes optional CMS image fields and lists', () => {
+    const schema = z.object({
+      image: optionalString,
+      thumbnail: optionalString,
+      images: imageList,
+    })
+    const result = schema.parse({
+      image: null,
+      thumbnail: '',
+      images: ['/uploads/a.jpg', '', null, '/uploads/b.jpg'],
+    })
+    expect(result.image).toBeUndefined()
+    expect(result.thumbnail).toBeUndefined()
+    expect(result.images).toEqual(['/uploads/a.jpg', '/uploads/b.jpg'])
   })
 })
