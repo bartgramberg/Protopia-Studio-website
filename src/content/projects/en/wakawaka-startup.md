@@ -13,6 +13,11 @@ services:
   - realisation
 year: ""
 image: "/assets/projects/WakaWaka/WakaWaka1.jpg"
+thumbnail: "/assets/projects/WakaWaka/WakaWaka1.jpg"
+images:
+  - "/assets/projects/WakaWaka/WakaWaka 3.jpg"
+  - "/assets/projects/WakaWaka/WakaWaka1.jpg"
+  - "/assets/projects/WakaWaka/WakWaka2.jpg"
 featured: false
 order: 10
 ---

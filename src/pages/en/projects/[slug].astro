@@ -2,6 +2,7 @@
 import Base from '../../../layouts/Base.astro'
 import Nav from '../../../components/Nav.astro'
 import Footer from '../../../components/Footer.astro'
+import ProjectImageSlider from '../../../components/ProjectImageSlider.astro'
 import { getCollection, render } from 'astro:content'
 import { t } from '../../../i18n/translations'
 
@@ -19,6 +20,7 @@ const locale = 'en'
 const tr = t(locale)
 const slug = project.id.replace('en/', '')
 const catLabel = tr.projects.categoryLabel[project.data.category]
+const sliderImages = project.data.images.length > 0 ? project.data.images : [project.data.image]
 ---
 <Base title={project.data.title} description={project.data.description} locale={locale} altHref={`/projecten/${slug}`}>
   <Nav locale={locale} altHref={`/projecten/${slug}`} activePage="projecten" />
@@ -46,16 +48,7 @@ const catLabel = tr.projects.categoryLabel[project.data.category]
     </div>
   </div>
 
-  <!-- Hero image -->
-  {project.data.image && (
-    <div class="max-w-content mx-auto px-10 my-10">
-      <img
-        src={project.data.image}
-        alt={project.data.imageAlt}
-        class="w-full aspect-[16/7] object-cover rounded-lg"
-      />
-    </div>
-  )}
+  <ProjectImageSlider images={sliderImages} imageAlt={project.data.imageAlt} />
 
   <!-- 3-col detail -->
   <section class="py-16">

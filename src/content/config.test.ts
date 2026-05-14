@@ -15,6 +15,8 @@ describe('project schema', () => {
       services:    z.array(z.enum(['research', 'design', 'realisation'])),
       year:        z.string(),
       image:       z.string(),
+      thumbnail:   z.string().optional(),
+      images:      z.array(z.string()).default([]),
       featured:    z.boolean().default(false),
       order:       z.number(),
       link:        z.string().optional(),
@@ -31,6 +33,8 @@ describe('project schema', () => {
       services: ['research', 'design'],
       year: '2025',
       image: '/uploads/test.jpg',
+      thumbnail: '/uploads/test-thumb.jpg',
+      images: ['/uploads/test.jpg', '/uploads/test-2.jpg'],
       featured: true,
       order: 1,
     })

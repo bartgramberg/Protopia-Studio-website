@@ -13,6 +13,13 @@ services:
   - realisation
 year: "2021–2022"
 image: "/assets/projects/Innovatiepartners/Thumbnail_IP.png"
+thumbnail: "/assets/projects/Innovatiepartners/Thumbnail_IP.png"
+images:
+  - "/assets/projects/Innovatiepartners/Thumbnail_IP.png"
+  - "/assets/projects/Innovatiepartners/Dashboard_IP.png"
+  - "/assets/projects/Innovatiepartners/Homepage_IP.png"
+  - "/assets/projects/Innovatiepartners/Projecten_IP.png"
+  - "/assets/projects/Innovatiepartners/Projectpage_IP.png"
 featured: false
 order: 14
 ---

@@ -12,6 +12,13 @@ services:
   - realisation
 year: "2024"
 image: "/assets/projects/WelvaartScan/Thumbnail_BWS.png"
+thumbnail: "/assets/projects/WelvaartScan/Thumbnail_BWS.png"
+images:
+  - "/assets/projects/WelvaartScan/Thumbnail_BWS.png"
+  - "/assets/projects/WelvaartScan/Brede Welvaart Scan - 20240314. p1.jpg"
+  - "/assets/projects/WelvaartScan/Brede Welvaart Scan - 20240314. p2.jpg"
+  - "/assets/projects/WelvaartScan/Brede Welvaart Scan - 20240314. p3.jpg"
+  - "/assets/projects/WelvaartScan/Brede Welvaart Scan-p0.png"
 featured: false
 order: 11
 ---

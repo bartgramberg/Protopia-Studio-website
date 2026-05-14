@@ -11,6 +11,18 @@ services:
   - design
 year: "2026"
 image: "/assets/werk/werk-ent.jpg"
+thumbnail: "/assets/projects/ENT:NAT/Macbook - Ent - small.jpg"
+images:
+  - "/assets/projects/ENT:NAT/ENT op laptop.jpg"
+  - "/assets/projects/ENT:NAT/ENT op laptop.png"
+  - "/assets/projects/ENT:NAT/Joris workshop1.jpg"
+  - "/assets/projects/ENT:NAT/Joris workshop2.jpg"
+  - "/assets/projects/ENT:NAT/Maarten Ent Boom.jpg"
+  - "/assets/projects/ENT:NAT/Macbook - Ent - small.jpg"
+  - "/assets/projects/ENT:NAT/Macbook - Ent.png"
+  - "/assets/projects/ENT:NAT/Network myc.png"
+  - "/assets/projects/ENT:NAT/schets idee.png"
+  - "/assets/projects/ENT:NAT/screen ENT copy.png"
 featured: true
 order: 1
 ---

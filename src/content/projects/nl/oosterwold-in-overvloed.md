@@ -12,6 +12,18 @@ services:
   - realisation
 year: "2025"
 image: "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_54.jpg"
+thumbnail: "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_54.jpg"
+images:
+  - "/assets/projects/Oosterwold in Overvloed/MAR_8.jpg"
+  - "/assets/projects/Oosterwold in Overvloed/MAR_41.jpg"
+  - "/assets/projects/Oosterwold in Overvloed/MAR_44.jpg"
+  - "/assets/projects/Oosterwold in Overvloed/MAR_45.jpg"
+  - "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_1.jpg"
+  - "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_2.jpg"
+  - "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_7.jpg"
+  - "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_23.jpg"
+  - "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_24.jpg"
+  - "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_54.jpg"
 featured: false
 order: 9
 ---

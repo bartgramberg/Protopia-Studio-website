@@ -12,6 +12,11 @@ services:
   - research
 year: "2023"
 image: "/assets/projects/ASC/SmartCityDS.jpg"
+thumbnail: "/assets/projects/ASC/SmartCityDS.jpg"
+images:
+  - "/assets/projects/ASC/AMS_pages.jpeg"
+  - "/assets/projects/ASC/ASC_home.jpeg"
+  - "/assets/projects/ASC/SmartCityDS.jpg"
 featured: false
 order: 18
 ---

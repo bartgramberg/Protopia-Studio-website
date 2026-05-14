@@ -12,6 +12,11 @@ services:
   - design
 year: "2017-2020"
 image: "/assets/projects/FMO/FMO INNOVATION CHALLENGE.2f98f9a4630e209e3a172aa6439658e3.png"
+thumbnail: "/assets/projects/FMO/FMO INNOVATION CHALLENGE.2f98f9a4630e209e3a172aa6439658e3.png"
+images:
+  - "/assets/projects/FMO/2016-header-howwework-alt4.jpg"
+  - "/assets/projects/FMO/FMO INNOVATION CHALLENGE.2f98f9a4630e209e3a172aa6439658e3.png"
+  - "/assets/projects/FMO/FMO-building-3.webp"
 featured: false
 order: 5
 ---

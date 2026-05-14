@@ -10,6 +10,11 @@ category: "businesses"
 services: []
 year: "2014-2016"
 image: "/assets/projects/Climate smart coffee/107_Soritor-San-Martin_Cafe-Solidaridad_2016-1-750x501.jpg"
+thumbnail: "/assets/projects/Climate smart coffee/107_Soritor-San-Martin_Cafe-Solidaridad_2016-1-750x501.jpg"
+images:
+  - "/assets/projects/Climate smart coffee/1_GY1W2Qd-d8bLsMyLsQeBlg-1080x675.jpeg"
+  - "/assets/projects/Climate smart coffee/107_Soritor-San-Martin_Cafe-Solidaridad_2016-1-750x501.jpg"
+  - "/assets/projects/Climate smart coffee/Screen-Shot-2019-05-06-at-2.57.32-PM-e1557509466401-1200x600.png"
 featured: false
 order: 7
 ---

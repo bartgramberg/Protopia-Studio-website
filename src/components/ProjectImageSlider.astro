@@ -1,0 +1,98 @@
+---
+interface Props {
+  images: string[]
+  imageAlt: string
+}
+
+const { images, imageAlt } = Astro.props
+const sliderId = `project-slider-${Math.random().toString(36).slice(2)}`
+---
+{images.length > 0 && (
+  <div id={sliderId} class="project-slider relative mx-auto my-10 w-full max-w-[960px] px-10" data-slider>
+    <div class="relative overflow-hidden rounded-lg bg-creme">
+      <div class="flex transition-transform duration-300 ease-out" data-track>
+        {images.map((image, index) => (
+          <div class="flex min-w-full items-center justify-center bg-creme">
+            <img
+              src={image}
+              alt={index === 0 ? imageAlt : `${imageAlt} ${index + 1}`}
+              class="h-full max-h-[620px] w-full aspect-[4/3] object-contain"
+              loading={index === 0 ? 'eager' : 'lazy'}
+            />
+          </div>
+        ))}
+      </div>
+
+      {images.length > 1 && (
+        <>
+          <button
+            type="button"
+            class="absolute left-4 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-white/85 text-[22px] font-semibold leading-none text-green shadow-sm transition-colors hover:bg-white"
+            aria-label="Previous image"
+            data-prev
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            class="absolute right-4 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-white/85 text-[22px] font-semibold leading-none text-green shadow-sm transition-colors hover:bg-white"
+            aria-label="Next image"
+            data-next
+          >
+            ›
+          </button>
+        </>
+      )}
+    </div>
+
+    {images.length > 1 && (
+      <div class="mt-3 flex items-center justify-between gap-4">
+        <div class="flex gap-2" data-dots>
+          {images.map((_, index) => (
+            <button
+              type="button"
+              class="h-2.5 w-2.5 rounded-full bg-border transition-colors data-[active]:bg-green"
+              aria-label={`Show image ${index + 1}`}
+              data-dot={index}
+            />
+          ))}
+        </div>
+        <div class="text-[12px] font-semibold text-light" data-count>1 / {images.length}</div>
+      </div>
+    )}
+  </div>
+)}
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-slider]').forEach(slider => {
+    const track = slider.querySelector<HTMLElement>('[data-track]')
+    const prev = slider.querySelector<HTMLButtonElement>('[data-prev]')
+    const next = slider.querySelector<HTMLButtonElement>('[data-next]')
+    const count = slider.querySelector<HTMLElement>('[data-count]')
+    const dots = Array.from(slider.querySelectorAll<HTMLButtonElement>('[data-dot]'))
+    const total = dots.length || slider.querySelectorAll('img').length
+    let current = 0
+
+    function setSlide(index: number) {
+      if (!track || total <= 0) return
+      current = (index + total) % total
+      track.style.transform = `translateX(-${current * 100}%)`
+      dots.forEach((dot, dotIndex) => {
+        if (dotIndex === current) {
+          dot.dataset.active = 'true'
+        } else {
+          delete dot.dataset.active
+        }
+      })
+      if (count) count.textContent = `${current + 1} / ${total}`
+    }
+
+    prev?.addEventListener('click', () => setSlide(current - 1))
+    next?.addEventListener('click', () => setSlide(current + 1))
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => setSlide(Number(dot.dataset.dot ?? 0)))
+    })
+
+    setSlide(0)
+  })
+</script>

@@ -13,6 +13,15 @@ services:
   - realisation
 year: "2020-2026"
 image: "/assets/werk/werk-rabo.jpg"
+thumbnail: "/assets/projects/Carbon Bank/Rabo carbon bank.jpg"
+images:
+  - "/assets/projects/Carbon Bank/1 (1).jpeg"
+  - "/assets/projects/Carbon Bank/1 (2).jpeg"
+  - "/assets/projects/Carbon Bank/1.jpeg"
+  - "/assets/projects/Carbon Bank/2.jpeg"
+  - "/assets/projects/Carbon Bank/IMG_0756.jpeg"
+  - "/assets/projects/Carbon Bank/Rabo carbon bank.jpg"
+  - "/assets/projects/Carbon Bank/random arr pic by gemini.png"
 featured: true
 order: 3
 ---

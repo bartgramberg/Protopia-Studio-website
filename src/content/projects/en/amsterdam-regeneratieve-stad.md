@@ -11,6 +11,14 @@ services:
   - research
 year: "2025"
 image: "/assets/werk/werk-amsregen.png"
+thumbnail: "/assets/projects/Ams Regen/Thumbnail_AmsRegen.png"
+images:
+  - "/assets/projects/Ams Regen/Thumbnail_AmsRegen.png"
+  - "/assets/projects/Ams Regen/Ams_Regen_Chatgpt.webp"
+  - "/assets/projects/Ams Regen/Ams_Regen_Chatgpt2.webp"
+  - "/assets/projects/Ams Regen/Database_Regen.png"
+  - "/assets/projects/Ams Regen/Natuurprincipes.webp"
+  - "/assets/projects/Ams Regen/Regen_city-infra.png"
 featured: true
 order: 2
 ---

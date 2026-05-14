@@ -12,6 +12,21 @@ services:
   - design
 year: "2023-2024"
 image: "/assets/projects/Taralena/Thumbnail_TL.png"
+thumbnail: "/assets/projects/Taralena/Thumbnail_TL.png"
+images:
+  - "/assets/projects/Taralena/Thumbnail_TL.png"
+  - "/assets/projects/Taralena/AQAL-model.png"
+  - "/assets/projects/Taralena/AQALmap2.png"
+  - "/assets/projects/Taralena/Birdview_TL.png"
+  - "/assets/projects/Taralena/Concept-TL.png"
+  - "/assets/projects/Taralena/designlayers.png"
+  - "/assets/projects/Taralena/mission1.png"
+  - "/assets/projects/Taralena/mission2.png"
+  - "/assets/projects/Taralena/mission3.png"
+  - "/assets/projects/Taralena/Plan_TL.png"
+  - "/assets/projects/Taralena/Plan-sketchbg.png"
+  - "/assets/projects/Taralena/TL-logo.png"
+  - "/assets/projects/Taralena/TL-sketch.png"
 featured: false
 order: 6
 ---

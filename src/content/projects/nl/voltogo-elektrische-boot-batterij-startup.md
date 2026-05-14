@@ -12,6 +12,13 @@ services:
   - design
 year: "2018"
 image: "/assets/projects/Voltogo/srhKITaw.jpeg"
+thumbnail: "/assets/projects/Voltogo/srhKITaw.jpeg"
+images:
+  - "/assets/projects/Voltogo/1 (1).jpeg"
+  - "/assets/projects/Voltogo/1 (2).jpeg"
+  - "/assets/projects/Voltogo/1.jpeg"
+  - "/assets/projects/Voltogo/srhKITaw.jpeg"
+  - "/assets/projects/Voltogo/Voltogo_XL.jpeg"
 featured: false
 order: 13
 ---

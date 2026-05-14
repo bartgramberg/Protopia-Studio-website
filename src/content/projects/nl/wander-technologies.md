@@ -13,6 +13,14 @@ services:
   - realisation
 year: "2015–2019"
 image: "/assets/projects/Wander/Wander_home.png"
+thumbnail: "/assets/projects/Wander/Wander_home.png"
+images:
+  - "/assets/projects/Wander/Adventure.jpg"
+  - "/assets/projects/Wander/Discover.jpg"
+  - "/assets/projects/Wander/Wander_app.jpg"
+  - "/assets/projects/Wander/Wander_home.png"
+  - "/assets/projects/Wander/Wander-discovery.png"
+  - "/assets/projects/Wander/wyzer.png"
 featured: false
 order: 8
 ---

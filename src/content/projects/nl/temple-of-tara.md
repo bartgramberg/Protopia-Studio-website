@@ -11,6 +11,9 @@ services:
   - design
 year: "2024"
 image: "/assets/projects/TempleOfTara/ed1b3e_dfc98bf386ef411aacc3bb683bf03f51~mv2.avif"
+thumbnail: "/assets/projects/TempleOfTara/ed1b3e_dfc98bf386ef411aacc3bb683bf03f51~mv2.avif"
+images:
+  - "/assets/projects/TempleOfTara/ed1b3e_dfc98bf386ef411aacc3bb683bf03f51~mv2.avif"
 featured: false
 order: 17
 ---

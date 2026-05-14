@@ -13,6 +13,12 @@ services:
   - realisation
 year: "2015-2020"
 image: "/assets/projects/DistractaGone/images.jpeg"
+thumbnail: "/assets/projects/DistractaGone/images.jpeg"
+images:
+  - "/assets/projects/DistractaGone/CgCvMK5.jpg"
+  - "/assets/projects/DistractaGone/DG met Ingmar.jpeg"
+  - "/assets/projects/DistractaGone/DG met Ingmar.jpg"
+  - "/assets/projects/DistractaGone/images.jpeg"
 featured: false
 order: 15
 ---

@@ -14,6 +14,8 @@ const projectSchema = z.object({
   services:    z.array(z.enum(['research', 'design', 'realisation'])),
   year:        z.string(),
   image:       z.string(),
+  thumbnail:   z.string().optional(),
+  images:      z.array(z.string()).default([]),
   featured:    z.boolean().default(false),
   order:       z.number(),
   link:        z.string().optional(),

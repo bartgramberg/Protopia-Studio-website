@@ -13,6 +13,12 @@ services:
   - realisation
 year: "2018-2019"
 image: "/assets/projects/Klasmann-Deilmann/weather_data.jpg"
+thumbnail: "/assets/projects/Klasmann-Deilmann/weather_data.jpg"
+images:
+  - "/assets/projects/Klasmann-Deilmann/klasmann_deilmann_log_and_solve_woman_in_greenhouse.jpg"
+  - "/assets/projects/Klasmann-Deilmann/log_and_solve_advantages.jpg"
+  - "/assets/projects/Klasmann-Deilmann/Screenshot 2026-04-20 at 11.09.37.png"
+  - "/assets/projects/Klasmann-Deilmann/weather_data.jpg"
 featured: false
 order: 4
 ---

@@ -48,7 +48,17 @@ collections:
             - { label: "Concept & Design",          value: "design" }
             - { label: "Co-creation & Realisation", value: "realisation" }
       - { label: Year,                    name: year,        widget: string,  i18n: duplicate }
-      - { label: Image,                   name: image,       widget: image,   i18n: duplicate }
+      - { label: "Fallback image",        name: image,       widget: image,   i18n: duplicate }
+      - { label: "Project thumbnail",     name: thumbnail,   widget: image,   i18n: duplicate, required: false }
+      - label: "Project slider images"
+        name: images
+        widget: list
+        i18n: duplicate
+        required: false
+        field:
+          label: Image
+          name: image
+          widget: image
       - { label: "Featured on homepage",  name: featured,    widget: boolean, i18n: duplicate, default: false }
       - { label: "Display order",         name: order,       widget: number,  i18n: duplicate }
       - { label: "External link",         name: link,        widget: string,  i18n: duplicate, required: false }

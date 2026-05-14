@@ -11,6 +11,18 @@ services:
   - design
 year: "2024"
 image: "/assets/projects/Marineterrein/Thumbnail_MT.jpg"
+thumbnail: "/assets/projects/Marineterrein/Thumbnail_MT.jpg"
+images:
+  - "/assets/projects/Marineterrein/Thumbnail_MT.jpg"
+  - "/assets/projects/Marineterrein/design.jpg"
+  - "/assets/projects/Marineterrein/drytoilet.jpg"
+  - "/assets/projects/Marineterrein/section-design-B.jpg"
+  - "/assets/projects/Marineterrein/section-design-detail.jpg"
+  - "/assets/projects/Marineterrein/section-design.jpg"
+  - "/assets/projects/Marineterrein/section.jpg"
+  - "/assets/projects/Marineterrein/sectors.jpg"
+  - "/assets/projects/Marineterrein/water-access.jpg"
+  - "/assets/projects/Marineterrein/zones.jpg"
 featured: false
 order: 12
 ---
