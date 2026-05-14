@@ -11,7 +11,7 @@ services:
   - research
   - design
 year: "2017-2020"
-image: "/uploads/FMO INNOVATION CHALLENGE.2f98f9a4630e209e3a172aa6439658e3.png"
+image: "/assets/projects/FMO/FMO INNOVATION CHALLENGE.2f98f9a4630e209e3a172aa6439658e3.png"
 featured: false
 order: 5
 ---

@@ -12,7 +12,7 @@ services:
   - design
   - realisation
 year: ""
-image: "/uploads/WakaWaka1.jpg"
+image: "/assets/projects/WakaWaka/WakaWaka1.jpg"
 featured: false
 order: 10
 ---

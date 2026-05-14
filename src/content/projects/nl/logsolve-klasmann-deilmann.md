@@ -12,7 +12,7 @@ services:
   - design
   - realisation
 year: "2018-2019"
-image: "/uploads/weather_data.jpg"
+image: "/assets/projects/Klasmann-Deilmann/weather_data.jpg"
 featured: false
 order: 4
 ---

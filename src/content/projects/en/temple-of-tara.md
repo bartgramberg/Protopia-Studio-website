@@ -10,7 +10,7 @@ category: "environments"
 services:
   - design
 year: "2024"
-image: "/uploads/ToT-birdview.jpg"
+image: "/assets/projects/TempleOfTara/ed1b3e_dfc98bf386ef411aacc3bb683bf03f51~mv2.avif"
 featured: false
 order: 17
 ---

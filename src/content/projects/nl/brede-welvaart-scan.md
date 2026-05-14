@@ -11,7 +11,7 @@ services:
   - design
   - realisation
 year: "2024"
-image: "/uploads/Thumbnail_BWS.png"
+image: "/assets/projects/WelvaartScan/Thumbnail_BWS.png"
 featured: false
 order: 11
 ---

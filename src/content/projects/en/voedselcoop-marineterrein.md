@@ -10,7 +10,7 @@ category: "environments"
 services:
   - design
 year: "2024"
-image: "/uploads/Thumbnail_MT.jpg"
+image: "/assets/projects/Marineterrein/Thumbnail_MT.jpg"
 featured: false
 order: 12
 ---

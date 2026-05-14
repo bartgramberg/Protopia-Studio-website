@@ -12,7 +12,7 @@ services:
   - design
   - realisation
 year: "2021-2025"
-image: "/uploads/Financieel vooruitzicht 1.jpg"
+image: "/assets/projects/ABN Fin Vooruitzicht/0efd05_c1522ade04704b598e4c3bc0433e40f8~mv2.avif"
 featured: false
 order: 16
 ---

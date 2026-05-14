@@ -11,7 +11,7 @@ services:
   - design
   - research
 year: "2023"
-image: "/uploads/SmartCityDS.jpg"
+image: "/assets/projects/ASC/SmartCityDS.jpg"
 featured: false
 order: 18
 ---

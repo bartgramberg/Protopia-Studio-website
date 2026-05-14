@@ -12,7 +12,7 @@ services:
   - design
   - realisation
 year: "2015–2019"
-image: "/uploads/Wander_home.png"
+image: "/assets/projects/Wander/Wander_home.png"
 featured: false
 order: 8
 ---

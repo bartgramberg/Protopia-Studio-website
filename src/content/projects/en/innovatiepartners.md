@@ -12,7 +12,7 @@ services:
   - design
   - realisation
 year: "2021–2022"
-image: "/uploads/Thumbnail_IP.png"
+image: "/assets/projects/Innovatiepartners/Thumbnail_IP.png"
 featured: false
 order: 14
 ---

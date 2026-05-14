@@ -11,7 +11,7 @@ services:
   - design
   - realisation
 year: "2023"
-image: "/uploads/WelvaartMeter1.png"
+image: "/assets/projects/WelvaartMeter/WelvaartMeter1.png"
 featured: false
 order: 19
 ---

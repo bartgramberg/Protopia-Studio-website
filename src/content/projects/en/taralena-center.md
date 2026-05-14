@@ -11,7 +11,7 @@ services:
   - research
   - design
 year: "2023-2024"
-image: "/uploads/Thumbnail_TL.png"
+image: "/assets/projects/Taralena/Thumbnail_TL.png"
 featured: false
 order: 6
 ---

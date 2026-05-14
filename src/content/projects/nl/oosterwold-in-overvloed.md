@@ -11,7 +11,7 @@ services:
   - research
   - realisation
 year: "2025"
-image: "/uploads/OiO4.jpeg"
+image: "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_54.jpg"
 featured: false
 order: 9
 ---

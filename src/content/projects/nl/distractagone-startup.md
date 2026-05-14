@@ -12,7 +12,7 @@ services:
   - research
   - realisation
 year: "2015-2020"
-image: "/uploads/images.jpeg"
+image: "/assets/projects/DistractaGone/images.jpeg"
 featured: false
 order: 15
 ---

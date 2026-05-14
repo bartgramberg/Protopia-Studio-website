@@ -9,7 +9,7 @@ typeProject: "Regeneratieve business"
 category: "businesses"
 services: []
 year: "2014-2016"
-image: "/uploads/107_Soritor-San-Martin_Cafe-Solidaridad_2016-1-750x501.jpg"
+image: "/assets/projects/Climate smart coffee/107_Soritor-San-Martin_Cafe-Solidaridad_2016-1-750x501.jpg"
 featured: false
 order: 7
 ---

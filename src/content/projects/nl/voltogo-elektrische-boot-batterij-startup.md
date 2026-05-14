@@ -11,7 +11,7 @@ services:
   - research
   - design
 year: "2018"
-image: "/uploads/srhKITaw.jpeg"
+image: "/assets/projects/Voltogo/srhKITaw.jpeg"
 featured: false
 order: 13
 ---
