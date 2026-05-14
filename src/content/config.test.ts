@@ -23,7 +23,17 @@ describe('project schema', () => {
         z.enum(['research', 'design', 'realisation']).optional(),
       ),
       order:       z.number(),
-      link:        z.string().optional(),
+      link:        z.preprocess(
+        value => {
+          if (typeof value === 'string') return value.trim() === '' ? undefined : value
+          if (value && typeof value === 'object' && 'url' in value) {
+            const url = value.url
+            return typeof url === 'string' && url.trim() !== '' ? url : undefined
+          }
+          return undefined
+        },
+        z.string().optional(),
+      ),
     })
     const result = schema.safeParse({
       title: 'Test',
@@ -52,5 +62,23 @@ describe('project schema', () => {
     })
     const result = schema.safeParse({ category: 'invalid' })
     expect(result.success).toBe(false)
+  })
+
+  it('normalizes CMS link objects', () => {
+    const schema = z.object({
+      link: z.preprocess(
+        value => {
+          if (typeof value === 'string') return value.trim() === '' ? undefined : value
+          if (value && typeof value === 'object' && 'url' in value) {
+            const url = value.url
+            return typeof url === 'string' && url.trim() !== '' ? url : undefined
+          }
+          return undefined
+        },
+        z.string().optional(),
+      ),
+    })
+    expect(schema.parse({ link: { url: 'https://example.com' } }).link).toBe('https://example.com')
+    expect(schema.parse({ link: {} }).link).toBeUndefined()
   })
 })

@@ -22,7 +22,17 @@ const projectSchema = z.object({
     z.enum(['research', 'design', 'realisation']).optional(),
   ),
   order:       z.number(),
-  link:        z.string().optional(),
+  link:        z.preprocess(
+    value => {
+      if (typeof value === 'string') return value.trim() === '' ? undefined : value
+      if (value && typeof value === 'object' && 'url' in value) {
+        const url = value.url
+        return typeof url === 'string' && url.trim() !== '' ? url : undefined
+      }
+      return undefined
+    },
+    z.string().optional(),
+  ),
 })
 
 const blogSchema = z.object({
