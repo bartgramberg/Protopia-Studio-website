@@ -9,17 +9,17 @@ const tr = t(locale)
 <Base title="Contact" description="Wij werken samen met corporates, overheden, NGO's en impact investors." locale={locale} altHref="/en/contact">
   <Nav locale={locale} altHref="/en/contact" activePage="contact" />
 
-  <div class="bg-creme pt-[88px] pb-16">
-    <div class="max-w-content mx-auto px-10">
+  <div class="page-hero bg-creme pt-16 sm:pt-20 lg:pt-[88px] pb-12 sm:pb-14 lg:pb-16">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Contact</span>
-      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">Laten we kennismaken.</h1>
-      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">Wij werken samen met corporates, overheden, NGO's en impact investors. Vertel ons over je vraagstuk.</p>
+      <h1 class="text-[clamp(32px,9vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">Laten we kennismaken.</h1>
+      <p class="text-[16px] sm:text-[18px] text-mid leading-[1.75] max-w-[680px]">Wij werken samen met corporates, overheden, NGO's en impact investors. Vertel ons over je vraagstuk.</p>
     </div>
   </div>
 
-  <section class="py-20">
-    <div class="max-w-content mx-auto px-10">
-      <div class="grid grid-cols-2 gap-[72px] items-start">
+  <section class="py-14 sm:py-16 lg:py-20">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="grid gap-10 lg:grid-cols-2 lg:gap-[72px] items-start">
 
         <!-- Left: info -->
         <div>
@@ -36,7 +36,7 @@ const tr = t(locale)
         <!-- Right: form -->
         <form class="flex flex-col gap-4" data-netlify="true" name="contact">
           <input type="hidden" name="form-name" value="contact" />
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid gap-4 sm:grid-cols-2">
             <div class="flex flex-col gap-1.5">
               <label for="name" class="text-[11px] font-semibold uppercase tracking-[0.1em] text-green">Naam</label>
               <input id="name" name="name" type="text" placeholder="Jouw naam" required class="border-[1.5px] border-border rounded-lg px-4 py-[11px] text-[14px] text-dark focus:outline-none focus:border-green transition-colors" />

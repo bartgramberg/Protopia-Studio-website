@@ -26,9 +26,9 @@ const navLinks = locale === 'nl'
       { href: '/en/blog',      label: tr.nav.blog         },
     ]
 ---
-<footer class="bg-dark pt-14 pb-8">
-  <div class="max-w-content mx-auto px-10">
-    <div class="grid grid-cols-[2fr_1fr_1fr] gap-12 mb-12">
+<footer class="bg-dark pt-12 sm:pt-14 pb-8">
+  <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
+    <div class="grid gap-9 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] lg:gap-12 mb-10 sm:mb-12">
 
       <!-- Brand col -->
       <div>
@@ -59,7 +59,7 @@ const navLinks = locale === 'nl'
       </div>
     </div>
 
-    <div class="border-t border-[#2a2a2a] pt-5 flex justify-between items-center">
+    <div class="border-t border-[#2a2a2a] pt-5 flex flex-col sm:flex-row gap-2 sm:justify-between sm:items-center">
       <span class="text-[12px] text-[#555]">{tr.footer.copy}</span>
       <span class="text-[12px] text-green font-semibold">{tr.footer.tagline}</span>
     </div>

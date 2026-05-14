@@ -8,7 +8,7 @@ const { images, imageAlt } = Astro.props
 const sliderId = `project-slider-${Math.random().toString(36).slice(2)}`
 ---
 {images.length > 0 && (
-  <div id={sliderId} class="project-slider relative mx-auto my-10 w-full max-w-[960px] px-10" data-slider>
+  <div id={sliderId} class="project-slider relative mx-auto my-8 sm:my-10 w-full max-w-[960px] px-5 sm:px-8 lg:px-10" data-slider>
     <div class="relative overflow-hidden rounded-lg bg-creme">
       <div class="flex transition-transform duration-300 ease-out" data-track>
         {images.map((image, index) => (
@@ -27,7 +27,7 @@ const sliderId = `project-slider-${Math.random().toString(36).slice(2)}`
         <>
           <button
             type="button"
-            class="absolute left-4 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-white/85 text-[22px] font-semibold leading-none text-green shadow-sm transition-colors hover:bg-white"
+            class="absolute left-2 sm:left-4 top-1/2 grid h-9 w-9 sm:h-10 sm:w-10 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-white/85 text-[22px] font-semibold leading-none text-green shadow-sm transition-colors hover:bg-white"
             aria-label="Previous image"
             data-prev
           >
@@ -35,7 +35,7 @@ const sliderId = `project-slider-${Math.random().toString(36).slice(2)}`
           </button>
           <button
             type="button"
-            class="absolute right-4 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-white/85 text-[22px] font-semibold leading-none text-green shadow-sm transition-colors hover:bg-white"
+            class="absolute right-2 sm:right-4 top-1/2 grid h-9 w-9 sm:h-10 sm:w-10 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-white/85 text-[22px] font-semibold leading-none text-green shadow-sm transition-colors hover:bg-white"
             aria-label="Next image"
             data-next
           >

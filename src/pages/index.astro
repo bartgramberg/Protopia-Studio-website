@@ -40,15 +40,15 @@ const logos = [
   <Nav locale={locale} altHref="/en" activePage="home" />
 
   <!-- Hero -->
-  <div class="bg-creme pt-24 pb-20">
-    <div class="max-w-content mx-auto px-10">
-      <div class="grid grid-cols-2 gap-[72px] items-center">
+  <div class="bg-creme pt-16 sm:pt-20 lg:pt-24 pb-14 sm:pb-12 sm:pb-14 lg:pb-16 lg:pb-20">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="grid gap-10 lg:grid-cols-2 lg:gap-[72px] items-center">
         <div>
           <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Regenerative Design Studio</span>
-          <h1 class="text-[clamp(40px,5vw,68px)] font-bold leading-[1.08] tracking-[-0.025em] text-green text-balance">
+          <h1 class="text-[clamp(34px,10vw,68px)] font-bold leading-[1.08] tracking-[-0.025em] text-green text-balance">
             Protopia is een <em class="not-italic text-magenta">regeneratieve studio</em>.
           </h1>
-          <p class="text-[22px] font-medium leading-[1.45] text-mid text-balance mt-6 max-w-[540px]">Wij ontwerpen en ontwikkelen steden, projecten en producten voor een veerkrachtige wereld.</p>
+          <p class="text-[18px] sm:text-[22px] font-medium leading-[1.45] text-mid text-balance mt-6 max-w-[540px]">Wij ontwerpen en ontwikkelen steden, projecten en producten voor een veerkrachtige wereld.</p>
           <p class="text-[14px] font-semibold text-green mt-4 tracking-[0.01em]">Sociaal, ecologisch en economisch in balans.</p>
           <div class="flex gap-3.5 mt-8 flex-wrap items-center">
             <a href="/waarom" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-green text-white hover:bg-green-dark transition-colors border border-green">
@@ -67,12 +67,12 @@ const logos = [
   </div>
 
   <!-- Protopia levert -->
-  <div class="bg-creme py-20">
-    <div class="max-w-content mx-auto px-10">
+  <div class="bg-creme py-14 sm:py-16 lg:py-20">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Protopia levert.</span>
       <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Drie manieren waarop wij bijdragen.</h2>
-      <p class="text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4 mb-12">Van carbon credit modellen tot regeneratieve steden — wij ontwerpen en bouwen.</p>
-      <div class="grid grid-cols-3 gap-6">
+      <p class="text-[16px] sm:text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4 mb-12">Van carbon credit modellen tot regeneratieve steden — wij ontwerpen en bouwen.</p>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <a href="/projecten" class="block bg-white border border-border rounded-lg overflow-hidden hover:shadow-[0_6px_24px_rgba(72,115,91,0.13)] transition-shadow">
           <div class="h-[180px] bg-creme overflow-hidden">
             <img src="/assets/levert-steden.png" alt="Regeneratieve kaart van Amsterdam op iPad" class="w-full h-full object-cover" />
@@ -116,7 +116,7 @@ const logos = [
           style="mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);"
           aria-label="Onze opdrachtgevers"
         >
-          <div class="clients-track flex items-center gap-20 w-max">
+          <div class="clients-track flex items-center gap-10 sm:gap-16 lg:gap-20 w-max">
             {logos.map(l => (
               <img src={l.src} alt={l.alt} class="h-14 w-auto max-w-[180px] object-contain grayscale opacity-[0.72] hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0" />
             ))}
@@ -130,12 +130,12 @@ const logos = [
   </div>
 
   <!-- Protopia regenereert -->
-  <div class="py-20">
-    <div class="max-w-content mx-auto px-10">
+  <div class="py-14 sm:py-16 lg:py-20">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Protopia regenereert.</span>
       <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Onze kracht ligt in de combinatie van onderzoek, ontwerp en ondernemerschap.</h2>
-      <p class="text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4">Van post-it, via pilot naar product. Van rapport naar resultaat. Van idee naar impact.</p>
-      <div class="grid grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden mt-12">
+      <p class="text-[16px] sm:text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4">Van post-it, via pilot naar product. Van rapport naar resultaat. Van idee naar impact.</p>
+      <div class="grid gap-px md:grid-cols-3 bg-border border border-border rounded-lg overflow-hidden mt-12">
         <div class="bg-white p-9">
           <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">#1</div>
           <div class="text-[15px] font-bold text-green mb-2">Onderzoek & Strategie</div>
@@ -159,8 +159,8 @@ const logos = [
   </div>
 
   <!-- Quote -->
-  <div class="bg-creme py-[72px]">
-    <div class="max-w-content mx-auto px-10 text-center">
+  <div class="bg-creme py-14 sm:py-16 lg:py-[72px]">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10 text-center">
       <blockquote class="text-[clamp(20px,2.5vw,28px)] italic font-light text-mid leading-[1.6] max-w-[760px] mx-auto text-balance">
         "Protopia is a state of becoming, rather than a destination. It is a process. In the protopian mode, things are better today than they were yesterday, although only a little better."
       </blockquote>
@@ -172,11 +172,11 @@ const logos = [
   </div>
 
   <!-- Featured projects -->
-  <div class="py-20">
-    <div class="max-w-content mx-auto px-10">
+  <div class="py-14 sm:py-16 lg:py-20">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-2">Projecten waar we trots op zijn.</span>
       <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mt-2 mb-10">Werk dat er toe doet.</h2>
-      <div class="grid grid-cols-3 gap-5">
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {featured.map(p => (
           <ProjectCard
             title={p.data.title}
@@ -196,11 +196,11 @@ const logos = [
   </div>
 
   <!-- Blog preview -->
-  <div class="bg-creme py-20">
-    <div class="max-w-content mx-auto px-10">
+  <div class="bg-creme py-14 sm:py-16 lg:py-20">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-2">Dit inspireert ons.</span>
       <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance mt-2 mb-10">Laatste blogs.</h2>
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid gap-6 md:grid-cols-2">
         {recentPosts.map(p => (
           <BlogCard
             title={p.data.title}
@@ -221,8 +221,8 @@ const logos = [
   </div>
 
   <!-- CTA banner -->
-  <div class="bg-green py-[72px] text-center">
-    <div class="max-w-content mx-auto px-10">
+  <div class="bg-green py-14 sm:py-16 lg:py-[72px] text-center">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <h2 class="text-[clamp(26px,3vw,38px)] font-bold text-white leading-[1.2] mb-2.5 text-balance">Volg ons voor laatste nieuws,<br />projecten en blogs.</h2>
       <p class="text-[16px] text-white/70 mb-7">Samen bouwen aan een regeneratieve wereld.</p>
       <div class="flex gap-3.5 justify-center flex-wrap">

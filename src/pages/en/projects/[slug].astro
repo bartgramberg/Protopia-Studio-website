@@ -33,15 +33,15 @@ const sliderImages = media.images.length > 0 ? media.images : media.image ? [med
   <Nav locale={locale} altHref={`/projecten/${slug}`} activePage="projecten" />
 
   <!-- Hero -->
-  <div class="bg-creme pt-[88px] pb-16">
-    <div class="max-w-content mx-auto px-10">
+  <div class="page-hero bg-creme pt-16 sm:pt-20 lg:pt-[88px] pb-12 sm:pb-14 lg:pb-16">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">
         {catLabel}
       </span>
-      <h1 class="text-[clamp(36px,4.5vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">
+      <h1 class="text-[clamp(32px,9vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">
         {project.data.title}
       </h1>
-      <p class="text-[18px] text-mid leading-[1.75] max-w-[680px]">{project.data.description}</p>
+      <p class="text-[16px] sm:text-[18px] text-mid leading-[1.75] max-w-[680px]">{project.data.description}</p>
       <div class="flex gap-2 flex-wrap mt-5">
         {project.data.services.map(s => (
           <span class="text-[11px] font-semibold uppercase tracking-[0.12em] px-3 py-1 rounded-pill border border-green text-green">
@@ -59,8 +59,8 @@ const sliderImages = media.images.length > 0 ? media.images : media.image ? [med
 
   <!-- 3-col detail -->
   <section class="py-16">
-    <div class="max-w-content mx-auto px-10">
-      <div class="grid grid-cols-3 gap-10">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
+      <div class="grid gap-8 md:grid-cols-3 lg:gap-10">
         <div>
           <h3 class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-4">
             {tr.projects.challenge}
@@ -85,7 +85,7 @@ const sliderImages = media.images.length > 0 ? media.images : media.image ? [med
 
   <!-- Body content -->
   <section class="py-12 bg-creme">
-    <div class="max-w-content mx-auto px-10">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <div class="prose prose-lg max-w-none text-mid">
         <Content />
       </div>
@@ -93,7 +93,7 @@ const sliderImages = media.images.length > 0 ? media.images : media.image ? [med
   </section>
 
   {project.data.link && (
-    <div class="max-w-content mx-auto px-10 py-8">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10 py-8">
       <a href={project.data.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-blue before:content-['>'] hover:text-green transition-colors">
         View project
       </a>
@@ -101,7 +101,7 @@ const sliderImages = media.images.length > 0 ? media.images : media.image ? [med
   )}
 
   <!-- Back link -->
-  <div class="max-w-content mx-auto px-10 pb-16">
+  <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10 pb-12 sm:pb-14 lg:pb-16">
     <a href="/en/projects" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-mid before:content-['<'] hover:text-green transition-colors">
       All projects
     </a>
