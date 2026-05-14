@@ -8,19 +8,26 @@ import { t } from '../../../i18n/translations'
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ id }) => id.startsWith('en/'))
+  const defaultProjects = await getCollection('projects', ({ id }) => id.startsWith('nl/'))
+  const defaultProjectBySlug = new Map(defaultProjects.map(p => [p.id.replace('nl/', ''), p]))
+
   return projects.map(p => ({
     params: { slug: p.id.replace('en/', '') },
-    props:  { project: p },
+    props:  {
+      project: p,
+      defaultProject: defaultProjectBySlug.get(p.id.replace('en/', '')),
+    },
   }))
 }
 
-const { project } = Astro.props
+const { project, defaultProject } = Astro.props
 const { Content }  = await render(project)
 const locale = 'en'
 const tr = t(locale)
 const slug = project.id.replace('en/', '')
 const catLabel = tr.projects.categoryLabel[project.data.category]
-const sliderImages = project.data.images.length > 0 ? project.data.images : [project.data.image]
+const media = defaultProject?.data ?? project.data
+const sliderImages = media.images.length > 0 ? media.images : [media.image]
 ---
 <Base title={project.data.title} description={project.data.description} locale={locale} altHref={`/projecten/${slug}`}>
   <Nav locale={locale} altHref={`/projecten/${slug}`} activePage="projecten" />
