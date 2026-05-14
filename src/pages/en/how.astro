@@ -14,7 +14,6 @@ projects.sort((a, b) => a.data.order - b.data.order)
 function examplesFor(section: 'research' | 'design' | 'realisation') {
   return projects
     .filter(project => defaultProjectBySlug.get(project.id.replace('en/', ''))?.data.howWeWorkSection === section)
-    .slice(0, 2)
     .map(project => ({
       title: project.data.title,
       description: project.data.description,
