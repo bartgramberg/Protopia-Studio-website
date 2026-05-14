@@ -18,6 +18,10 @@ describe('project schema', () => {
       thumbnail:   z.string().optional(),
       images:      z.array(z.string()).default([]),
       featured:    z.boolean().default(false),
+      howWeWorkSection: z.preprocess(
+        value => value === '' ? undefined : value,
+        z.enum(['research', 'design', 'realisation']).optional(),
+      ),
       order:       z.number(),
       link:        z.string().optional(),
     })
@@ -36,6 +40,7 @@ describe('project schema', () => {
       thumbnail: '/uploads/test-thumb.jpg',
       images: ['/uploads/test.jpg', '/uploads/test-2.jpg'],
       featured: true,
+      howWeWorkSection: 'research',
       order: 1,
     })
     expect(result.success).toBe(true)

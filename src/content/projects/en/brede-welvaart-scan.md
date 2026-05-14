@@ -19,6 +19,7 @@ images:
   - "/assets/projects/WelvaartScan/Brede Welvaart Scan - 20240314. p2.jpg"
   - "/assets/projects/WelvaartScan/Brede Welvaart Scan - 20240314. p3.jpg"
   - "/assets/projects/WelvaartScan/Brede Welvaart Scan-p0.png"
+howWeWorkSection: "realisation"
 featured: false
 order: 11
 ---

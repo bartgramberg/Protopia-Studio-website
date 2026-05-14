@@ -2,9 +2,29 @@
 import Base from '../../layouts/Base.astro'
 import Nav from '../../components/Nav.astro'
 import Footer from '../../components/Footer.astro'
-import { t } from '../../i18n/translations'
+import HowProjectExamples from '../../components/HowProjectExamples.astro'
+import { getCollection } from 'astro:content'
 const locale = 'en'
-const tr = t(locale)
+
+const projects = await getCollection('projects', ({ id }) => id.startsWith('en/'))
+const defaultProjects = await getCollection('projects', ({ id }) => id.startsWith('nl/'))
+const defaultProjectBySlug = new Map(defaultProjects.map(project => [project.id.replace('nl/', ''), project]))
+projects.sort((a, b) => a.data.order - b.data.order)
+
+function examplesFor(section: 'research' | 'design' | 'realisation') {
+  return projects
+    .filter(project => defaultProjectBySlug.get(project.id.replace('en/', ''))?.data.howWeWorkSection === section)
+    .slice(0, 2)
+    .map(project => ({
+      title: project.data.title,
+      description: project.data.description,
+      href: `/en/projects/${project.id.replace('en/', '')}`,
+    }))
+}
+
+const researchExamples = examplesFor('research')
+const designExamples = examplesFor('design')
+const realisationExamples = examplesFor('realisation')
 ---
 <Base title="How we work" description="Our strength lies in combining research, design and realisation." locale={locale} altHref="/hoe">
   <Nav locale={locale} altHref="/hoe" activePage="hoe" />
@@ -40,18 +60,7 @@ const tr = t(locale)
             <a href="/en/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Research together?</a>
           </div>
         </div>
-        <div class="flex flex-col gap-3">
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Example project</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Amsterdam Regenerative City</div>
-            <p class="text-[12px] text-mid leading-[1.55]">Research and vision development for the City of Amsterdam into the city as a regenerative ecosystem. Resulted in design principles, models and policy proposals.</p>
-          </div>
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Example project</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Amsterdam Smart City</div>
-            <p class="text-[12px] text-mid leading-[1.55]">User research, data analysis and a new proposition and platform concept for a renewed Amsterdam Smart City platform.</p>
-          </div>
-        </div>
+        <HowProjectExamples projects={researchExamples} label="Example project" />
       </div>
 
       <!-- Phase 2 -->
@@ -73,18 +82,7 @@ const tr = t(locale)
             <a href="/en/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Collaborate?</a>
           </div>
         </div>
-        <div class="flex flex-col gap-3">
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Example project</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Taralena Retreat Center</div>
-            <p class="text-[12px] text-mid leading-[1.55]">A first design vision for a holistic centre dedicated to healing, education and community building. Integral Theory and regenerative principles translated into architectural design.</p>
-          </div>
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Example project</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Broad Prosperity Meter</div>
-            <p class="text-[12px] text-mid leading-[1.55]">In a design sprint, a prototype app was developed together with the City of Amsterdam. The app lets civil servants reflect on their work in relation to broad prosperity through statements.</p>
-          </div>
-        </div>
+        <HowProjectExamples projects={designExamples} label="Example project" />
       </div>
 
       <!-- Phase 3 -->
@@ -106,18 +104,7 @@ const tr = t(locale)
             <a href="/en/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Co-create?</a>
           </div>
         </div>
-        <div class="flex flex-col gap-3">
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Example project</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Oosterwold in Abundance</div>
-            <p class="text-[12px] text-mid leading-[1.55]">A area workshop in Almere Oosterwold where residents, farmers, officials and developers came together to explore new forms of cooperation.</p>
-          </div>
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Example project</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Broad Prosperity Scan</div>
-            <p class="text-[12px] text-mid leading-[1.55]">An instrument to comprehensively assess the effects of policy proposals on ten themes of broad prosperity, now and in the future.</p>
-          </div>
-        </div>
+        <HowProjectExamples projects={realisationExamples} label="Example project" />
       </div>
 
     </div>

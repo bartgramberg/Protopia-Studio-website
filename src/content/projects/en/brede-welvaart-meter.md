@@ -17,6 +17,7 @@ images:
   - "/assets/projects/WelvaartMeter/WelvaartMeter.jpg"
   - "/assets/projects/WelvaartMeter/WelvaartMeter1.png"
   - "/assets/projects/WelvaartMeter/WelvaartMeter2.png"
+howWeWorkSection: "design"
 featured: false
 order: 19
 ---

@@ -24,6 +24,7 @@ images:
   - "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_23.jpg"
   - "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_24.jpg"
   - "/assets/projects/Oosterwold in Overvloed/Selectie/Webformat/MAR_54.jpg"
+howWeWorkSection: "realisation"
 featured: false
 order: 9
 ---

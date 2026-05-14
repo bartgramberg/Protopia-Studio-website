@@ -1,0 +1,23 @@
+---
+interface ProjectExample {
+  title: string
+  description: string
+  href: string
+}
+
+interface Props {
+  projects: ProjectExample[]
+  label: string
+}
+
+const { projects, label } = Astro.props
+---
+<div class="flex flex-col gap-3">
+  {projects.map(project => (
+    <a href={project.href} class="block bg-creme rounded-lg p-5 transition-colors hover:bg-[#edf0e5]">
+      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">{label}</div>
+      <div class="text-[14px] font-bold text-green mb-1.5">{project.title}</div>
+      <p class="text-[12px] text-mid leading-[1.55]">{project.description}</p>
+    </a>
+  ))}
+</div>

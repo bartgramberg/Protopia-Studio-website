@@ -17,6 +17,10 @@ const projectSchema = z.object({
   thumbnail:   z.string().optional(),
   images:      z.array(z.string()).default([]),
   featured:    z.boolean().default(false),
+  howWeWorkSection: z.preprocess(
+    value => value === '' ? undefined : value,
+    z.enum(['research', 'design', 'realisation']).optional(),
+  ),
   order:       z.number(),
   link:        z.string().optional(),
 })

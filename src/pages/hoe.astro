@@ -2,9 +2,27 @@
 import Base from '../layouts/Base.astro'
 import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
-import { t } from '../i18n/translations'
+import HowProjectExamples from '../components/HowProjectExamples.astro'
+import { getCollection } from 'astro:content'
 const locale = 'nl'
-const tr = t(locale)
+
+const projects = await getCollection('projects', ({ id }) => id.startsWith('nl/'))
+projects.sort((a, b) => a.data.order - b.data.order)
+
+function examplesFor(section: 'research' | 'design' | 'realisation') {
+  return projects
+    .filter(project => project.data.howWeWorkSection === section)
+    .slice(0, 2)
+    .map(project => ({
+      title: project.data.title,
+      description: project.data.description,
+      href: `/projecten/${project.id.replace('nl/', '')}`,
+    }))
+}
+
+const researchExamples = examplesFor('research')
+const designExamples = examplesFor('design')
+const realisationExamples = examplesFor('realisation')
 ---
 <Base title="Hoe we werken" description="Onze kracht ligt in het combineren van onderzoek, ontwerp en realisatie." locale={locale} altHref="/en/how">
   <Nav locale={locale} altHref="/en/how" activePage="hoe" />
@@ -40,18 +58,7 @@ const tr = t(locale)
             <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Samen onderzoek doen?</a>
           </div>
         </div>
-        <div class="flex flex-col gap-3">
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Amsterdam Regeneratieve Stad</div>
-            <p class="text-[12px] text-mid leading-[1.55]">Onderzoek en visieontwikkeling voor de gemeente Amsterdam naar de stad als regeneratief ecosysteem. Resulteerde in ontwerpprincipes, modellen en beleidsvoorstellen.</p>
-          </div>
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Amsterdam Smart City</div>
-            <p class="text-[12px] text-mid leading-[1.55]">Gebruikersonderzoek, data-analyse en een nieuwe propositie en platformconcept voor een vernieuwd platform van Amsterdam Smart City.</p>
-          </div>
-        </div>
+        <HowProjectExamples projects={researchExamples} label="Voorbeeldproject" />
       </div>
 
       <!-- Phase 2 -->
@@ -73,18 +80,7 @@ const tr = t(locale)
             <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Samenwerken?</a>
           </div>
         </div>
-        <div class="flex flex-col gap-3">
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Taralena Retreat Center</div>
-            <p class="text-[12px] text-mid leading-[1.55]">Een eerste ontwerpvisie voor een holistisch centrum gewijd aan heling, educatie en gemeenschapsvorming. Integral Theory en regeneratieve principes vertaald naar architectonisch ontwerp.</p>
-          </div>
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Brede Welvaart Meter</div>
-            <p class="text-[12px] text-mid leading-[1.55]">In een design sprint een prototype-app ontwikkeld samen met de gemeente Amsterdam. De app laat ambtenaren via stellingen reflecteren op hun werk in relatie tot brede welvaart.</p>
-          </div>
-        </div>
+        <HowProjectExamples projects={designExamples} label="Voorbeeldproject" />
       </div>
 
       <!-- Phase 3 -->
@@ -106,18 +102,7 @@ const tr = t(locale)
             <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Co-creëren?</a>
           </div>
         </div>
-        <div class="flex flex-col gap-3">
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Oosterwold in Overvloed</div>
-            <p class="text-[12px] text-mid leading-[1.55]">Een gebiedswerkplaats in Almere Oosterwold waarin bewoners, boeren, ambtenaren en ontwikkelaars samenkwamen om nieuwe vormen van samenwerking te verkennen.</p>
-          </div>
-          <div class="bg-creme rounded-lg p-5">
-            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Voorbeeldproject</div>
-            <div class="text-[14px] font-bold text-green mb-1.5">Brede Welvaart Scan</div>
-            <p class="text-[12px] text-mid leading-[1.55]">Een instrument om de effecten van beleidsvoorstellen integraal te beoordelen op tien thema's van brede welvaart, in het hier en nu én in de toekomst.</p>
-          </div>
-        </div>
+        <HowProjectExamples projects={realisationExamples} label="Voorbeeldproject" />
       </div>
 
     </div>

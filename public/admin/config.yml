@@ -50,6 +50,16 @@ collections:
       - { label: Year,                    name: year,        widget: string,  i18n: duplicate }
       - { label: "Fallback image",        name: image,       widget: image,   i18n: duplicate }
       - { label: "Project thumbnail",     name: thumbnail,   widget: image,   i18n: duplicate, required: false }
+      - label: "How we work section"
+        name: howWeWorkSection
+        widget: select
+        i18n: duplicate
+        required: false
+        options:
+          - { label: "Not shown", value: "" }
+          - { label: "Research & Strategy", value: "research" }
+          - { label: "Concept & Design", value: "design" }
+          - { label: "Co-creation & Realisation", value: "realisation" }
       - label: "Project slider images"
         name: images
         widget: list

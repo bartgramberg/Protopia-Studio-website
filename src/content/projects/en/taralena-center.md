@@ -27,6 +27,7 @@ images:
   - "/assets/projects/Taralena/Plan-sketchbg.png"
   - "/assets/projects/Taralena/TL-logo.png"
   - "/assets/projects/Taralena/TL-sketch.png"
+howWeWorkSection: "design"
 featured: false
 order: 6
 ---

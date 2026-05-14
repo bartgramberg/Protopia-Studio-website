@@ -19,6 +19,7 @@ images:
   - "/assets/projects/Ams Regen/Database_Regen.png"
   - "/assets/projects/Ams Regen/Natuurprincipes.webp"
   - "/assets/projects/Ams Regen/Regen_city-infra.png"
+howWeWorkSection: "research"
 featured: true
 order: 2
 ---

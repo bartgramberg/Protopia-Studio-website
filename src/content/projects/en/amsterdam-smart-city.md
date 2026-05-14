@@ -17,6 +17,7 @@ images:
   - "/assets/projects/ASC/AMS_pages.jpeg"
   - "/assets/projects/ASC/ASC_home.jpeg"
   - "/assets/projects/ASC/SmartCityDS.jpg"
+howWeWorkSection: "research"
 featured: false
 order: 18
 ---
