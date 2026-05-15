@@ -2,19 +2,17 @@
 import Base from '../layouts/Base.astro'
 import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
+import { getCollection } from 'astro:content'
 import { t } from '../i18n/translations'
 const locale = 'nl'
 const tr = t(locale)
 
-const team = [
-  { name: 'Joris de Leeuw',    role: 'Regeneratieve visionair, architect, system thinker en verbinder.', quote: '"Joris is het hart van ons gedachtegoed."', img: '/assets/team/joris-de-leeuw.jpg' },
-  { name: 'Maarten Langbroek', role: 'Ondernemer, business developer, lean startup expert en natuurfanaat.', quote: '"Niemand maakt iets sneller écht dan Maarten."', img: '/assets/team/maarten-langbroek.jpg' },
-  { name: 'Bart Gramberg',     role: 'Strateeg, ontwerper, ecosysteem-bouwer en AI-enthousiast.', quote: '"Bart neemt je mee — into uncharted territory."', img: '/assets/team/bart-gramberg.jpg' },
-]
-const advisors = [
-  { name: 'Kim van der Leeuw', role: 'Serial impact entrepreneur, business designer, programmamanager & brok energie.', quote: '"Onze duurzaamheids-dinosaurus."', img: '/assets/team/kim.jpeg' },
-  { name: 'Zoë Red',           role: 'Communicatiestrateeg, klimaat-guru, impact investor & netwerkbouwer.', quote: '"Van meta-denken tot morgen doen."', img: '/assets/team/zoe.jpg' },
-]
+const teamMembers = await getCollection('teamMembers', ({ id }) => id.startsWith(`${locale}/`))
+teamMembers.sort((a, b) => a.data.order - b.data.order || a.data.name.localeCompare(b.data.name, locale))
+
+const team = teamMembers.filter(member => member.data.section === 'team')
+const advisors = teamMembers.filter(member => member.data.section === 'advisors')
+
 const partners = [
   { src: '/assets/partners/donutcoalitie.png', alt: 'Amsterdam Donut Coalitie' },
   { src: '/assets/partners/fractal.jpg',       alt: 'Fractal Regenerative Technologies' },
@@ -91,12 +89,12 @@ const partners = [
         {team.map(m => (
           <div class="bg-white border border-[rgba(72,115,91,0.15)] rounded-xl overflow-hidden transition-all duration-200 hover:shadow-[0_12px_32px_rgba(72,115,91,0.14)] hover:-translate-y-0.5">
             <div class="w-full aspect-[4/4.3] bg-creme overflow-hidden">
-              {m.img ? <img src={m.img} alt={m.name} class="w-full h-full object-cover" /> : <span class="flex items-center justify-center h-full text-[10px] text-border uppercase tracking-[0.1em]">Foto</span>}
+              {m.data.image ? <img src={m.data.image} alt={m.data.imageAlt ?? m.data.name} class="w-full h-full object-cover" /> : <span class="flex items-center justify-center h-full text-[10px] text-border uppercase tracking-[0.1em]">Foto</span>}
             </div>
             <div class="px-6 pt-[22px] pb-[26px]">
-              <div class="text-[19px] font-bold text-green leading-snug mb-1.5">{m.name}</div>
-              <div class="text-[13.5px] text-mid leading-[1.55] mb-3.5 min-h-[42px]">{m.role}</div>
-              <div class="text-[13.5px] italic text-magenta leading-[1.5] pt-3.5 border-t border-[rgba(72,115,91,0.12)]">{m.quote}</div>
+              <div class="text-[19px] font-bold text-green leading-snug mb-1.5">{m.data.name}</div>
+              <div class="text-[13.5px] text-mid leading-[1.55] mb-3.5 min-h-[42px]">{m.data.role}</div>
+              {m.data.quote && <div class="text-[13.5px] italic text-magenta leading-[1.5] pt-3.5 border-t border-[rgba(72,115,91,0.12)]">{m.data.quote}</div>}
             </div>
           </div>
         ))}
@@ -121,12 +119,12 @@ const partners = [
         {advisors.map(m => (
           <div class="bg-white border border-[rgba(72,115,91,0.15)] rounded-xl overflow-hidden transition-all duration-200 hover:shadow-[0_12px_32px_rgba(72,115,91,0.14)] hover:-translate-y-0.5">
             <div class="w-full aspect-[4/4.3] bg-creme overflow-hidden">
-              {m.img ? <img src={m.img} alt={m.name} class="w-full h-full object-cover" /> : <span class="flex items-center justify-center h-full text-[10px] text-border uppercase tracking-[0.1em]">Foto</span>}
+              {m.data.image ? <img src={m.data.image} alt={m.data.imageAlt ?? m.data.name} class="w-full h-full object-cover" /> : <span class="flex items-center justify-center h-full text-[10px] text-border uppercase tracking-[0.1em]">Foto</span>}
             </div>
             <div class="px-6 pt-[22px] pb-[26px]">
-              <div class="text-[19px] font-bold text-green leading-snug mb-1.5">{m.name}</div>
-              <div class="text-[13.5px] text-mid leading-[1.55] mb-3.5 min-h-[42px]">{m.role}</div>
-              <div class="text-[13.5px] italic text-magenta leading-[1.5] pt-3.5 border-t border-[rgba(72,115,91,0.12)]">{m.quote}</div>
+              <div class="text-[19px] font-bold text-green leading-snug mb-1.5">{m.data.name}</div>
+              <div class="text-[13.5px] text-mid leading-[1.55] mb-3.5 min-h-[42px]">{m.data.role}</div>
+              {m.data.quote && <div class="text-[13.5px] italic text-magenta leading-[1.5] pt-3.5 border-t border-[rgba(72,115,91,0.12)]">{m.data.quote}</div>}
             </div>
           </div>
         ))}

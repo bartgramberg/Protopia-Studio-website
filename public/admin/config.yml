@@ -89,3 +89,25 @@ collections:
       - { label: Date,               name: date,        widget: datetime, i18n: duplicate }
       - { label: Image,              name: image,       widget: image,    i18n: duplicate, required: false }
       - { label: "Reading time (min)", name: readingTime, widget: number, i18n: duplicate }
+
+  - name: team_members
+    label: Team members
+    folder: src/content/team-members
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - { label: Name,        name: name,     widget: string, i18n: duplicate }
+      - { label: Role,        name: role,     widget: text,   i18n: true }
+      - { label: Quote,       name: quote,    widget: string, i18n: true, required: false }
+      - { label: Photo,       name: image,    widget: image,  i18n: duplicate, required: false }
+      - { label: Image alt,   name: imageAlt, widget: string, i18n: true, required: false }
+      - label: Section
+        name: section
+        widget: select
+        i18n: duplicate
+        default: "team"
+        options:
+          - { label: "Team",     value: "team" }
+          - { label: "Advisors", value: "advisors" }
+      - { label: "Display order", name: order, widget: number, i18n: duplicate, default: 99, value_type: int }

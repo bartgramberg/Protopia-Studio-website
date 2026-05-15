@@ -23,6 +23,16 @@ const imageList = z.preprocess(
   z.array(z.string()).default([]),
 )
 
+const teamMemberSchema = z.object({
+  name:     z.string(),
+  role:     z.string(),
+  quote:    optionalString,
+  image:    optionalString,
+  imageAlt: optionalString,
+  section:  z.enum(['team', 'advisors']).default('team'),
+  order:    z.number().default(99),
+})
+
 describe('project schema', () => {
   it('accepts a valid project entry', () => {
     const schema = z.object({
@@ -110,5 +120,58 @@ describe('project schema', () => {
     expect(result.image).toBeUndefined()
     expect(result.thumbnail).toBeUndefined()
     expect(result.images).toEqual(['/uploads/a.jpg', '/uploads/b.jpg'])
+  })
+})
+
+describe('team member schema', () => {
+  it('accepts a valid team member entry', () => {
+    const result = teamMemberSchema.safeParse({
+      name: 'Ada Lovelace',
+      role: 'Systems thinker and advisor.',
+      quote: '"A useful quote."',
+      image: '/uploads/ada.jpg',
+      imageAlt: 'Ada Lovelace',
+      section: 'advisors',
+      order: 2,
+    })
+
+    expect(result.success).toBe(true)
+  })
+
+  it('defaults new CMS entries to the team section with a fallback order', () => {
+    const result = teamMemberSchema.parse({
+      name: 'New Protopian',
+      role: 'Designer.',
+    })
+
+    expect(result.section).toBe('team')
+    expect(result.order).toBe(99)
+  })
+
+  it('normalizes empty optional CMS fields', () => {
+    const result = teamMemberSchema.parse({
+      name: 'No Photo',
+      role: 'Contributor.',
+      quote: '',
+      image: null,
+      imageAlt: '',
+      section: 'team',
+      order: 4,
+    })
+
+    expect(result.quote).toBeUndefined()
+    expect(result.image).toBeUndefined()
+    expect(result.imageAlt).toBeUndefined()
+  })
+
+  it('rejects invalid team member sections', () => {
+    const result = teamMemberSchema.safeParse({
+      name: 'Wrong Section',
+      role: 'Contributor.',
+      section: 'board',
+      order: 1,
+    })
+
+    expect(result.success).toBe(false)
   })
 })

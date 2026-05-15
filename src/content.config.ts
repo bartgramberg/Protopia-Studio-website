@@ -56,10 +56,22 @@ const blogSchema = z.object({
   readingTime: z.number(),
 })
 
+const teamMemberSchema = z.object({
+  name:     z.string(),
+  role:     z.string(),
+  quote:    optionalString,
+  image:    optionalString,
+  imageAlt: optionalString,
+  section:  z.enum(['team', 'advisors']).default('team'),
+  order:    z.number().default(99),
+})
+
 export const collections = {
-  projects: defineCollection({ loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }), schema: projectSchema }),
-  blog:     defineCollection({ loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),     schema: blogSchema }),
+  projects:    defineCollection({ loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),      schema: projectSchema }),
+  blog:        defineCollection({ loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),          schema: blogSchema }),
+  teamMembers: defineCollection({ loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/team-members' }),  schema: teamMemberSchema }),
 }
 
-export type ProjectData = z.infer<typeof projectSchema>
-export type BlogData    = z.infer<typeof blogSchema>
+export type ProjectData    = z.infer<typeof projectSchema>
+export type BlogData       = z.infer<typeof blogSchema>
+export type TeamMemberData = z.infer<typeof teamMemberSchema>
