@@ -87,17 +87,9 @@ const tr = t(locale)
       <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Discover our eight principles.</h2>
       <p class="text-[16px] sm:text-[17px] text-mid leading-[1.75] max-w-[680px] mt-4">Protopia Studio has developed eight regenerative design principles. They describe not an end state, but a direction — of more life, more abundance, and more capacity for systems to renew themselves. These principles are both a design attitude and an assessment tool: for cities, for organisations, for products.</p>
 
-      <!-- Domain tabs -->
       <div class="mt-8">
-        <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-light mb-2.5">Step 1 — Choose a domain to see how a principle works</div>
-        <div class="flex gap-2 flex-wrap" id="domain-tabs">
-          <button class="px-domain-tab active" data-domain="cities">Environments</button>
-          <button class="px-domain-tab" data-domain="business">Businesses</button>
-          <button class="px-domain-tab" data-domain="products">Products</button>
-        </div>
-
-        <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-light mt-6 mb-4">Step 2 — Click a principle</div>
-        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" id="principles-grid">
+        <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-light mb-4">Choose a principle</div>
+        <div class="grid grid-cols-2 gap-3 lg:grid-cols-4" id="principles-grid">
           {[
             { num: '01', p: 1, title: 'Design from one living system',  desc: 'Design from one integrated socio-ecological whole.',     img: '/assets/principes/01-holistic.png' },
             { num: '02', p: 2, title: 'Give more than you take',        desc: 'Give more back than you take on balance.',              img: '/assets/principes/02-resources.png' },
@@ -112,22 +104,29 @@ const tr = t(locale)
               class="px-pcard text-left border border-[rgba(72,115,91,0.12)] bg-creme rounded-lg overflow-hidden transition-all duration-200 hover:border-green hover:shadow-[0_6px_20px_rgba(72,115,91,0.12)] hover:-translate-y-0.5"
               data-p={item.p}
             >
-              <img src={item.img} alt={item.title} class="w-full aspect-[4/3] object-contain bg-creme" />
-              <div class="p-[18px] pb-5">
-                <div class="text-[28px] font-extrabold text-magenta leading-none mb-2">{item.num}</div>
-                <div class="text-[14px] font-bold text-green mb-1.5">{item.title}</div>
-                <p class="text-[12px] text-mid leading-[1.6]">{item.desc}</p>
+              <div class="px-card-img">
+                <img src={item.img} alt={item.title} />
+              </div>
+              <div class="px-3 py-3 sm:px-3.5 sm:py-3.5">
+                <div class="text-[21px] font-extrabold text-magenta leading-none mb-1.5">{item.num}</div>
+                <div class="text-[13px] font-bold text-green leading-snug mb-1">{item.title}</div>
+                <p class="text-[11px] text-mid leading-[1.45]">{item.desc}</p>
               </div>
             </button>
           ))}
         </div>
 
         <!-- Detail panel -->
-        <div id="px-detail" class="mt-8 bg-creme rounded-xl overflow-hidden opacity-0 translate-y-2 transition-all duration-300">
+        <div id="px-detail" class="mt-7 bg-creme rounded-xl overflow-hidden opacity-0 translate-y-2 transition-all duration-300">
           <div id="px-detail-strip" class="h-[5px] bg-green"></div>
           <div class="p-5 sm:p-8 relative">
             <div id="px-detail-num" class="absolute top-[18px] right-5 sm:right-7 text-[44px] sm:text-[64px] font-light italic text-green/20 leading-none tracking-[-2px]">01</div>
-            <span id="px-detail-pill" class="inline-block text-[9px] font-semibold uppercase tracking-[0.16em] px-3 py-1 rounded-pill text-white bg-green mb-3">Environments</span>
+            <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-light mb-2.5">Choose a domain</div>
+            <div class="flex gap-2 flex-wrap mb-5 pr-16 sm:pr-24" id="domain-tabs">
+              <button class="px-domain-tab active" data-domain="cities">Environments</button>
+              <button class="px-domain-tab" data-domain="business">Businesses</button>
+              <button class="px-domain-tab" data-domain="products">Products</button>
+            </div>
             <h3 id="px-detail-title" class="text-[20px] sm:text-[22px] font-bold text-green mb-1.5 leading-snug max-w-[82%] sm:max-w-[78%]">Design from one living system</h3>
             <p id="px-detail-activating" class="text-[13px] italic text-magenta mb-3.5"></p>
             <div id="px-detail-short" class="text-[13px] text-mid leading-[1.7] p-4 bg-white rounded-lg mb-4"></div>
@@ -173,13 +172,34 @@ const tr = t(locale)
 }
 .px-domain-tab:hover { background: #F2EFE9; color: #48735B; }
 .px-domain-tab.active { background: #48735B; color: white; border-color: #48735B; }
+.px-card-img {
+  height: 118px;
+  overflow: hidden;
+  background: #F2EFE9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+.px-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+@media (min-width: 640px) {
+  .px-card-img { height: 150px; }
+}
+@media (min-width: 1024px) {
+  .px-card-img { height: 170px; }
+}
 .px-pcard.active { border-color: #D90D7D !important; box-shadow: 0 6px 20px rgba(217,13,125,0.18) !important; }
 .px-pcard.active .principle-title { color: #D90D7D; }
 #px-detail.visible { opacity: 1 !important; transform: translateY(0) !important; }
+#px-detail:not(.visible) { display: none; }
 #px-detail-strip.business { background: #347EBF; }
 #px-detail-strip.products { background: #D90D7D; }
-#px-detail-pill.business { background: #347EBF; }
-#px-detail-pill.products { background: #D90D7D; }
 .px-nav-btn {
   cursor: pointer;
   font-family: inherit;
@@ -198,7 +218,6 @@ const tr = t(locale)
 
 <script>
 const PX_NAMES = ['Design from one living system','Give more than you take','Move with natural and cultural rhythms','Design for natural self-organisation','Pay attention to all life','Design for future generations','Strengthen regenerative culture','Govern as a community'];
-const PX_DOMAINS = {cities:'Environments',business:'Businesses',products:'Products'};
 const PX_DATA = {
   1:{cities:{activating:'Design from one living socio-ecological system',short:'The city is one integrated, continuously changing socio-ecological system, embedded in a larger bioregional context.',full:'<p>Ecology, social and cultural structures, and economy constantly strengthen or undermine each other. Regenerative design begins by recognising that reciprocity and designing solutions that fulfil multiple functions at once.</p><p>The neighbourhood is part of the city, the city of the region. An intervention reverberates across every scale. Actively connecting those scales is a core task.</p>'},business:{activating:'Act from one living socio-ecological system',short:'The organisation is one integrated system, embedded in value chains, communities and bioregions.',full:'<p>An organisation is never a closed system. The team is part of the organisation, the organisation of the value chain, the chain of the bioregion.</p><p>Business decisions are assessed not only on financial return, but on their contribution to the living whole.</p>'},products:{activating:'Design from one living system — from material to end of life',short:'A product exists within one integrated system, from material origin through use to end of life.',full:'<p>A product is not an isolated object. A material choice affects the producing ecosystem, user behaviour and the end-of-life landscape.</p><p>Products are assessed not only on function or price, but on their contribution to the living whole.</p>'}},
   2:{cities:{activating:'Give back more than you take',short:'Design on the basis of circular, local and renewable resources. On balance, an intervention contributes more than it costs.',full:'<p>The aim is a system that adds more than it consumes: building soil fertility, increasing biodiversity, and accumulating social and economic value.</p><p>The city nourishes the region, and the region nourishes the city. Food, water, materials, ecological services — they flow in both directions.</p>'},business:{activating:'Give back more than you take',short:'Operate through regenerative flows of natural, human, social and financial capital.',full:'<p>A regenerative business aims to give more back to its context than it takes, across every form of capital.</p><p>The relationship is reciprocal: the organisation nourishes the communities in which it operates, and those communities nourish the organisation.</p>'},products:{activating:'Give back more than you take',short:'Across its life cycle, a product contributes more to living systems than it extracts.',full:'<p>Every material belongs to a biological cycle (safe return to soil) or a technical cycle (continuous reuse without loss of quality).</p><p>The product must return value — in nutrients that build soil, or materials that remain in productive use.</p>'}},
@@ -237,10 +256,7 @@ function pxRender() {
   const data = (PX_DATA as Record<number, Record<string, PxEntry>>)[principle][domain];
   const num = String(principle).padStart(2,'0');
   const strip = document.getElementById('px-detail-strip')!;
-  const pill  = document.getElementById('px-detail-pill')!;
   strip.className = 'h-[5px] bg-green ' + (domain === 'cities' ? '' : domain);
-  pill.className  = 'inline-block text-[9px] font-semibold uppercase tracking-[0.16em] px-3 py-1 rounded-pill text-white bg-green mb-3 ' + (domain === 'cities' ? '' : domain);
-  pill.textContent = (PX_DOMAINS as Record<string, string>)[domain];
   document.getElementById('px-detail-num')!.textContent = num;
   document.getElementById('px-detail-title')!.textContent = PX_NAMES[principle-1];
   document.getElementById('px-detail-activating')!.textContent = data.activating;
@@ -258,5 +274,4 @@ document.querySelectorAll('.px-domain-tab').forEach(btn => {
 document.querySelectorAll('.px-pcard').forEach(btn => {
   btn.addEventListener('click', () => pxSelectPrinciple(+(btn as HTMLElement).dataset.p!));
 });
-pxRender();
 </script>
