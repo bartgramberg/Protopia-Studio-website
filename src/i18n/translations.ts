@@ -33,12 +33,14 @@ const nl = {
     result:    'Resultaat',
   },
   blog: {
-    eyebrow:     'Journal',
+    eyebrow:     'Blog',
     title:       'Dit inspireert ons.',
     lead:        'Gedachten, excursies en inzichten vanuit de praktijk.',
     viewAll:     'Bekijk alle blogposts',
     readMore:    'Lees meer',
     latestTitle: 'Laatste blogs.',
+    previous:    'Vorige',
+    next:        'Volgende',
   },
   home: {
     heroTitle:     'Wij ontwerpen steden, projecten en producten voor een',
@@ -62,7 +64,7 @@ const nl = {
     ctaTitle:      'Klaar om samen te bouwen?',
     ctaSub:        'Van post-it, via pilot naar product. Van rapport naar resultaat.',
     ctaPrimary:    'Neem contact op',
-    ctaSecondary:  'Bekijk het journal',
+    ctaSecondary:  'Bekijk de blog',
   },
   waarom: {
     eyebrow: 'Waarom regeneratie',
@@ -136,12 +138,14 @@ const en: typeof nl = {
     result:    'Result',
   },
   blog: {
-    eyebrow:     'Journal',
+    eyebrow:     'Blog',
     title:       'What inspires us.',
     lead:        'Thoughts, excursions and insights from practice.',
     viewAll:     'View all posts',
     readMore:    'Read more',
     latestTitle: 'Latest posts.',
+    previous:    'Previous',
+    next:        'Next',
   },
   home: {
     heroTitle:     'We design cities, projects and products for a',
@@ -165,7 +169,7 @@ const en: typeof nl = {
     ctaTitle:      'Ready to build together?',
     ctaSub:        'From post-it, via pilot to product. From report to result.',
     ctaPrimary:    'Get in touch',
-    ctaSecondary:  'View the journal',
+    ctaSecondary:  'View the blog',
   },
   waarom: {
     eyebrow: 'Why regeneration',
