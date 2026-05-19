@@ -44,12 +44,11 @@ const logos = [
     <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <div class="grid gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-[56px] items-center">
         <div>
-          <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Regenerative Design Studio</span>
+          <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Socially, ecologically, and economically balanced.</span>
           <h1 class="text-[clamp(34px,8vw,62px)] font-bold leading-[1.08] tracking-[-0.025em] text-green text-balance">
             <span class="whitespace-nowrap">Protopia is a</span> <em class="not-italic text-magenta">regenerative studio<span class="text-magenta">.</span></em>
           </h1>
           <p class="text-[18px] sm:text-[22px] font-medium leading-[1.45] text-mid text-balance mt-6 max-w-[540px]">We design and develop cities, projects and products for a resilient world.</p>
-          <p class="text-[14px] font-semibold text-green mt-4 tracking-[0.01em]">Social, ecological and economic in balance.</p>
           <div class="flex gap-3.5 mt-8 flex-wrap items-center">
             <a href="/en/why" class="inline-flex items-center justify-center gap-1.5 min-w-[220px] px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-green text-white hover:bg-green-dark transition-colors border border-green">
               Regeneration, what is that?
@@ -159,15 +158,29 @@ const logos = [
     </div>
   </div>
 
-  <!-- Quote -->
-  <div class="bg-creme py-14 sm:py-16 lg:py-[72px]">
-    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10 text-center">
-      <blockquote class="text-[clamp(20px,2.5vw,28px)] italic font-light text-mid leading-[1.6] max-w-[760px] mx-auto text-balance">
+  <!-- Quote (with video background) -->
+  <div class="relative overflow-hidden py-14 sm:py-16 lg:py-[72px]">
+    <!-- Video background -->
+    <video
+      class="absolute inset-0 w-full h-full object-cover -z-10"
+      src="/assets/video/forest-sunshine.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+      aria-hidden="true"
+    ></video>
+    <!-- Dark overlay for text readability -->
+    <div class="absolute inset-0 bg-black/55 -z-10" aria-hidden="true"></div>
+
+    <div class="relative max-w-content mx-auto px-5 sm:px-8 lg:px-10 text-center">
+      <blockquote class="text-[clamp(18px,2.1vw,24px)] italic font-light text-white leading-[1.6] max-w-[760px] mx-auto text-balance drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
         "Protopia is a state of becoming, rather than a destination. It is a process. In the protopian mode, things are better today than they were yesterday, although only a little better."
       </blockquote>
-      <p class="text-[13px] text-magenta font-medium mt-5 tracking-[0.02em]">— Kevin Kelly, futurist and founder of Wired magazine</p>
+      <p class="text-[13px] text-white/85 font-medium mt-5 tracking-[0.02em]">— Kevin Kelly, futurist and founder of Wired magazine</p>
       <div class="mt-6">
-        <a href="/en/who" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green justify-center before:content-['>'] hover:text-magenta transition-colors">We believe in this. Read our mission</a>
+        <a href="/en/who" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-white justify-center before:content-['>'] hover:text-magenta transition-colors">We believe in this. Read our mission</a>
       </div>
     </div>
   </div>
