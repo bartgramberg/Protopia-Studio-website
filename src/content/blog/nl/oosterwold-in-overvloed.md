@@ -7,7 +7,9 @@ description: Oosterwold in Overvloed — een gebiedswerkplaats voor bewoners,
 category: Projecten
 author: Joris de Leeuw
 date: 2025-07-21
-image: /uploads/ed1b3e_e7421bee059140df94c7961ce3daeea3~mv2.jpg
+image: /uploads/ed1b3e_13d30d10558e48f8b676ac8102bc8e3e~mv2.webp
+images:
+  - /uploads/ed1b3e_13d30d10558e48f8b676ac8102bc8e3e~mv2.webp
 readingTime: 3
 ---
 
