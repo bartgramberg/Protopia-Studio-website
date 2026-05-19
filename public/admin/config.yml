@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: bartgramberg/Protopia-Studio-website
-  branch: dev
+  branch: main
 
 local_backend: true
 
