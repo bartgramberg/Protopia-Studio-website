@@ -32,8 +32,14 @@ const tr = t(locale)
         </div>
 
         <!-- Right: form -->
-        <form class="flex flex-col gap-4" data-netlify="true" name="contact">
-          <input type="hidden" name="form-name" value="contact" />
+        <form class="js-contact-form flex flex-col gap-4" name="contact" method="POST" action="https://api.web3forms.com/submit" data-success="/bedankt/" data-error="/niet-verzonden/">
+          <input type="hidden" name="access_key" value="0e617b1f-44af-4241-9847-8f84340a307b" />
+          <input type="hidden" name="subject" value="Nieuw contactformulier bericht" />
+          <input type="hidden" name="from_name" value="Protopia Studio website" />
+          <input type="hidden" name="locale" value="nl" />
+          <p class="hidden">
+            <label>Laat dit veld leeg <input type="checkbox" name="botcheck" /></label>
+          </p>
           <div class="grid gap-4 sm:grid-cols-2">
             <div class="flex flex-col gap-1.5">
               <label for="name" class="text-[11px] font-semibold uppercase tracking-[0.1em] text-green">Naam</label>
@@ -46,7 +52,7 @@ const tr = t(locale)
           </div>
           <div class="flex flex-col gap-1.5">
             <label for="organisatie" class="text-[11px] font-semibold uppercase tracking-[0.1em] text-green">Organisatie</label>
-            <input id="organisatie" name="organisatie" type="text" placeholder="Jouw organisatie" class="border-[1.5px] border-border rounded-lg px-4 py-[11px] text-[14px] text-dark focus:outline-none focus:border-green transition-colors" />
+            <input id="organisatie" name="organization" type="text" placeholder="Jouw organisatie" class="border-[1.5px] border-border rounded-lg px-4 py-[11px] text-[14px] text-dark focus:outline-none focus:border-green transition-colors" />
           </div>
           <div class="flex flex-col gap-1.5">
             <label for="message" class="text-[11px] font-semibold uppercase tracking-[0.1em] text-green">Vraagstuk</label>
@@ -59,6 +65,29 @@ const tr = t(locale)
       </div>
     </div>
   </section>
+
+  <script>
+    document.querySelectorAll<HTMLFormElement>('.js-contact-form').forEach((form) => {
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault()
+
+        const submitButton = form.querySelector<HTMLButtonElement>('button[type="submit"]')
+        submitButton?.setAttribute('disabled', 'true')
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' },
+          })
+          const result = await response.json().catch(() => ({ success: response.ok }))
+          window.location.href = response.ok && result.success !== false ? form.dataset.success || '/bedankt/' : form.dataset.error || '/niet-verzonden/'
+        } catch {
+          window.location.href = form.dataset.error || '/niet-verzonden/'
+        }
+      })
+    })
+  </script>
 
   <Footer locale={locale} />
 </Base>
