@@ -110,3 +110,24 @@ const realisationExamples = examplesFor('realisation')
 
   <Footer locale={locale} />
 </Base>
+
+<script is:inline>
+  // Auto-scroll: if URL has ?scroll=fase-X, start at top then smooth-scroll down to the section
+  (function() {
+    const params = new URLSearchParams(window.location.search)
+    const target = params.get('scroll')
+    if (!target) return
+    // Force start at top before browser paints
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
+    window.scrollTo(0, 0)
+    const trigger = () => {
+      const el = document.getElementById(target)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    if (document.readyState === 'complete') {
+      setTimeout(trigger, 200)
+    } else {
+      window.addEventListener('load', () => setTimeout(trigger, 200), { once: true })
+    }
+  })()
+</script>
