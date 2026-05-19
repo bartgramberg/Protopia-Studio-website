@@ -62,7 +62,8 @@ const realisationExamples = examplesFor('realisation')
       </div>
 
       <!-- Phase 2 -->
-      <div class="grid gap-6 lg:grid-cols-[96px_1fr_1fr] lg:gap-10 py-10 sm:py-12 lg:py-14 border-b border-border items-start">
+      <div class="grid gap-6 lg:grid-cols-[1fr_96px_1fr] lg:gap-10 py-10 sm:py-12 lg:py-14 border-b border-border items-start">
+        <HowProjectExamples projects={designExamples} label="Voorbeeldproject" />
         <div class="text-[44px] sm:text-[56px] lg:text-[72px] font-extrabold text-magenta leading-none">#2</div>
         <div>
           <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-3">Fase twee</span>
@@ -80,7 +81,6 @@ const realisationExamples = examplesFor('realisation')
             <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Samenwerken?</a>
           </div>
         </div>
-        <HowProjectExamples projects={designExamples} label="Voorbeeldproject" />
       </div>
 
       <!-- Phase 3 -->
