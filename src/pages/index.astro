@@ -72,45 +72,46 @@ const logos = [
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Protopia levert.</span>
       <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Drie manieren waarop wij bijdragen.</h2>
       <p class="text-[16px] sm:text-[17px] text-mid leading-[1.75] max-w-[720px] mt-4 mb-12 text-balance">Van carbon credit modellen tot regeneratieve steden — wij ontwerpen en bouwen.</p>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <a href="/projecten" class="block bg-white border border-border rounded-lg overflow-hidden hover:shadow-[0_6px_24px_rgba(72,115,91,0.13)] transition-shadow">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+        <a href="/projecten" class="flex flex-col bg-white border border-border rounded-lg overflow-hidden hover:shadow-[0_6px_24px_rgba(72,115,91,0.13)] transition-shadow">
           <div class="h-[180px] bg-creme overflow-hidden">
             <img src="/assets/levert-steden.png" alt="Regeneratieve kaart van Amsterdam op iPad" class="w-full h-full object-cover" />
           </div>
-          <div class="p-[22px]">
+          <div class="p-[22px] flex flex-col flex-1">
             <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Producten</div>
-            <div class="text-[15px] font-bold text-green mb-2">Regeneratieve producten</div>
+            <div class="text-[15px] font-bold text-green mb-2">Regeneratieve <span class="text-magenta">producten</span></div>
             <p class="text-[13px] text-mid leading-[1.6] mb-3">Protopia ontwerpt en bouwt producten en diensten, waarbij wij specialiseren in het creëren van nieuwe, unieke waardeproposities die economische en regeneratieve impact opleveren.</p>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Bekijk regeneratieve producten</span>
+            <span class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Bekijk regeneratieve producten</span>
           </div>
         </a>
-        <a href="/projecten" class="block bg-white border border-border rounded-lg overflow-hidden hover:shadow-[0_6px_24px_rgba(72,115,91,0.13)] transition-shadow">
+        <a href="/projecten" class="flex flex-col bg-white border border-border rounded-lg overflow-hidden hover:shadow-[0_6px_24px_rgba(72,115,91,0.13)] transition-shadow">
           <div class="h-[180px] bg-creme overflow-hidden">
             <img src="/assets/levert-business.jpg" alt="Team werkt aan business model canvas" class="w-full h-full object-cover" />
           </div>
-          <div class="p-[22px]">
+          <div class="p-[22px] flex flex-col flex-1">
             <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Bedrijven</div>
-            <div class="text-[15px] font-bold text-green mb-2">Regeneratieve bedrijven</div>
+            <div class="text-[15px] font-bold text-green mb-2">Regeneratieve <span class="text-magenta">bedrijven</span></div>
             <p class="text-[13px] text-mid leading-[1.6] mb-3">Van carbon credit modellen tot impact ecosystemen of regeneratieve bosbouw. Wij ontwikkelen nieuwe businessmodellen en bouwen teams, partnerships en ventures met een regeneratie-mindset.</p>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Bekijk regeneratieve bedrijven</span>
+            <span class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Bekijk regeneratieve bedrijven</span>
           </div>
         </a>
-        <a href="/projecten" class="block bg-white border border-border rounded-lg overflow-hidden hover:shadow-[0_6px_24px_rgba(72,115,91,0.13)] transition-shadow">
+        <a href="/projecten" class="flex flex-col bg-white border border-border rounded-lg overflow-hidden hover:shadow-[0_6px_24px_rgba(72,115,91,0.13)] transition-shadow">
           <div class="h-[180px] bg-creme overflow-hidden">
             <img src="/assets/levert-omgevingen.jpeg" alt="Schetsen van regeneratieve stedelijke omgevingen" class="w-full h-full object-cover" />
           </div>
-          <div class="p-[22px]">
+          <div class="p-[22px] flex flex-col flex-1">
             <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">Omgevingen</div>
-            <div class="text-[15px] font-bold text-green mb-2">Regeneratieve omgevingen</div>
+            <div class="text-[15px] font-bold text-green mb-2">Regeneratieve <span class="text-magenta">omgevingen</span></div>
             <p class="text-[13px] text-mid leading-[1.6] mb-3">De stad als bron voor vernieuwing en verbetering van het ecosysteem? Het kan. Protopia herontwerpt stedelijke ruimtes en ondersteunt lokale en nationale initiatieven voor een positieve leefomgeving.</p>
-            <span class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Bekijk regeneratieve omgevingen</span>
+            <span class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Bekijk regeneratieve omgevingen</span>
           </div>
         </a>
       </div>
 
       <!-- Client logos marquee -->
-      <div class="mt-12">
-        <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-light pb-2 border-b-2 border-border inline-block mb-6">Wij werken voor ondernemers, bedrijven en overheden met een missie</p>
+      <div class="mt-16 sm:mt-20">
+        <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Protopia cocreëert.</span>
+        <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Wij werken voor ondernemers, bedrijven en overheden met een missie.</h2>
         <div
           class="relative overflow-hidden py-8"
           style="mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);"
@@ -134,25 +135,25 @@ const logos = [
     <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Protopia regenereert.</span>
       <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Onze kracht ligt in de combinatie van onderzoek, ontwerp en ondernemerschap.</h2>
-      <p class="text-[16px] sm:text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4">Van post-it, via pilot naar product. Van rapport naar resultaat. Van idee naar impact.</p>
-      <div class="grid gap-5 md:grid-cols-3 mt-12">
-        <div class="bg-white border border-[rgba(72,115,91,0.15)] rounded-lg shadow-[0_2px_8px_rgba(26,26,26,0.04)] p-9">
+      <p class="text-[16px] sm:text-[17px] text-mid leading-[1.75] max-w-[840px] mt-4 text-balance">Van post-it, via pilot naar product. Van rapport naar resultaat. Van idee naar impact.</p>
+      <div class="grid gap-5 md:grid-cols-3 mt-12 items-stretch">
+        <div class="flex flex-col bg-white border border-[rgba(72,115,91,0.15)] rounded-lg shadow-[0_2px_8px_rgba(26,26,26,0.04)] p-9">
           <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">#1</div>
           <div class="text-[15px] font-bold text-green mb-2">Onderzoek & Strategie</div>
           <p class="text-[13px] text-mid leading-[1.65] mb-4">Complexe vraagstukken tot de kern gebracht en vertaald naar ideeën & concrete strategieën.</p>
-          <a href="/hoe" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat betekent dat?</a>
+          <a href="/hoe#fase-1" class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat betekent dat?</a>
         </div>
-        <div class="bg-white border border-[rgba(72,115,91,0.15)] rounded-lg shadow-[0_2px_8px_rgba(26,26,26,0.04)] p-9">
+        <div class="flex flex-col bg-white border border-[rgba(72,115,91,0.15)] rounded-lg shadow-[0_2px_8px_rgba(26,26,26,0.04)] p-9">
           <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">#2</div>
           <div class="text-[15px] font-bold text-green mb-2">Concept & Ontwerp</div>
           <p class="text-[13px] text-mid leading-[1.65] mb-4">Innovatieve concepten, business modellen en plekken. Meteen gebouwd en getest.</p>
-          <a href="/hoe" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat krijg ik?</a>
+          <a href="/hoe#fase-2" class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat krijg ik?</a>
         </div>
-        <div class="bg-white border border-[rgba(72,115,91,0.15)] rounded-lg shadow-[0_2px_8px_rgba(26,26,26,0.04)] p-9">
+        <div class="flex flex-col bg-white border border-[rgba(72,115,91,0.15)] rounded-lg shadow-[0_2px_8px_rgba(26,26,26,0.04)] p-9">
           <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">#3</div>
           <div class="text-[15px] font-bold text-green mb-2">Co-creatie & Realisatie</div>
           <p class="text-[13px] text-mid leading-[1.65] mb-4">Wij bouwen samen aan teams, labs en partnerships die tastbare resultaten halen.</p>
-          <a href="/hoe" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat doen jullie dan?</a>
+          <a href="/hoe#fase-3" class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat doen jullie dan?</a>
         </div>
       </div>
     </div>
