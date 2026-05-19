@@ -48,22 +48,24 @@ const realisationExamples = examplesFor('realisation')
           <p class="text-[15px] text-mid leading-[1.75] mb-4">Complexe vraagstukken tot de kern gebracht en vertaald naar ideeën & concrete strategieën.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">Elke transitie begint met een nieuw narratief: een toekomstbeeld dat stevig in het heden is verankerd. Samen met partners onderzoeken we complexe vraagstukken en brengen ze terug tot de kern. Daarbij kijken we altijd naar systemen in hun geheel en vanuit alle perspectieven: van mens én natuur.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">We analyseren trends en signaleren kansen voor innovatie. We reiken strategieën aan waarmee nieuwe ideeën uitmonden in concreet resultaat.</p>
-          <div class="flex flex-wrap gap-2 mt-3.5">
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Systeemanalyse</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Trendonderzoek</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Stakeholderonderzoek</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Strategievorming</span>
-          </div>
           <div class="mt-6">
             <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Samen onderzoek doen?</a>
           </div>
         </div>
-        <HowProjectExamples projects={researchExamples} label="Voorbeeldproject" />
+        <HowProjectExamples
+          projects={researchExamples}
+          label="Voorbeeldproject"
+          tags={['Systeemanalyse', 'Trendonderzoek', 'Strategievorming']}
+        />
       </div>
 
       <!-- Phase 2 -->
       <div id="fase-2" class="grid gap-6 lg:grid-cols-[1fr_96px_1fr] lg:gap-10 py-10 sm:py-12 lg:py-14 border-b border-border items-start scroll-mt-24">
-        <HowProjectExamples projects={designExamples} label="Voorbeeldproject" />
+        <HowProjectExamples
+          projects={designExamples}
+          label="Voorbeeldproject"
+          tags={['Design thinking', 'Ruimtelijk ontwerp', 'Businessmodellen']}
+        />
         <div class="text-[44px] sm:text-[56px] lg:text-[72px] font-extrabold text-magenta leading-none">#2</div>
         <div>
           <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-3">Fase twee</span>
@@ -71,12 +73,6 @@ const realisationExamples = examplesFor('realisation')
           <p class="text-[15px] text-mid leading-[1.75] mb-4">Vernieuwende concepten, systemen en plekken die de regeneratieve samenleving vormgeven.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">Als creatieve studio ontwerpen we regeneratieve concepten: van digitale diensten tot ruimtelijke ingrepen. Voor ons is er geen scheiding tussen het fysieke en digitale domein — beide zijn nodig in de transitie naar een nieuw narratief. Technologie is nooit een doel op zich, maar een middel.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">In onze toolkit combineren we regeneratieve methodes zoals permacultuur, systeemdenken en biobased ontwerp met innovatietechnieken als design thinking en lean startup.</p>
-          <div class="flex flex-wrap gap-2 mt-3.5">
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Design thinking</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Ruimtelijk ontwerp</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Businessmodellen</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Digitale diensten</span>
-          </div>
           <div class="mt-6">
             <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Samenwerken?</a>
           </div>
@@ -92,17 +88,15 @@ const realisationExamples = examplesFor('realisation')
           <p class="text-[15px] text-mid leading-[1.75] mb-4">Begeleiding van groepen en organisaties in co-creatie, zowel bij visie en concept als bij de uitvoering.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">In een versnipperde en complexe wereld richten wij de aandacht op wat er echt toe doet. We begeleiden groepen en organisaties in co-creatie, met interactieve en ervaringsgerichte werkvormen die de collectieve creatiekracht activeren.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">Visie en concept vertalen we naar concrete programma's en projecten. We vormen coalities en werken samen met een breed netwerk van partners.</p>
-          <div class="flex flex-wrap gap-2 mt-3.5">
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Co-creatie</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Labs & Pilots</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Partnerships</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Teambuilding</span>
-          </div>
           <div class="mt-6">
             <a href="/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Co-creëren?</a>
           </div>
         </div>
-        <HowProjectExamples projects={realisationExamples} label="Voorbeeldproject" />
+        <HowProjectExamples
+          projects={realisationExamples}
+          label="Voorbeeldproject"
+          tags={['Co-creatie', 'Labs & Pilots', 'Partnerships']}
+        />
       </div>
 
     </div>
@@ -110,3 +104,24 @@ const realisationExamples = examplesFor('realisation')
 
   <Footer locale={locale} />
 </Base>
+
+<script is:inline>
+  // Auto-scroll: if URL has ?scroll=fase-X, start at top then smooth-scroll down to the section
+  (function() {
+    const params = new URLSearchParams(window.location.search)
+    const target = params.get('scroll')
+    if (!target) return
+    // Force start at top before browser paints
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
+    window.scrollTo(0, 0)
+    const trigger = () => {
+      const el = document.getElementById(target)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    if (document.readyState === 'complete') {
+      setTimeout(trigger, 200)
+    } else {
+      window.addEventListener('load', () => setTimeout(trigger, 200), { once: true })
+    }
+  })()
+</script>

@@ -44,12 +44,11 @@ const logos = [
     <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <div class="grid gap-10 lg:grid-cols-[1.35fr_1fr] lg:gap-[56px] items-center">
         <div>
-          <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Regenerative Design Studio</span>
+          <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Sociaal, ecologisch en economisch in balans.</span>
           <h1 class="text-[clamp(34px,8vw,62px)] font-bold leading-[1.08] tracking-[-0.025em] text-green text-balance">
             <span class="whitespace-nowrap">Protopia is een</span> <em class="not-italic text-magenta">regeneratieve studio<span class="text-magenta">.</span></em>
           </h1>
           <p class="text-[18px] sm:text-[22px] font-medium leading-[1.45] text-mid text-balance mt-6 max-w-[540px]">Wij ontwerpen en ontwikkelen steden, projecten en producten voor een veerkrachtige wereld.</p>
-          <p class="text-[14px] font-semibold text-green mt-4 tracking-[0.01em]">Sociaal, ecologisch en economisch in balans.</p>
           <div class="flex gap-3.5 mt-8 flex-wrap items-center">
             <a href="/waarom" class="inline-flex items-center justify-center gap-1.5 min-w-[220px] px-[26px] py-[11px] rounded-pill text-[14px] font-semibold bg-green text-white hover:bg-green-dark transition-colors border border-green">
               Regeneratie, wat is dat?
@@ -67,7 +66,7 @@ const logos = [
   </div>
 
   <!-- Protopia levert -->
-  <div class="bg-creme py-14 sm:py-16 lg:py-20">
+  <div class="bg-white py-14 sm:py-16 lg:py-20">
     <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Protopia levert.</span>
       <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Drie manieren waarop wij bijdragen.</h2>
@@ -108,23 +107,26 @@ const logos = [
         </a>
       </div>
 
-      <!-- Client logos marquee -->
-      <div class="mt-16 sm:mt-20">
-        <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Protopia cocreëert.</span>
-        <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Wij werken voor ondernemers, bedrijven en overheden met een missie.</h2>
-        <div
-          class="relative overflow-hidden py-8"
-          style="mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);"
-          aria-label="Onze opdrachtgevers"
-        >
-          <div class="clients-track flex items-center gap-10 sm:gap-16 lg:gap-20 w-max">
-            {logos.map(l => (
-              <img src={l.src} alt={l.alt} class="h-14 w-auto max-w-[180px] object-contain grayscale opacity-[0.72] hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0" />
-            ))}
-            {logos.map(l => (
-              <img src={l.src} alt="" aria-hidden="true" class="h-14 w-auto max-w-[180px] object-contain grayscale opacity-[0.72] flex-shrink-0" />
-            ))}
-          </div>
+    </div>
+  </div>
+
+  <!-- Protopia cocreëert (client logos) -->
+  <div class="bg-creme py-14 sm:py-16 lg:py-20">
+    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
+      <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Protopia cocreëert.</span>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Wij werken voor ondernemers, bedrijven en overheden met een missie.</h2>
+      <div
+        class="relative overflow-hidden py-8 mt-10 sm:mt-12 lg:mt-14"
+        style="mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);"
+        aria-label="Onze opdrachtgevers"
+      >
+        <div class="clients-track flex items-center gap-10 sm:gap-16 lg:gap-20 w-max">
+          {logos.map(l => (
+            <img src={l.src} alt={l.alt} class="h-14 w-auto max-w-[180px] object-contain grayscale opacity-[0.72] hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-shrink-0" />
+          ))}
+          {logos.map(l => (
+            <img src={l.src} alt="" aria-hidden="true" class="h-14 w-auto max-w-[180px] object-contain grayscale opacity-[0.72] flex-shrink-0" />
+          ))}
         </div>
       </div>
     </div>
@@ -141,33 +143,47 @@ const logos = [
           <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">#1</div>
           <div class="text-[15px] font-bold text-green mb-2">Onderzoek & Strategie</div>
           <p class="text-[13px] text-mid leading-[1.65] mb-4">Complexe vraagstukken tot de kern gebracht en vertaald naar ideeën & concrete strategieën.</p>
-          <a href="/hoe#fase-1" class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat betekent dat?</a>
+          <a href="/hoe?scroll=fase-1" class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat betekent dat?</a>
         </div>
         <div class="flex flex-col bg-white border border-[rgba(72,115,91,0.15)] rounded-lg shadow-[0_2px_8px_rgba(26,26,26,0.04)] p-9">
           <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">#2</div>
           <div class="text-[15px] font-bold text-green mb-2">Concept & Ontwerp</div>
           <p class="text-[13px] text-mid leading-[1.65] mb-4">Innovatieve concepten, business modellen en plekken. Meteen gebouwd en getest.</p>
-          <a href="/hoe#fase-2" class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat krijg ik?</a>
+          <a href="/hoe?scroll=fase-2" class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat krijg ik?</a>
         </div>
         <div class="flex flex-col bg-white border border-[rgba(72,115,91,0.15)] rounded-lg shadow-[0_2px_8px_rgba(26,26,26,0.04)] p-9">
           <div class="text-[56px] font-extrabold text-magenta leading-none mb-3">#3</div>
           <div class="text-[15px] font-bold text-green mb-2">Co-creatie & Realisatie</div>
           <p class="text-[13px] text-mid leading-[1.65] mb-4">Wij bouwen samen aan teams, labs en partnerships die tastbare resultaten halen.</p>
-          <a href="/hoe#fase-3" class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat doen jullie dan?</a>
+          <a href="/hoe?scroll=fase-3" class="mt-auto inline-flex items-center gap-1.5 text-[13px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Wat doen jullie dan?</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Quote -->
-  <div class="bg-creme py-14 sm:py-16 lg:py-[72px]">
-    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10 text-center">
-      <blockquote class="text-[clamp(20px,2.5vw,28px)] italic font-light text-mid leading-[1.6] max-w-[760px] mx-auto text-balance">
+  <!-- Quote (with video background) -->
+  <div class="relative overflow-hidden py-14 sm:py-16 lg:py-[72px]">
+    <!-- Video background -->
+    <video
+      class="absolute inset-0 w-full h-full object-cover -z-10"
+      src="/assets/video/forest-sunshine.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+      aria-hidden="true"
+    ></video>
+    <!-- Green-tinted overlay (less dark, more green) -->
+    <div class="absolute inset-0 -z-10" style="background-color: rgba(72, 115, 91, 0.55);" aria-hidden="true"></div>
+
+    <div class="relative max-w-content mx-auto px-5 sm:px-8 lg:px-10 text-center">
+      <blockquote class="text-[clamp(18px,2.1vw,24px)] italic font-light text-white leading-[1.6] max-w-[760px] mx-auto text-balance drop-shadow-[0_1px_3px_rgba(0,0,0,0.45)]">
         "Protopia is a state of becoming, rather than a destination. It is a process. In the protopian mode, things are better today than they were yesterday, although only a little better."
       </blockquote>
-      <p class="text-[13px] text-magenta font-medium mt-5 tracking-[0.02em]">— Kevin Kelly, futurist en founder of Wired magazine</p>
+      <p class="text-[13px] text-white font-medium mt-5 tracking-[0.02em] drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]">— Kevin Kelly, futurist en founder of Wired magazine</p>
       <div class="mt-6">
-        <a href="/wie" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green justify-center before:content-['>'] hover:text-magenta transition-colors">Wij geloven hier in. Lees onze missie</a>
+        <a href="/wie" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-white justify-center before:content-['>'] hover:text-magenta transition-colors">Wij geloven hier in. Lees onze missie</a>
       </div>
     </div>
   </div>
@@ -226,13 +242,22 @@ const logos = [
     <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <h2 class="text-[clamp(26px,3vw,38px)] font-bold text-white leading-[1.2] mb-2.5 text-balance">Volg ons voor laatste nieuws,<br />projecten en blogs.</h2>
       <p class="text-[16px] text-white/70 mb-7">Samen bouwen aan een regeneratieve wereld.</p>
-      <div class="flex gap-3.5 justify-center flex-wrap">
+      <div class="flex flex-col gap-3.5 items-center">
         <a href="/contact" class="inline-flex items-center justify-center gap-1.5 min-w-[240px] px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">
           Neem contact op
         </a>
-        <a href="#nieuwsbrief" class="inline-flex items-center justify-center gap-1.5 min-w-[240px] px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">
-          Schrijf je in voor de nieuwsbrief
-        </a>
+        <form name="newsletter" method="POST" action="/nieuwsbrief-bedankt/" data-netlify="true" data-netlify-honeypot="bot-field" class="flex w-full max-w-[520px] flex-col gap-2 sm:flex-row">
+          <input type="hidden" name="form-name" value="newsletter" />
+          <input type="hidden" name="locale" value="nl" />
+          <p class="hidden">
+            <label>Laat dit veld leeg <input name="bot-field" /></label>
+          </p>
+          <label for="newsletter-email" class="sr-only">E-mailadres</label>
+          <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Schrijf je in voor onze nieuwsbrief" required class="min-h-[46px] min-w-0 flex-1 rounded-pill border border-white/50 bg-white px-5 text-[14px] font-medium text-dark placeholder:text-light focus:outline-none focus:ring-2 focus:ring-white/70" />
+          <button type="submit" class="inline-flex min-h-[46px] items-center justify-center rounded-pill border border-white bg-white px-6 text-[14px] font-semibold text-green transition-colors hover:bg-creme">
+            Meld je aan
+          </button>
+        </form>
       </div>
     </div>
   </div>

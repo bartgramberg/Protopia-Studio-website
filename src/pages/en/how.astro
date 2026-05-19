@@ -50,22 +50,24 @@ const realisationExamples = examplesFor('realisation')
           <p class="text-[15px] text-mid leading-[1.75] mb-4">Complex questions brought to their core and translated into ideas & concrete strategies.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">Every transition begins with a new narrative: a vision of the future firmly anchored in the present. Together with partners we investigate complex issues and bring them back to their core. We always look at systems as a whole and from all perspectives: of people and nature alike.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">We analyse trends and identify opportunities for innovation. We provide strategies that turn new ideas into concrete results.</p>
-          <div class="flex flex-wrap gap-2 mt-3.5">
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Systems analysis</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Trend research</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Stakeholder research</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Strategy formation</span>
-          </div>
           <div class="mt-6">
             <a href="/en/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Research together?</a>
           </div>
         </div>
-        <HowProjectExamples projects={researchExamples} label="Example project" />
+        <HowProjectExamples
+          projects={researchExamples}
+          label="Example project"
+          tags={['Systems analysis', 'Trend research', 'Strategy formation']}
+        />
       </div>
 
       <!-- Phase 2 -->
       <div id="phase-2" class="grid gap-6 lg:grid-cols-[1fr_96px_1fr] lg:gap-10 py-10 sm:py-12 lg:py-14 border-b border-border items-start scroll-mt-24">
-        <HowProjectExamples projects={designExamples} label="Example project" />
+        <HowProjectExamples
+          projects={designExamples}
+          label="Example project"
+          tags={['Design thinking', 'Spatial design', 'Business models']}
+        />
         <div class="text-[44px] sm:text-[56px] lg:text-[72px] font-extrabold text-magenta leading-none">#2</div>
         <div>
           <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-3">Phase two</span>
@@ -73,12 +75,6 @@ const realisationExamples = examplesFor('realisation')
           <p class="text-[15px] text-mid leading-[1.75] mb-4">Innovative concepts, systems and places that shape the regenerative society.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">As a creative studio we design regenerative concepts: from digital services to spatial interventions. For us there is no separation between the physical and digital domain — both are needed in the transition to a new narrative. Technology is never a goal in itself, but a means.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">In our toolkit we combine regenerative methods such as permaculture, systems thinking and biobased design with innovation techniques such as design thinking and lean startup.</p>
-          <div class="flex flex-wrap gap-2 mt-3.5">
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Design thinking</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Spatial design</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Business models</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Digital services</span>
-          </div>
           <div class="mt-6">
             <a href="/en/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Collaborate?</a>
           </div>
@@ -94,17 +90,15 @@ const realisationExamples = examplesFor('realisation')
           <p class="text-[15px] text-mid leading-[1.75] mb-4">Guiding groups and organisations in co-creation, both in vision and concept and in execution.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">In a fragmented and complex world we focus attention on what truly matters. We guide groups and organisations in co-creation, with interactive and experiential working methods that activate collective creative power.</p>
           <p class="text-[15px] text-mid leading-[1.75] mb-4">We translate vision and concept into concrete programmes and projects. We form coalitions and work together with a broad network of partners.</p>
-          <div class="flex flex-wrap gap-2 mt-3.5">
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Co-creation</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Labs & Pilots</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Partnerships</span>
-            <span class="text-[12px] font-semibold px-3.5 py-[5px] rounded-pill border-[1.5px] border-green text-green">Team building</span>
-          </div>
           <div class="mt-6">
             <a href="/en/contact" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-green before:content-['>'] hover:text-magenta transition-colors">Co-create?</a>
           </div>
         </div>
-        <HowProjectExamples projects={realisationExamples} label="Example project" />
+        <HowProjectExamples
+          projects={realisationExamples}
+          label="Example project"
+          tags={['Co-creation', 'Labs & Pilots', 'Partnerships']}
+        />
       </div>
 
     </div>
@@ -112,3 +106,23 @@ const realisationExamples = examplesFor('realisation')
 
   <Footer locale={locale} />
 </Base>
+
+<script is:inline>
+  // Auto-scroll: if URL has ?scroll=phase-X, start at top then smooth-scroll down to the section
+  (function() {
+    const params = new URLSearchParams(window.location.search)
+    const target = params.get('scroll')
+    if (!target) return
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
+    window.scrollTo(0, 0)
+    const trigger = () => {
+      const el = document.getElementById(target)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    if (document.readyState === 'complete') {
+      setTimeout(trigger, 200)
+    } else {
+      window.addEventListener('load', () => setTimeout(trigger, 200), { once: true })
+    }
+  })()
+</script>

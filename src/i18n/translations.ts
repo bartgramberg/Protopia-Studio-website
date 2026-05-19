@@ -33,12 +33,14 @@ const nl = {
     result:    'Resultaat',
   },
   blog: {
-    eyebrow:     'Journal',
+    eyebrow:     'Blog',
     title:       'Dit inspireert ons.',
     lead:        'Gedachten, excursies en inzichten vanuit de praktijk.',
     viewAll:     'Bekijk alle blogposts',
     readMore:    'Lees meer',
     latestTitle: 'Laatste blogs.',
+    previous:    'Vorige',
+    next:        'Volgende',
   },
   home: {
     heroTitle:     'Wij ontwerpen steden, projecten en producten voor een',
@@ -62,7 +64,7 @@ const nl = {
     ctaTitle:      'Klaar om samen te bouwen?',
     ctaSub:        'Van post-it, via pilot naar product. Van rapport naar resultaat.',
     ctaPrimary:    'Neem contact op',
-    ctaSecondary:  'Bekijk het journal',
+    ctaSecondary:  'Bekijk de blog',
   },
   waarom: {
     eyebrow: 'Waarom regeneratie',
@@ -91,10 +93,11 @@ const nl = {
     lead:    'Heb je een vraag, een project of wil je gewoon een kop koffie drinken?',
   },
   footer: {
-    tagline: 'Regenerative Design Studio',
-    colNav:  'Navigatie',
+    tagline:    'Regenerative Design Studio',
+    taglineSub: 'Wij ontwerpen en ontwikkelen steden, projecten en producten voor een veerkrachtige wereld.',
+    colNav:     'Navigatie',
     colContact: 'Contact',
-    copy:    '© 2025 by Attention by Design',
+    copy:       '© 2025 by Attention by Design',
   },
   lang: {
     toggle:  'EN',
@@ -135,12 +138,14 @@ const en: typeof nl = {
     result:    'Result',
   },
   blog: {
-    eyebrow:     'Journal',
+    eyebrow:     'Blog',
     title:       'What inspires us.',
     lead:        'Thoughts, excursions and insights from practice.',
     viewAll:     'View all posts',
     readMore:    'Read more',
     latestTitle: 'Latest posts.',
+    previous:    'Previous',
+    next:        'Next',
   },
   home: {
     heroTitle:     'We design cities, projects and products for a',
@@ -164,7 +169,7 @@ const en: typeof nl = {
     ctaTitle:      'Ready to build together?',
     ctaSub:        'From post-it, via pilot to product. From report to result.',
     ctaPrimary:    'Get in touch',
-    ctaSecondary:  'View the journal',
+    ctaSecondary:  'View the blog',
   },
   waarom: {
     eyebrow: 'Why regeneration',
@@ -193,10 +198,11 @@ const en: typeof nl = {
     lead:    'Have a question, a project or just want a coffee?',
   },
   footer: {
-    tagline: 'Regenerative Design Studio',
-    colNav:  'Navigation',
+    tagline:    'Regenerative Design Studio',
+    taglineSub: 'We design and develop cities, projects and products for a resilient world.',
+    colNav:     'Navigation',
     colContact: 'Contact',
-    copy:    '© 2025 by Attention by Design',
+    copy:       '© 2025 by Attention by Design',
   },
   lang: {
     toggle:  'NL',

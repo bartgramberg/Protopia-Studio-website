@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro'
 import Nav from '../../components/Nav.astro'
 import Footer from '../../components/Footer.astro'
 import ProjectImageSlider from '../../components/ProjectImageSlider.astro'
-import { getCollection, render } from 'astro:content'
+import { getCollection } from 'astro:content'
 import { t } from '../../i18n/translations'
 
 export async function getStaticPaths() {
@@ -15,7 +15,6 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props
-const { Content }  = await render(project)
 const locale = 'nl'
 const tr = t(locale)
 const slug = project.id.replace('nl/', '')
@@ -72,15 +71,6 @@ const sliderImages = project.data.images.length > 0 ? project.data.images : proj
           </h3>
           <p class="text-[14px] text-mid leading-[1.75]">{project.data.result}</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Body content -->
-  <section class="py-12 bg-creme">
-    <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
-      <div class="prose prose-lg max-w-none text-mid">
-        <Content />
       </div>
     </div>
   </section>

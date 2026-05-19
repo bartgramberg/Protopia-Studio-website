@@ -8,13 +8,18 @@ import { t } from '../../i18n/translations'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ id }) => id.startsWith('nl/'))
-  return posts.map(p => ({
+  const sorted = [...posts].sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  return sorted.map((p, i) => ({
     params: { slug: p.id.replace('nl/', '') },
-    props:  { post: p },
+    props:  {
+      post: p,
+      prevPost: sorted[i + 1] ?? null,
+      nextPost: sorted[i - 1] ?? null,
+    },
   }))
 }
 
-const { post } = Astro.props
+const { post, prevPost, nextPost } = Astro.props
 const { Content } = await render(post)
 const locale = 'nl'
 const tr = t(locale)
@@ -24,8 +29,9 @@ const dateStr = post.data.date.toLocaleDateString('nl-NL', {
 })
 
 // Combine cover + gallery images for slider
-const allImages = post.data.images.length > 0
-  ? [post.data.image, ...post.data.images].filter(Boolean) as string[]
+const galleryImages = post.data.images ?? []
+const allImages = galleryImages.length > 0
+  ? [post.data.image, ...galleryImages].filter(Boolean) as string[]
   : post.data.image
     ? [post.data.image]
     : []
@@ -37,7 +43,7 @@ const allImages = post.data.images.length > 0
   <div class="page-hero bg-creme pt-16 sm:pt-20 lg:pt-[88px] pb-10 sm:pb-12 lg:pb-14">
     <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-4">
-        <a href="/blog" class="hover:text-green transition-colors">Journal</a>
+        <a href="/blog" class="hover:text-green transition-colors">Blog</a>
         <span class="mx-1.5">›</span>
         <span class="text-magenta">{post.data.category}</span>
       </div>
@@ -65,8 +71,28 @@ const allImages = post.data.images.length > 0
         </div>
       </div>
 
+      <!-- Prev / Next post navigation -->
+      <nav class="mt-10 grid gap-3 sm:grid-cols-2" aria-label="Blog navigatie">
+        {prevPost ? (
+          <a href={`/blog/${prevPost.id.replace('nl/', '')}`} class="group bg-white border border-border rounded-lg p-4 sm:p-5 hover:shadow-[0_4px_16px_rgba(72,115,91,0.10)] transition-shadow">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">‹ {tr.blog.previous}</div>
+            <div class="text-[13.5px] font-bold text-green leading-snug group-hover:text-magenta transition-colors">{prevPost.data.title}</div>
+          </a>
+        ) : (
+          <span class="hidden sm:block"></span>
+        )}
+        {nextPost ? (
+          <a href={`/blog/${nextPost.id.replace('nl/', '')}`} class="group bg-white border border-border rounded-lg p-4 sm:p-5 hover:shadow-[0_4px_16px_rgba(72,115,91,0.10)] transition-shadow sm:text-right">
+            <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">{tr.blog.next} ›</div>
+            <div class="text-[13.5px] font-bold text-green leading-snug group-hover:text-magenta transition-colors">{nextPost.data.title}</div>
+          </a>
+        ) : (
+          <span class="hidden sm:block"></span>
+        )}
+      </nav>
+
       <!-- Back link -->
-      <div class="mt-8">
+      <div class="mt-6">
         <a href="/blog" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-mid before:content-['<'] hover:text-green transition-colors">
           {tr.blog.eyebrow}
         </a>
