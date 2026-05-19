@@ -36,8 +36,12 @@ const allImages = post.data.images.length > 0
   <!-- Hero -->
   <div class="page-hero bg-creme pt-16 sm:pt-20 lg:pt-[88px] pb-10 sm:pb-12 lg:pb-14">
     <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
-      <span class="text-[10px] font-semibold uppercase tracking-[0.12em] text-magenta mb-4 inline-block">{post.data.category}</span>
-      <h1 class="text-[clamp(30px,8vw,52px)] font-bold leading-[1.12] tracking-[-0.025em] text-green text-balance mb-4">
+      <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-4">
+        <a href="/blog" class="hover:text-green transition-colors">Journal</a>
+        <span class="mx-1.5">›</span>
+        <span class="text-magenta">{post.data.category}</span>
+      </div>
+      <h1 class="text-[clamp(28px,7vw,50px)] font-bold leading-[1.12] tracking-[-0.025em] text-green text-balance mb-4">
         {post.data.title}
       </h1>
       {post.data.description && (
@@ -53,20 +57,95 @@ const allImages = post.data.images.length > 0
   )}
 
   <!-- Article body -->
-  <article class="py-12 sm:py-14 lg:py-16">
-    <div class="max-w-[740px] mx-auto px-5 sm:px-8 lg:px-10">
-      <div class="prose prose-lg text-mid prose-headings:text-green prose-headings:font-bold prose-strong:text-dark prose-a:text-green prose-a:no-underline hover:prose-a:text-magenta prose-li:marker:text-green">
-        <Content />
+  <div class="bg-creme py-12 sm:py-14 lg:py-16">
+    <article class="max-w-[780px] mx-auto px-5 sm:px-8 lg:px-0">
+      <div class="bg-white rounded-xl shadow-[0_2px_16px_rgba(26,26,26,0.06)] px-7 sm:px-10 lg:px-14 py-10 sm:py-12">
+        <div class="blog-prose prose prose-lg max-w-none">
+          <Content />
+        </div>
       </div>
-    </div>
-  </article>
 
-  <!-- Back link -->
-  <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10 pb-12 sm:pb-14 lg:pb-16">
-    <a href="/blog" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-mid before:content-['<'] hover:text-green transition-colors">
-      {tr.blog.eyebrow}
-    </a>
+      <!-- Back link -->
+      <div class="mt-8">
+        <a href="/blog" class="inline-flex items-center gap-1.5 text-[13px] font-semibold text-mid before:content-['<'] hover:text-green transition-colors">
+          {tr.blog.eyebrow}
+        </a>
+      </div>
+    </article>
   </div>
 
   <Footer locale={locale} />
 </Base>
+
+<style>
+  .blog-prose :global(h2) {
+    color: #48735B;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.25;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .blog-prose :global(h3) {
+    color: #48735B;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 1.35;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .blog-prose :global(p) {
+    color: #4A4A4A;
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+  }
+  .blog-prose :global(ul),
+  .blog-prose :global(ol) {
+    color: #4A4A4A;
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+  .blog-prose :global(li) {
+    margin-bottom: 0.35rem;
+  }
+  .blog-prose :global(li::marker) {
+    color: #48735B;
+  }
+  .blog-prose :global(strong) {
+    color: #1A1A1A;
+    font-weight: 600;
+  }
+  .blog-prose :global(em) {
+    font-style: italic;
+  }
+  .blog-prose :global(a) {
+    color: #48735B;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .blog-prose :global(a:hover) {
+    color: #D90D7D;
+  }
+  .blog-prose :global(hr) {
+    border-color: #DEDAD4;
+    margin: 2rem 0;
+  }
+  .blog-prose :global(blockquote) {
+    border-left: 3px solid #48735B;
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: #4A4A4A;
+    font-style: italic;
+  }
+  @media (min-width: 640px) {
+    .blog-prose :global(h2) {
+      font-size: 26px;
+    }
+    .blog-prose :global(h3) {
+      font-size: 19px;
+    }
+  }
+</style>
