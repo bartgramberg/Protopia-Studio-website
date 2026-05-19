@@ -34,13 +34,13 @@ const tr = t(locale)
           <img src="/assets/spectrum/sustainable.png" alt="Sustainable — city in balance illustration" class="w-full aspect-[5/4] object-contain mb-4" />
           <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">Step 2</div>
           <div class="text-[20px] font-bold text-green mb-2.5">Sustainable</div>
-          <p class="text-[14px] text-mid leading-[1.7]">Fortunately, we are collectively becoming more aware of this, and sustainability thinking has taken off. Sustainability is a necessary, but ultimately imperfect position. Limiting damage is not enough.</p>
+          <p class="text-[14px] text-mid leading-[1.7]">Fortunately, we are collectively becoming more aware of this, and sustainability thinking has taken off over the past decades. Sustainability is a necessary, but ultimately imperfect position. Limiting damage and maintaining the status quo is not enough.</p>
         </div>
         <div class="bg-creme p-8">
           <img src="/assets/spectrum/regeneratief.png" alt="Regenerative — green city illustration" class="w-full aspect-[5/4] object-contain mb-4" />
           <div class="text-[11px] font-semibold uppercase tracking-[0.12em] text-light mb-2.5">Step 3 — the direction</div>
           <div class="text-[20px] font-bold text-magenta mb-2.5">Regenerative</div>
-          <p class="text-[14px] text-mid leading-[1.7]">The next step is regeneration: actively restoring natural and social ecosystems. A systemic view of the world based on abundance, reciprocity and resilience.</p>
+          <p class="text-[14px] text-mid leading-[1.7]">The next step is regeneration: actively restoring natural and social ecosystems. A systemic view of the world based on abundance, reciprocity and resilience, where the goal is to give back more than you take.</p>
         </div>
       </div>
     </div>
@@ -54,7 +54,8 @@ const tr = t(locale)
       <div class="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-14 items-start mt-10">
         <div class="flex flex-col gap-3.5">
           <p class="text-[16px] text-mid leading-[1.7]">Regeneration is not an abstract promise. It is the direction you choose with every project, every intervention, every decision — whether it concerns a city, a business or a product.</p>
-          <p class="text-[16px] text-mid leading-[1.7]">Protopia works in the tension between regenerative vision and economic reality, and makes that tension productive. Not by advising from the sidelines, but by designing, building and realising.</p>
+          <p class="text-[16px] text-mid leading-[1.7]">Protopia works in the tension between regenerative vision and economic reality, and makes that tension productive.</p>
+          <p class="text-[16px] text-mid leading-[1.7]">Not by advising from the sidelines, but by designing, building and realising.</p>
         </div>
         <div class="grid gap-3 sm:grid-cols-2">
           <div class="bg-white border border-[rgba(72,115,91,0.18)] rounded-lg p-5 flex flex-col justify-center min-h-[110px]">
@@ -71,8 +72,8 @@ const tr = t(locale)
           </div>
           <div class="bg-green rounded-lg p-5 flex flex-col justify-center min-h-[110px]">
             <div class="text-[9.5px] font-semibold uppercase tracking-[0.14em] text-white/70 mb-1.5">Our role</div>
-            <div class="text-[15px] font-bold text-white mb-1.5">From vision to realisation.</div>
-            <div class="text-[12.5px] text-white/90 leading-[1.6]">We design, prototype and build — across all three domains.</div>
+            <div class="text-[15px] font-bold text-white mb-1.5">From vision to prototype to realisation.</div>
+            <div class="text-[12.5px] text-white/90 leading-[1.6]">We build what would otherwise not have existed.</div>
           </div>
         </div>
       </div>
@@ -83,8 +84,8 @@ const tr = t(locale)
   <section class="py-14 sm:py-16 lg:py-20">
     <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">8 regenerative principles as compass</span>
-      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Eight principles as design attitude and assessment tool.</h2>
-      <p class="text-[16px] sm:text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4">Protopia Studio has developed eight regenerative design principles. They describe not an end state, but a direction — of more life, more abundance, and more capacity for systems to renew themselves.</p>
+      <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Discover our eight principles.</h2>
+      <p class="text-[16px] sm:text-[17px] text-mid leading-[1.75] max-w-[680px] mt-4">Protopia Studio has developed eight regenerative design principles. They describe not an end state, but a direction — of more life, more abundance, and more capacity for systems to renew themselves. These principles are both a design attitude and an assessment tool: for cities, for organisations, for products.</p>
 
       <!-- Domain tabs -->
       <div class="mt-8">
@@ -98,14 +99,14 @@ const tr = t(locale)
         <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-light mt-6 mb-4">Step 2 — Click a principle</div>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" id="principles-grid">
           {[
-            { num: '01', p: 1, title: 'One living system',              desc: 'Design from one integrated socio-ecological whole.',     img: '/assets/principes/01-holistic.png' },
-            { num: '02', p: 2, title: 'Regenerative resource management', desc: 'Give back more than you take on balance.',            img: '/assets/principes/02-resources.png' },
-            { num: '03', p: 3, title: 'Natural patterns and rhythms',   desc: 'Move with cycles, seasons and timing.',                 img: '/assets/principes/03-cycli.png' },
-            { num: '04', p: 4, title: 'Self-organisation and resilience', desc: 'Create conditions — give space, not control.',        img: '/assets/principes/04-resilience.png' },
-            { num: '05', p: 5, title: 'Inclusive for all life',         desc: 'Give equal attention to human and non-human life.',      img: '/assets/principes/05-inclusief.png' },
-            { num: '06', p: 6, title: 'Intergenerational perspective',  desc: 'Design for future generations.',                         img: '/assets/principes/06-intergenerationeel.png' },
-            { num: '07', p: 7, title: 'Cultural regeneration',          desc: 'Strengthen the culture that carries regeneration.',      img: '/assets/principes/07-social.png' },
-            { num: '08', p: 8, title: 'Commons & cooperative stewardship', desc: 'Build shared ownership and collective stewardship.', img: '/assets/principes/08-commons.png' },
+            { num: '01', p: 1, title: 'Design from one living system',  desc: 'Design from one integrated socio-ecological whole.',     img: '/assets/principes/01-holistic.png' },
+            { num: '02', p: 2, title: 'Give more than you take',        desc: 'Give more back than you take on balance.',              img: '/assets/principes/02-resources.png' },
+            { num: '03', p: 3, title: 'Move with natural and cultural rhythms', desc: 'Move with cycles, seasons and timing.',        img: '/assets/principes/03-cycli.png' },
+            { num: '04', p: 4, title: 'Design for natural self-organisation', desc: 'Create conditions — give space, not control.',   img: '/assets/principes/04-resilience.png' },
+            { num: '05', p: 5, title: 'Pay attention to all life',      desc: 'Give equal attention to human and non-human life.',      img: '/assets/principes/05-inclusief.png' },
+            { num: '06', p: 6, title: 'Design for future generations',  desc: 'Design for future generations.',                         img: '/assets/principes/06-intergenerationeel.png' },
+            { num: '07', p: 7, title: 'Strengthen regenerative culture', desc: 'Strengthen the culture that carries regeneration.',     img: '/assets/principes/07-social.png' },
+            { num: '08', p: 8, title: 'Govern as a community',          desc: 'Build shared ownership and collective stewardship.',     img: '/assets/principes/08-commons.png' },
           ].map(item => (
             <button
               class="px-pcard text-left border border-[rgba(72,115,91,0.12)] bg-creme rounded-lg overflow-hidden transition-all duration-200 hover:border-green hover:shadow-[0_6px_20px_rgba(72,115,91,0.12)] hover:-translate-y-0.5"
@@ -127,7 +128,7 @@ const tr = t(locale)
           <div class="p-5 sm:p-8 relative">
             <div id="px-detail-num" class="absolute top-[18px] right-5 sm:right-7 text-[44px] sm:text-[64px] font-light italic text-green/20 leading-none tracking-[-2px]">01</div>
             <span id="px-detail-pill" class="inline-block text-[9px] font-semibold uppercase tracking-[0.16em] px-3 py-1 rounded-pill text-white bg-green mb-3">Environments</span>
-            <h3 id="px-detail-title" class="text-[20px] sm:text-[22px] font-bold text-green mb-1.5 leading-snug max-w-[82%] sm:max-w-[78%]">One living system</h3>
+            <h3 id="px-detail-title" class="text-[20px] sm:text-[22px] font-bold text-green mb-1.5 leading-snug max-w-[82%] sm:max-w-[78%]">Design from one living system</h3>
             <p id="px-detail-activating" class="text-[13px] italic text-magenta mb-3.5"></p>
             <div id="px-detail-short" class="text-[13px] text-mid leading-[1.7] p-4 bg-white rounded-lg mb-4"></div>
             <div id="px-detail-body" class="text-[13.5px] text-[#333] leading-[1.8]"></div>
@@ -145,8 +146,8 @@ const tr = t(locale)
   <!-- CTA banner -->
   <div class="bg-green py-14 sm:py-16 lg:py-[72px] text-center">
     <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
-      <h2 class="text-[clamp(26px,3vw,38px)] font-bold text-white leading-[1.2] mb-2.5 text-balance">Regenerative knowledge in practice.</h2>
-      <p class="text-[16px] text-white/70 mb-7">See also our exploratory research Amsterdam Regenerative City.</p>
+      <h2 class="text-[clamp(26px,3vw,38px)] font-bold text-white leading-[1.2] mb-2.5 text-balance">Regenerative knowledge in practice</h2>
+      <p class="text-[16px] text-white/70 mb-7 max-w-[820px] mx-auto leading-[1.7]">Regenerative theory only gains power when it is rooted in practice. That is why we actively build a knowledge base of regenerative initiatives and approaches worldwide. That database forms the backbone of our work — so that for every challenge we can draw on what already works, and translate it to the context of our clients. See also our exploratory research Amsterdam Regenerative City.</p>
       <div class="flex gap-3.5 justify-center flex-wrap">
         <a href="/en/projects" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">View projects</a>
         <a href="/en/contact" class="inline-flex items-center gap-1.5 px-[26px] py-[11px] rounded-pill text-[14px] font-semibold text-white border border-white/50 hover:bg-white/10 transition-colors">Get in touch</a>
@@ -196,7 +197,7 @@ const tr = t(locale)
 </style>
 
 <script>
-const PX_NAMES = ['One living system','Regenerative resource management','Natural patterns and rhythms','Self-organisation and resilience','Inclusive for all life','Intergenerational perspective','Cultural regeneration','Commons & cooperative stewardship'];
+const PX_NAMES = ['Design from one living system','Give more than you take','Move with natural and cultural rhythms','Design for natural self-organisation','Pay attention to all life','Design for future generations','Strengthen regenerative culture','Govern as a community'];
 const PX_DOMAINS = {cities:'Environments',business:'Businesses',products:'Products'};
 const PX_DATA = {
   1:{cities:{activating:'Design from one living socio-ecological system',short:'The city is one integrated, continuously changing socio-ecological system, embedded in a larger bioregional context.',full:'<p>Ecology, social and cultural structures, and economy constantly strengthen or undermine each other. Regenerative design begins by recognising that reciprocity and designing solutions that fulfil multiple functions at once.</p><p>The neighbourhood is part of the city, the city of the region. An intervention reverberates across every scale. Actively connecting those scales is a core task.</p>'},business:{activating:'Act from one living socio-ecological system',short:'The organisation is one integrated system, embedded in value chains, communities and bioregions.',full:'<p>An organisation is never a closed system. The team is part of the organisation, the organisation of the value chain, the chain of the bioregion.</p><p>Business decisions are assessed not only on financial return, but on their contribution to the living whole.</p>'},products:{activating:'Design from one living system — from material to end of life',short:'A product exists within one integrated system, from material origin through use to end of life.',full:'<p>A product is not an isolated object. A material choice affects the producing ecosystem, user behaviour and the end-of-life landscape.</p><p>Products are assessed not only on function or price, but on their contribution to the living whole.</p>'}},
