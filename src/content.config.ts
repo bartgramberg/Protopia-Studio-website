@@ -49,10 +49,12 @@ const projectSchema = z.object({
 
 const blogSchema = z.object({
   title:       z.string(),
+  description: z.string().optional(),
   category:    z.string(),
   author:      z.string(),
   date:        z.date(),
   image:       z.string().optional(),
+  images:      imageList,
   readingTime: z.number(),
 })
 

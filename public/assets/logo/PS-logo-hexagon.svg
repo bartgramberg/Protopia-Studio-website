@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3942px" height="4545px" viewBox="0 0 3942 4545" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo-Groen</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Logo-Groen" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Versie3" transform="translate(25.000000, 25.000000)">
+            <g id="SG-onderlegger4" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="50">
+                <polygon id="Stroke-3" fill="#6E927B" points="0 3371 1945 3371 1945 4495"></polygon>
+                <polygon id="Stroke-4" fill="#6E927B" points="1945 4495 3890 3371 1945 3371"></polygon>
+                <polygon id="Stroke-5" fill="#6E927B" points="1945 0 972.5 1686 0 1124"></polygon>
+                <polygon id="Stroke-6" fill="#6E927B" points="0 1124 0 3371 973 1685.83817"></polygon>
+                <polygon id="Stroke-8" fill="#6E927B" points="1945 0 2917.5 1686 3890 1124"></polygon>
+                <polygon id="Stroke-9" fill="#6E927B" points="3892 1124 3892 3371 2919 1685.83817"></polygon>
+                <polygon id="Stroke-10" fill="#82BB98" points="1945 0 2918 1685.25 1945 2247"></polygon>
+                <polygon id="Stroke-11" fill="#82BB98" points="1945 2245.45082 3890 3368 2917.5 1684"></polygon>
+                <polygon id="Stroke-13" fill="#ABDEBE" points="1945 2245.45082 0 3368 972.5 1684"></polygon>
+                <polygon id="Stroke-12" fill="#ABDEBE" points="1946 0 973 1685.25 1946 2247"></polygon>
+                <polygon id="Stroke-1" fill="#99C7AA" points="1945 2247 1945 3370 3890 3370"></polygon>
+                <polygon id="Stroke-7" fill="#99C7AA" points="1945 2247 1945 3370 0 3370"></polygon>
+            </g>
+            <g id="SG-onderlegger5">
+                <polygon id="Stroke-1" stroke="#FFFFFF" stroke-width="50" fill-opacity="0.3" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="1946 2246.89602 1946 4495 3892 3371.10398 3892 1123"></polygon>
+                <polygon id="Stroke-3" stroke="#FFFFFF" stroke-width="50" fill-opacity="0.1" fill="#000000" stroke-linecap="round" stroke-linejoin="round" points="0 1123 0 3371.10398 1946 4495 1946 2246.89602"></polygon>
+                <polygon id="Stroke-4" points="1945.34415 0 0 1123.5 1945.34415 2247 3891 1123.5"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

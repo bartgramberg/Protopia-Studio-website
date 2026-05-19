@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: bartgramberg/Protopia-Studio-website
-  branch: main
+  branch: dev
 
 local_backend: true
 
@@ -83,11 +83,21 @@ collections:
     i18n: true
     fields:
       - { label: Title,              name: title,       widget: string,   i18n: true }
+      - { label: Description,        name: description, widget: text,     i18n: true, required: false }
       - { label: Category,           name: category,    widget: string,   i18n: true }
       - { label: Body,               name: body,        widget: markdown, i18n: true }
       - { label: Author,             name: author,      widget: string,   i18n: duplicate }
       - { label: Date,               name: date,        widget: datetime, i18n: duplicate }
-      - { label: Image,              name: image,       widget: image,    i18n: duplicate, required: false }
+      - { label: "Cover image",      name: image,       widget: image,    i18n: duplicate, required: false }
+      - label: "Gallery images"
+        name: images
+        widget: list
+        i18n: false
+        required: false
+        field:
+          label: Image
+          name: image
+          widget: image
       - { label: "Reading time (min)", name: readingTime, widget: number, i18n: duplicate }
 
   - name: team_members
