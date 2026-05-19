@@ -85,26 +85,59 @@ const tr = t(locale)
       <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">8 regenerative principles as compass</span>
       <h2 class="text-[clamp(28px,3.5vw,42px)] font-bold leading-[1.15] tracking-[-0.02em] text-green text-balance">Eight principles as design attitude and assessment tool.</h2>
       <p class="text-[16px] sm:text-[17px] text-mid leading-[1.75] max-w-[560px] mt-4">Protopia Studio has developed eight regenerative design principles. They describe not an end state, but a direction — of more life, more abundance, and more capacity for systems to renew themselves.</p>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-10">
-        {[
-          { num: '01', title: 'One living system',              desc: 'Design from one integrated socio-ecological whole.',              img: '/assets/principes/01-holistic.png' },
-          { num: '02', title: 'Regenerative resource management', desc: 'Give back more than you take on balance.',                    img: '/assets/principes/02-resources.png' },
-          { num: '03', title: 'Natural patterns and rhythms',   desc: 'Move with cycles, seasons and timing.',                          img: '/assets/principes/03-cycli.png' },
-          { num: '04', title: 'Self-organisation and resilience', desc: 'Create conditions — give space, not control.',                  img: '/assets/principes/04-resilience.png' },
-          { num: '05', title: 'Inclusive for all life',         desc: 'Give equal attention to human and non-human life.',               img: '/assets/principes/05-inclusief.png' },
-          { num: '06', title: 'Intergenerational perspective',  desc: 'Design for future generations.',                                  img: '/assets/principes/06-intergenerationeel.png' },
-          { num: '07', title: 'Cultural regeneration',          desc: 'Strengthen the culture that carries regeneration.',               img: '/assets/principes/07-social.png' },
-          { num: '08', title: 'Commons & cooperative stewardship', desc: 'Build shared ownership and collective stewardship.',           img: '/assets/principes/08-commons.png' },
-        ].map(p => (
-          <div class="border border-[rgba(72,115,91,0.12)] bg-creme rounded-lg overflow-hidden">
-            <img src={p.img} alt={p.title} class="w-full aspect-[4/3] object-contain bg-creme" />
-            <div class="p-[18px] pb-5">
-              <div class="text-[28px] font-extrabold text-magenta leading-none mb-2">{p.num}</div>
-              <div class="text-[14px] font-bold text-green mb-1.5">{p.title}</div>
-              <p class="text-[12px] text-mid leading-[1.6]">{p.desc}</p>
+
+      <!-- Domain tabs -->
+      <div class="mt-8">
+        <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-light mb-2.5">Step 1 — Choose a domain to see how a principle works</div>
+        <div class="flex gap-2 flex-wrap" id="domain-tabs">
+          <button class="px-domain-tab active" data-domain="cities">Environments</button>
+          <button class="px-domain-tab" data-domain="business">Businesses</button>
+          <button class="px-domain-tab" data-domain="products">Products</button>
+        </div>
+
+        <div class="text-[10px] font-semibold uppercase tracking-[0.16em] text-light mt-6 mb-4">Step 2 — Click a principle</div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" id="principles-grid">
+          {[
+            { num: '01', p: 1, title: 'One living system',              desc: 'Design from one integrated socio-ecological whole.',     img: '/assets/principes/01-holistic.png' },
+            { num: '02', p: 2, title: 'Regenerative resource management', desc: 'Give back more than you take on balance.',            img: '/assets/principes/02-resources.png' },
+            { num: '03', p: 3, title: 'Natural patterns and rhythms',   desc: 'Move with cycles, seasons and timing.',                 img: '/assets/principes/03-cycli.png' },
+            { num: '04', p: 4, title: 'Self-organisation and resilience', desc: 'Create conditions — give space, not control.',        img: '/assets/principes/04-resilience.png' },
+            { num: '05', p: 5, title: 'Inclusive for all life',         desc: 'Give equal attention to human and non-human life.',      img: '/assets/principes/05-inclusief.png' },
+            { num: '06', p: 6, title: 'Intergenerational perspective',  desc: 'Design for future generations.',                         img: '/assets/principes/06-intergenerationeel.png' },
+            { num: '07', p: 7, title: 'Cultural regeneration',          desc: 'Strengthen the culture that carries regeneration.',      img: '/assets/principes/07-social.png' },
+            { num: '08', p: 8, title: 'Commons & cooperative stewardship', desc: 'Build shared ownership and collective stewardship.', img: '/assets/principes/08-commons.png' },
+          ].map(item => (
+            <button
+              class="px-pcard text-left border border-[rgba(72,115,91,0.12)] bg-creme rounded-lg overflow-hidden transition-all duration-200 hover:border-green hover:shadow-[0_6px_20px_rgba(72,115,91,0.12)] hover:-translate-y-0.5"
+              data-p={item.p}
+            >
+              <img src={item.img} alt={item.title} class="w-full aspect-[4/3] object-contain bg-creme" />
+              <div class="p-[18px] pb-5">
+                <div class="text-[28px] font-extrabold text-magenta leading-none mb-2">{item.num}</div>
+                <div class="text-[14px] font-bold text-green mb-1.5">{item.title}</div>
+                <p class="text-[12px] text-mid leading-[1.6]">{item.desc}</p>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        <!-- Detail panel -->
+        <div id="px-detail" class="mt-8 bg-creme rounded-xl overflow-hidden opacity-0 translate-y-2 transition-all duration-300">
+          <div id="px-detail-strip" class="h-[5px] bg-green"></div>
+          <div class="p-5 sm:p-8 relative">
+            <div id="px-detail-num" class="absolute top-[18px] right-5 sm:right-7 text-[44px] sm:text-[64px] font-light italic text-green/20 leading-none tracking-[-2px]">01</div>
+            <span id="px-detail-pill" class="inline-block text-[9px] font-semibold uppercase tracking-[0.16em] px-3 py-1 rounded-pill text-white bg-green mb-3">Environments</span>
+            <h3 id="px-detail-title" class="text-[20px] sm:text-[22px] font-bold text-green mb-1.5 leading-snug max-w-[82%] sm:max-w-[78%]">One living system</h3>
+            <p id="px-detail-activating" class="text-[13px] italic text-magenta mb-3.5"></p>
+            <div id="px-detail-short" class="text-[13px] text-mid leading-[1.7] p-4 bg-white rounded-lg mb-4"></div>
+            <div id="px-detail-body" class="text-[13.5px] text-[#333] leading-[1.8]"></div>
+            <div class="flex flex-wrap justify-between items-center gap-3 mt-5 pt-4 border-t border-[rgba(72,115,91,0.12)]">
+              <button id="px-nav-prev" class="px-nav-btn" onclick="pxNavigate(-1)">← Previous</button>
+              <span id="px-nav-progress" class="text-[11px] text-light tracking-[0.1em]">1 / 8</span>
+              <button id="px-nav-next" class="px-nav-btn" onclick="pxNavigate(1)">Next →</button>
             </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   </section>
@@ -123,3 +156,106 @@ const tr = t(locale)
 
   <Footer locale={locale} />
 </Base>
+
+<style>
+.px-domain-tab {
+  cursor: pointer;
+  border: 1px solid var(--color-border, #DEDAD4);
+  background: white;
+  color: #4A4A4A;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 22px;
+  border-radius: 999px;
+  transition: all 0.15s;
+}
+.px-domain-tab:hover { background: #F2EFE9; color: #48735B; }
+.px-domain-tab.active { background: #48735B; color: white; border-color: #48735B; }
+.px-pcard.active { border-color: #D90D7D !important; box-shadow: 0 6px 20px rgba(217,13,125,0.18) !important; }
+.px-pcard.active .principle-title { color: #D90D7D; }
+#px-detail.visible { opacity: 1 !important; transform: translateY(0) !important; }
+#px-detail-strip.business { background: #347EBF; }
+#px-detail-strip.products { background: #D90D7D; }
+#px-detail-pill.business { background: #347EBF; }
+#px-detail-pill.products { background: #D90D7D; }
+.px-nav-btn {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: #48735B;
+  background: white;
+  border: 1px solid #DEDAD4;
+  padding: 7px 16px;
+  border-radius: 999px;
+  transition: all 0.15s;
+}
+.px-nav-btn:hover { background: #48735B; color: white; border-color: #48735B; }
+.px-nav-btn:disabled { opacity: 0.4; cursor: default; background: white; color: #7A7A7A; }
+</style>
+
+<script>
+const PX_NAMES = ['One living system','Regenerative resource management','Natural patterns and rhythms','Self-organisation and resilience','Inclusive for all life','Intergenerational perspective','Cultural regeneration','Commons & cooperative stewardship'];
+const PX_DOMAINS = {cities:'Environments',business:'Businesses',products:'Products'};
+const PX_DATA = {
+  1:{cities:{activating:'Design from one living socio-ecological system',short:'The city is one integrated, continuously changing socio-ecological system, embedded in a larger bioregional context.',full:'<p>Ecology, social and cultural structures, and economy constantly strengthen or undermine each other. Regenerative design begins by recognising that reciprocity and designing solutions that fulfil multiple functions at once.</p><p>The neighbourhood is part of the city, the city of the region. An intervention reverberates across every scale. Actively connecting those scales is a core task.</p>'},business:{activating:'Act from one living socio-ecological system',short:'The organisation is one integrated system, embedded in value chains, communities and bioregions.',full:'<p>An organisation is never a closed system. The team is part of the organisation, the organisation of the value chain, the chain of the bioregion.</p><p>Business decisions are assessed not only on financial return, but on their contribution to the living whole.</p>'},products:{activating:'Design from one living system — from material to end of life',short:'A product exists within one integrated system, from material origin through use to end of life.',full:'<p>A product is not an isolated object. A material choice affects the producing ecosystem, user behaviour and the end-of-life landscape.</p><p>Products are assessed not only on function or price, but on their contribution to the living whole.</p>'}},
+  2:{cities:{activating:'Give back more than you take',short:'Design on the basis of circular, local and renewable resources. On balance, an intervention contributes more than it costs.',full:'<p>The aim is a system that adds more than it consumes: building soil fertility, increasing biodiversity, and accumulating social and economic value.</p><p>The city nourishes the region, and the region nourishes the city. Food, water, materials, ecological services — they flow in both directions.</p>'},business:{activating:'Give back more than you take',short:'Operate through regenerative flows of natural, human, social and financial capital.',full:'<p>A regenerative business aims to give more back to its context than it takes, across every form of capital.</p><p>The relationship is reciprocal: the organisation nourishes the communities in which it operates, and those communities nourish the organisation.</p>'},products:{activating:'Give back more than you take',short:'Across its life cycle, a product contributes more to living systems than it extracts.',full:'<p>Every material belongs to a biological cycle (safe return to soil) or a technical cycle (continuous reuse without loss of quality).</p><p>The product must return value — in nutrients that build soil, or materials that remain in productive use.</p>'}},
+  3:{cities:{activating:'Move with natural and socio-cultural rhythms',short:'Design in tune with cycles and timing. Continuous change is the starting point, not the problem.',full:'<p>Day and night, seasons, growth phases, recovery periods. Respect natural timescales. The art is distinguishing between guiding and controlling.</p><p>Interventions are aligned with natural processes: timing of construction, plant selection according to succession, the slow building of soil and community.</p>'},business:{activating:'Move with natural and organisational rhythms',short:'Operate in tune with periods of growth and recovery, market cycles and innovation rhythms.',full:'<p>Continuous change is not a problem to control, but the starting point for strategy. Trust that organisations and markets find their own balance.</p><p>Business decisions are aligned with natural processes: the rhythm of hiring, the seasons of fundraising and harvest, the slow building of trust.</p>'},products:{activating:'Design with natural material cycles and rhythms of use',short:'Build for ageing, repair and adaptation — not planned obsolescence.',full:'<p>The ageing of wood and leather, the seasonality of objects, the maintenance and repair cycles of well-made things.</p><p>Materials are sourced at their ecological peak; design for successive upgrades instead of full replacement.</p>'}},
+  4:{cities:{activating:'Design for natural self-organisation',short:'Design places where systems can organise, adapt and recover themselves.',full:'<p>Stimulate diversity, functional redundancy and decentralised networks so systems can absorb shocks and adapt without central control.</p><p>Not the city as a machine to be controlled, but as a garden to be guided. Create conditions, remove obstacles — and give space.</p>'},business:{activating:'Build for natural self-organisation',short:'Build organisations where teams and ecosystems can organise, adapt and recover themselves.',full:'<p>Stimulate diversity, functional redundancy and decentralised connected networks. Trust the self-regulating capacity of the organisation.</p><p>Not the organisation as a machine to be controlled, but as a garden to be tended.</p>'},products:{activating:'Design for self-organisation by users and ecosystems',short:'Modular, repairable, open — so products can evolve instead of being discarded.',full:'<p>Trust the adaptive capacity of users and materials. Design for repair, modification and unexpected use.</p><p>Not the product as a machine that fixes user behaviour, but as an instrument that empowers it.</p>'}},
+  5:{cities:{activating:'Pay attention to all life',short:'Design with explicit attention to the coexistence of all life forms — human, plant, animal, microbiome.',full:'<p>The ecological dimension treats nature as co-designer: habitats are integrated, corridors connected, and non-human species are given space.</p><p>The social dimension actively involves all human groups, including vulnerable groups. Both dimensions are equally essential.</p>'},business:{activating:'Create value for all life',short:'Nature as co-beneficiary, not as resource. All stakeholders — employees, communities, ecosystems — are weighed.',full:'<p>Ecosystems are supported, biodiversity in the chain is built up, and non-human species are considered in decisions.</p><p>A business that recognises nature but exploits its workers is not regenerative — and vice versa.</p>'},products:{activating:'Design for all life across the full life cycle',short:'Attention for users, makers, communities around production locations, and non-human life.',full:'<p>Materials are sourced from living systems that are supported. Production processes are harmless to surrounding ecosystems.</p><p>A product with ecological care but exploitative labour is not regenerative — and vice versa.</p>'}},
+  6:{cities:{activating:'Design for future generations',short:'Short-term gain must not undermine long-term viability. Design for adaptability, not only durability.',full:'<p>By designing with a time horizon of decades to centuries, soil, biodiversity and social structures remain resilient across generations.</p><p>A temporary building that makes room for something better can be as strong an expression of intergenerational thinking as a centuries-old structure.</p>'},business:{activating:'Build for future generations',short:'Short-term gain must not undermine long-term viability. Ownership structures and adaptive capacity both matter.',full:'<p>Build with a time horizon of decades to generations. Organisational, ecological and social structures must remain resilient.</p><p>This anchors an ethic of stewardship in decisions — what will future generations need?</p>'},products:{activating:'Design for future generations',short:'Products that add value beyond their own lifespan — through the materials, knowledge and relationships they leave behind.',full:'<p>What remains when the product is gone? Which materials, skills, communities and ecosystems has it strengthened or weakened?</p><p>Design for long-term usefulness and for a gentle ending — a product that leaves the world something of value.</p>'}},
+  7:{cities:{activating:'Strengthen the culture that carries regeneration',short:'Design not only for function, but for the culture, stories and meanings that keep regeneration alive.',full:'<p>Regeneration requires a cultural foundation: shared stories, rituals, language and identity that connect people to place and to each other.</p><p>Places are designed as cultural carriers — not as generic background, but as a specific expression of what is valuable here.</p>'},business:{activating:'Strengthen the culture that carries regeneration',short:'Build an organisational culture — and broader cultural relationships — that naturally carries regeneration.',full:'<p>Culture is what remains when strategy changes. Regenerative organisations invest in the stories, rituals and habits that normalise reciprocity.</p><p>This goes beyond internal culture: the broader social and bioregional culture is nourished as well.</p>'},products:{activating:'Strengthen the culture that carries regeneration',short:'Products are cultural objects — they carry values, stories and practices within them.',full:'<p>What does this product teach the user? Which habits does it invite? What story does it tell about our relationship with materials, makers and the earth?</p><p>Regenerative products actively contribute to a culture of care, craftsmanship and reciprocity.</p>'}},
+  8:{cities:{activating:'Build shared ownership and collective stewardship',short:'Not everything has to be private or state-owned. Commons — shared resources under collective management — are essential to regeneration.',full:'<p>Air, water, soil, knowledge, public space: these are commons. They thrive under cooperative management with clear agreements and responsibilities.</p><p>Design places that can be collectively managed — community gardens, energy cooperatives, shared infrastructure.</p>'},business:{activating:'Build shared ownership and collective stewardship',short:'Cooperative ownership structures, open knowledge and shared infrastructure as building blocks of regenerative enterprise.',full:'<p>Who owns determines where value flows. Cooperatives, stewardship ownership and commons-oriented structures anchor regenerative values.</p><p>Open knowledge and shared infrastructure strengthen the wider ecosystem instead of extracting value from it.</p>'},products:{activating:'Build shared ownership and collective stewardship',short:'Products as commons — shared, repaired, passed on. Open documentation and collective ownership.',full:'<p>Not every product needs to be individually owned. Sharing platforms, libraries, cooperative models — shared access is often more regenerative than private ownership.</p><p>Open designs, shared repair knowledge and collective ownership structures turn products into commons.</p>'}}
+};
+
+type PxDomainKey = 'cities' | 'business' | 'products';
+type PxPrincipleKey = 1|2|3|4|5|6|7|8;
+interface PxEntry { activating: string; short: string; full: string; }
+
+let pxState: {domain: PxDomainKey; principle: PxPrincipleKey} = {domain:'cities',principle:1};
+
+function pxSelectDomain(d: string) {
+  pxState.domain = d as PxDomainKey;
+  document.querySelectorAll('.px-domain-tab').forEach(t => (t as HTMLElement).classList.toggle('active', (t as HTMLElement).dataset.domain === d));
+  pxRender();
+}
+function pxSelectPrinciple(p: number) {
+  pxState.principle = p as PxPrincipleKey;
+  document.querySelectorAll('.px-pcard').forEach(c => (c as HTMLElement).classList.toggle('active', +(c as HTMLElement).dataset.p! === p));
+  pxRender();
+  document.getElementById('px-detail')!.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function pxNavigate(delta: number) {
+  const next = pxState.principle + delta;
+  if (next < 1 || next > 8) return;
+  pxSelectPrinciple(next);
+}
+function pxRender() {
+  const {domain, principle} = pxState;
+  const data = (PX_DATA as Record<number, Record<string, PxEntry>>)[principle][domain];
+  const num = String(principle).padStart(2,'0');
+  const strip = document.getElementById('px-detail-strip')!;
+  const pill  = document.getElementById('px-detail-pill')!;
+  strip.className = 'h-[5px] bg-green ' + (domain === 'cities' ? '' : domain);
+  pill.className  = 'inline-block text-[9px] font-semibold uppercase tracking-[0.16em] px-3 py-1 rounded-pill text-white bg-green mb-3 ' + (domain === 'cities' ? '' : domain);
+  pill.textContent = (PX_DOMAINS as Record<string, string>)[domain];
+  document.getElementById('px-detail-num')!.textContent = num;
+  document.getElementById('px-detail-title')!.textContent = PX_NAMES[principle-1];
+  document.getElementById('px-detail-activating')!.textContent = data.activating;
+  document.getElementById('px-detail-short')!.textContent = data.short;
+  document.getElementById('px-detail-body')!.innerHTML = data.full;
+  document.getElementById('px-nav-progress')!.textContent = principle + ' / 8';
+  (document.getElementById('px-nav-prev') as HTMLButtonElement).disabled = principle === 1;
+  (document.getElementById('px-nav-next') as HTMLButtonElement).disabled = principle === 8;
+  document.getElementById('px-detail')!.classList.add('visible');
+}
+
+document.querySelectorAll('.px-domain-tab').forEach(btn => {
+  btn.addEventListener('click', () => pxSelectDomain((btn as HTMLElement).dataset.domain!));
+});
+document.querySelectorAll('.px-pcard').forEach(btn => {
+  btn.addEventListener('click', () => pxSelectPrinciple(+(btn as HTMLElement).dataset.p!));
+});
+pxRender();
+</script>
