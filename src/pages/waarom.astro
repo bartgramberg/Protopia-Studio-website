@@ -171,7 +171,10 @@ const tr = t(locale)
   transition: all 0.15s;
 }
 .px-domain-tab:hover { background: #F2EFE9; color: #48735B; }
-.px-domain-tab.active { background: #48735B; color: white; border-color: #48735B; }
+.px-domain-tab.active { color: white; }
+.px-domain-tab[data-domain="cities"].active { background: #48735B; border-color: #48735B; }
+.px-domain-tab[data-domain="business"].active { background: #347EBF; border-color: #347EBF; }
+.px-domain-tab[data-domain="products"].active { background: #D90D7D; border-color: #D90D7D; }
 .px-card-img {
   height: 118px;
   overflow: hidden;
