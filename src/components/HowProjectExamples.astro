@@ -9,23 +9,35 @@ interface ProjectExample {
 interface Props {
   projects: ProjectExample[]
   label: string
+  tags?: string[]
 }
 
-const { projects, label } = Astro.props
+const { projects, label, tags = [] } = Astro.props
+const project = projects[0]  // only the first project
 ---
-<div class="flex flex-col gap-3">
-  {projects.map(project => (
-    <a href={project.href} class="flex items-stretch gap-4 bg-creme rounded-lg overflow-hidden border border-border max-w-[420px] transition-colors hover:bg-[#edf0e5]">
+<div class="flex flex-col">
+  {tags.length > 0 && (
+    <div class="flex flex-wrap gap-x-2.5 gap-y-1.5 mb-8 sm:mb-10 lg:mb-12 lg:pt-[30px]">
+      {tags.map(tag => (
+        <span class="text-[12px] text-mid bg-[rgba(72,115,91,0.07)] px-2.5 py-[3px] rounded-[3px]">{tag}</span>
+      ))}
+    </div>
+  )}
+  {project && (
+    <a
+      href={project.href}
+      class="block bg-white rounded-lg overflow-hidden border border-border max-w-[320px] transition-shadow hover:shadow-[0_6px_20px_rgba(72,115,91,0.10)]"
+    >
       {project.image && (
-        <div class="shrink-0 w-[100px] sm:w-[110px] self-stretch bg-white overflow-hidden">
+        <div class="aspect-[4/3] bg-creme overflow-hidden">
           <img src={project.image} alt={project.title} class="w-full h-full object-cover" loading="lazy" />
         </div>
       )}
-      <div class="py-4 pr-5 flex-1 min-w-0">
+      <div class="px-5 py-4">
         <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">{label}</div>
-        <div class="text-[14px] font-bold text-green mb-1.5">{project.title}</div>
+        <div class="text-[14px] font-bold text-green mb-1.5 leading-snug">{project.title}</div>
         <p class="text-[12px] text-mid leading-[1.55]">{project.description}</p>
       </div>
     </a>
-  ))}
+  )}
 </div>

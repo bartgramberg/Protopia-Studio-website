@@ -132,9 +132,9 @@ const tr = t(locale)
             <div id="px-detail-short" class="text-[13px] text-mid leading-[1.7] p-4 bg-white rounded-lg mb-4"></div>
             <div id="px-detail-body" class="text-[13.5px] text-[#333] leading-[1.8]"></div>
             <div class="flex flex-wrap justify-between items-center gap-3 mt-5 pt-4 border-t border-[rgba(72,115,91,0.12)]">
-              <button id="px-nav-prev" class="px-nav-btn" onclick="pxNavigate(-1)">← Vorige</button>
+              <button id="px-nav-prev" class="px-nav-btn">← Vorige</button>
               <span id="px-nav-progress" class="text-[11px] text-light tracking-[0.1em]">1 / 8</span>
-              <button id="px-nav-next" class="px-nav-btn" onclick="pxNavigate(1)">Volgende →</button>
+              <button id="px-nav-next" class="px-nav-btn">Volgende →</button>
             </div>
           </div>
         </div>
@@ -279,4 +279,6 @@ document.querySelectorAll('.px-domain-tab').forEach(btn => {
 document.querySelectorAll('.px-pcard').forEach(btn => {
   btn.addEventListener('click', () => pxSelectPrinciple(+(btn as HTMLElement).dataset.p!));
 });
+document.getElementById('px-nav-prev')?.addEventListener('click', () => pxNavigate(-1));
+document.getElementById('px-nav-next')?.addEventListener('click', () => pxNavigate(1));
 </script>

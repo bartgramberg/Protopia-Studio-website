@@ -91,10 +91,11 @@ const nl = {
     lead:    'Heb je een vraag, een project of wil je gewoon een kop koffie drinken?',
   },
   footer: {
-    tagline: 'Regenerative Design Studio',
-    colNav:  'Navigatie',
+    tagline:    'Regenerative Design Studio',
+    taglineSub: 'Wij ontwerpen en ontwikkelen steden, projecten en producten voor een veerkrachtige wereld.',
+    colNav:     'Navigatie',
     colContact: 'Contact',
-    copy:    '© 2025 by Attention by Design',
+    copy:       '© 2025 by Attention by Design',
   },
   lang: {
     toggle:  'EN',
@@ -193,10 +194,11 @@ const en: typeof nl = {
     lead:    'Have a question, a project or just want a coffee?',
   },
   footer: {
-    tagline: 'Regenerative Design Studio',
-    colNav:  'Navigation',
+    tagline:    'Regenerative Design Studio',
+    taglineSub: 'We design and develop cities, projects and products for a resilient world.',
+    colNav:     'Navigation',
     colContact: 'Contact',
-    copy:    '© 2025 by Attention by Design',
+    copy:       '© 2025 by Attention by Design',
   },
   lang: {
     toggle:  'NL',
