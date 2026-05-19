@@ -18,6 +18,7 @@ function examplesFor(section: 'research' | 'design' | 'realisation') {
       title: project.data.title,
       description: project.data.description,
       href: `/en/projects/${project.id.replace('en/', '')}`,
+      image: project.data.image,
     }))
 }
 

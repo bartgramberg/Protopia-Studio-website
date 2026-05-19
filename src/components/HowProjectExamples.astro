@@ -3,6 +3,7 @@ interface ProjectExample {
   title: string
   description: string
   href: string
+  image?: string
 }
 
 interface Props {
@@ -14,10 +15,17 @@ const { projects, label } = Astro.props
 ---
 <div class="flex flex-col gap-3">
   {projects.map(project => (
-    <a href={project.href} class="block bg-creme rounded-lg p-5 transition-colors hover:bg-[#edf0e5]">
-      <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">{label}</div>
-      <div class="text-[14px] font-bold text-green mb-1.5">{project.title}</div>
-      <p class="text-[12px] text-mid leading-[1.55]">{project.description}</p>
+    <a href={project.href} class="flex items-stretch gap-4 bg-creme rounded-lg overflow-hidden border border-border max-w-[420px] transition-colors hover:bg-[#edf0e5]">
+      {project.image && (
+        <div class="shrink-0 w-[100px] sm:w-[110px] self-stretch bg-white overflow-hidden">
+          <img src={project.image} alt={project.title} class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      )}
+      <div class="py-4 pr-5 flex-1 min-w-0">
+        <div class="text-[10px] font-semibold uppercase tracking-[0.12em] text-light mb-1.5">{label}</div>
+        <div class="text-[14px] font-bold text-green mb-1.5">{project.title}</div>
+        <p class="text-[12px] text-mid leading-[1.55]">{project.description}</p>
+      </div>
     </a>
   ))}
 </div>

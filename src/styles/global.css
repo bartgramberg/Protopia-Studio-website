@@ -15,6 +15,10 @@
 @font-face { font-family: 'Poppins'; src: url('/assets/fonts/Poppins-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Poppins'; src: url('/assets/fonts/Poppins-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
 
+/* ── Baumans (wordmark) ──────────────────────────────────── */
+@font-face { font-family: 'Baumans'; src: url('/assets/fonts/Baumans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+.font-baumans { font-family: 'Baumans', 'Poppins', sans-serif; }
+
 /* ── CSS custom properties (mirrors Tailwind theme) ──────── */
 :root {
   --green:      #48735B;
