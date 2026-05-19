@@ -13,20 +13,14 @@ interface Props {
 }
 
 const { projects, label, tags = [] } = Astro.props
-const project = projects[0]  // only the first project
+const project = projects[0]            // only the first project
+const visibleTags = tags.slice(0, 3)   // max 3 tags
 ---
-<div class="flex flex-col">
-  {tags.length > 0 && (
-    <div class="flex flex-wrap gap-x-2.5 gap-y-1.5 mb-8 sm:mb-10 lg:mb-12 lg:pt-[30px]">
-      {tags.map(tag => (
-        <span class="text-[12px] text-mid bg-[rgba(72,115,91,0.07)] px-2.5 py-[3px] rounded-[3px]">{tag}</span>
-      ))}
-    </div>
-  )}
+<div class="flex flex-col max-w-[320px]">
   {project && (
     <a
       href={project.href}
-      class="block bg-white rounded-lg overflow-hidden border border-border max-w-[320px] transition-shadow hover:shadow-[0_6px_20px_rgba(72,115,91,0.10)]"
+      class="block bg-white rounded-lg overflow-hidden border border-border transition-shadow hover:shadow-[0_6px_20px_rgba(72,115,91,0.10)]"
     >
       {project.image && (
         <div class="aspect-[4/3] bg-creme overflow-hidden">
@@ -39,5 +33,12 @@ const project = projects[0]  // only the first project
         <p class="text-[12px] text-mid leading-[1.55]">{project.description}</p>
       </div>
     </a>
+  )}
+  {visibleTags.length > 0 && (
+    <div class="mt-4 flex flex-nowrap gap-1.5 overflow-hidden">
+      {visibleTags.map(tag => (
+        <span class="text-[10.5px] text-mid bg-[rgba(72,115,91,0.07)] px-2 py-[2px] rounded-[3px] whitespace-nowrap">{tag}</span>
+      ))}
+    </div>
   )}
 </div>
