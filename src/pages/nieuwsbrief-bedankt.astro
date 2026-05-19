@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+
+const locale = 'nl'
+---
+<Base title="Nieuwsbrief" description="Bedankt voor je aanmelding voor de nieuwsbrief van Protopia Studio." locale={locale} altHref="/en/newsletter-thanks">
+  <Nav locale={locale} altHref="/en/newsletter-thanks" activePage="home" />
+
+  <main class="bg-creme">
+    <section class="min-h-[60vh] py-20 sm:py-24 lg:py-28">
+      <div class="max-w-content mx-auto px-5 sm:px-8 lg:px-10">
+        <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-green pb-2 border-b-2 border-green inline-block mb-5">Nieuwsbrief</span>
+        <h1 class="text-[clamp(32px,9vw,58px)] font-bold leading-[1.1] tracking-[-0.025em] text-green text-balance mb-5">Je staat op de lijst.</h1>
+        <p class="text-[16px] sm:text-[18px] text-mid leading-[1.75] max-w-[680px]">Bedankt voor je aanmelding. We houden je op de hoogte van nieuws, projecten en blogs.</p>
+        <a href="/" class="mt-8 inline-flex items-center justify-center px-[26px] py-[13px] rounded-pill text-[15px] font-semibold bg-green text-white hover:bg-green-dark transition-colors">
+          Terug naar home
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer locale={locale} />
+</Base>
