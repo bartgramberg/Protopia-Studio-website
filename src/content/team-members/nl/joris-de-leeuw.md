@@ -1,6 +1,6 @@
 ---
 name: "Joris de Leeuw"
-role: "Regeneratieve visionair, architect, system thinker en verbinder."
+role: "Regeneratieve visionair, architect, system thinker & verbinder."
 quote: "\"Joris is het hart van ons gedachtegoed.\""
 image: "/assets/team/joris-de-leeuw.jpg"
 imageAlt: "Joris de Leeuw"
