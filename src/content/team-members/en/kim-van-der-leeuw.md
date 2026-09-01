@@ -4,6 +4,6 @@ role: "Serial impact entrepreneur, business designer, programme manager & bundle
 quote: "\"Our sustainability dinosaur.\""
 image: "/assets/team/kim.jpeg"
 imageAlt: "Kim van der Leeuw"
-section: "advisors"
-order: 1
+section: "team"
+order: 3
 ---

@@ -4,6 +4,6 @@ role: "Strateeg, ontwerper, ecosysteem-bouwer & AI-enthousiast."
 quote: "\"Bart neemt je mee — into uncharted territory.\""
 image: "/assets/team/bart-gramberg.jpg"
 imageAlt: "Bart Gramberg"
-section: "team"
-order: 3
+section: "advisors"
+order: 1
 ---

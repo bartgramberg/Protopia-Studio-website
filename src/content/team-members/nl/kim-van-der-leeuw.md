@@ -4,6 +4,6 @@ role: "Serial impact entrepreneur, business designer, programmamanager & brok en
 quote: "\"Onze duurzaamheids-dinosaurus.\""
 image: "/assets/team/kim.jpeg"
 imageAlt: "Kim van der Leeuw"
-section: "advisors"
-order: 1
+section: "team"
+order: 3
 ---
